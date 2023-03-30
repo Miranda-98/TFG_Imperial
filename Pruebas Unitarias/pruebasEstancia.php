@@ -20,7 +20,7 @@
     }
 
     echo "<br/><br/><h1>OBTENER USUARIO POR ID</h1>";
-    $estanciaID = $estancia2->obtenerId(6);
+    $estanciaID = $estancia->obtenerId(6);
     foreach($estanciaID as $usuario) {
         echo $usuario['estado'] . "<br/>";
     }
