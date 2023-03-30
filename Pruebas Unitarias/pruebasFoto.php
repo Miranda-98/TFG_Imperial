@@ -2,6 +2,7 @@
         require_once "../Modelo/Foto.php";
 
         $foto = new Foto(6, "foto2.jpeg");
+        // $foto2 = new CRUD();
     
         // $foto->crearFoto();
         // $foto->borrar("foto", 5);

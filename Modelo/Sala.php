@@ -3,16 +3,16 @@
 
     class Sala extends Estancia {
 
-        private $conexion, $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $aforo, $tipoSala;
+        private $conexion, $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $aforo, $tipo_sala;
         public static $TABLA = 'sala';
 
-        function __construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $aforo, $tipoSala)
+        function __construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $aforo, $tipo_sala)
         {
             parent::__construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad);
             $this->conexion = parent::conectar();
             $this->cod_estancia = $cod_estancia;
             $this->aforo = $aforo;
-            $this->tipoSala = $tipoSala;
+            $this->tipo_sala = $tipo_sala;
         }
 
         /*
@@ -23,7 +23,7 @@
             try {
                 $a2 = $this->__get('cod_estancia');
                 $a3 = $this->__get('aforo');
-                $a4 = $this->__get('tipoSala');
+                $a4 = $this->__get('tipo_sala');
 
                 $cone = $this->conexion;
                 $sql = "INSERT INTO " . self::$TABLA . "(cod_estancia, aforo, tipo_sala) 

@@ -2,6 +2,7 @@
     require_once "../Modelo/Estancia.php";
 
     $estancia = new Estancia(1, "estancia 1", "exterior", 1, 'lujo', 200, 10, 'madrid');
+    // $estancia2 = new CRUD();
 
     // $estancia->crearEstancia();
     $estancia->borrar(7);
