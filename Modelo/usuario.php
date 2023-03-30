@@ -8,7 +8,7 @@
 
             function __construct($nombre, $primer_apellido, $segundo_apellido, $telefono, $correo, $usuario, $contraseña)
             {
-                parent::__construct();
+                parent::__construct(self::$TABLA);
                 $this->conexion = parent::conectar();
                 $this->nombre = $nombre;
                 $this->primer_apellido = $primer_apellido;
