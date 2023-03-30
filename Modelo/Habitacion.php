@@ -6,12 +6,12 @@
         private $conexion, $cod_estancia, $numCamas, $tipo_bano;
         public static $TABLA = 'habitacion';
 
-        function __construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $numCamas, $tipo_bano)
+        function __construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $num_camas, $tipo_bano)
         {
-            parent::__construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad);
+            parent::__construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $num_camas, $tipo_bano);
             $this->conexion = parent::conectar();
             $this->cod_estancia = $cod_estancia;
-            $this->numCamas = $numCamas;
+            $this->num_camas = $num_camas;
             $this->tipo_bano = $tipo_bano;
         }
 
@@ -50,7 +50,7 @@
         {
             try {
                 $a2 = $this->__get('cod_estancia');
-                $a3 = $this->__get('numCamas');
+                $a3 = $this->__get('num_camas');
                 $a4 = $this->__get('tipo_bano');
 
                 $cone = $this->conexion;

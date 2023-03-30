@@ -26,7 +26,7 @@
                 $stmt->execute();
                 echo "<br/>eliminado";
             } catch (PDOException $e) {
-                echo "<br/>ERROR AL ELIMINAR FOTO " . $e->getMessage();
+                echo "<br/>ERROR AL ELIMINAR " . $e->getMessage();
             }
         }
 
@@ -42,7 +42,7 @@
                 
                 return $resultado;
             } catch (PDOException $e) {
-                echo "<br/>ERROR AL OBTENER TODOS LAS FOTOS " . $e->getMessage();
+                echo "<br/>ERROR AL OBTENER TODOS " . $e->getMessage();
             }
         }
 
@@ -58,7 +58,7 @@
 
                 return $resultado;
             } catch (PDOException $e) {
-                echo "<br/>ERROR AL OBTENER FOTO POR ID " . $e->getMessage();
+                echo "<br/>ERROR AL OBTENER POR ID " . $e->getMessage();
             }
         }
     }

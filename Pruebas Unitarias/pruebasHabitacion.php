@@ -1,7 +1,7 @@
 <?php
     require_once "../Modelo/Habitacion.php";
 
-    $hab2 = new Habitacion(1, "estancia 1", "exterior", 1, 'lujo', 200, 10, 'madrid',6, 2, 'jacuzzi');
+    $hab = new Habitacion(1, "estancia 1", "exterior", 1, 'lujo', 200, 10, 'madrid', 6, 2, 'jacuzzi');
     // $hab2 = new CRUD();
 
     // $hab->crearHabitacion();
@@ -19,10 +19,9 @@
     }
 
     echo "<br/><br/><h1>OBTENER HABITACION POR ID</h1>";
-    $habitacionID = $hab2->obtenerIdHabitacion(3);
-    // print_r($habitacionID);
-    // foreach($habitacionID as $hab) {
-    //     echo $hab['num_camas'] . "<br/>";
-    // }
+    $habitacionID = $hab->obtenerId(3);
+    foreach($habitacionID as $hab) {
+        echo $hab['num_camas'] . "<br/>";
+    }
 
 ?>

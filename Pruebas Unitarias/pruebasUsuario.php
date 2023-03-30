@@ -1,9 +1,9 @@
 <?php
     require_once "../Modelo/Usuario.php";
-    // require_once "../Modelo/CRUD.php";
+    require_once "../Modelo/CRUD.php";
 
-    $user = new Usuario(3,"Britany","Mendez","Gomez","64444444","tatianaPanchis@gmail.com","Panchis","1234");
-    // $user2 = new CRUD();
+    $user = new Usuario("Tatiana","Garcia","Alvarez","655555555","tatianaPanchis@gmail.com","TatianaGarcias01","1234");
+    // $user = new CRUD();
 
      $user->crearUsuario();
     // $user2->borrar("usuario", 2);
@@ -17,7 +17,7 @@
     }
 
     echo "<br/><br/><h1>OBTENER USUARIO POR ID</h1>";
-    $usuarioID = $user->obtenerId(2);
+    $usuarioID = $user->obtenerId(1);
     foreach($usuarioID as $usuario) {
         echo $usuario['nombre'] . "<br/>";
     }

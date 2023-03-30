@@ -9,14 +9,14 @@
         // $foto->modificarFoto(4, 6, 'habitacionImperial.jpg');
         // echo $foto->obtenerTodosUsuarios()[0]['nombre'];
     
-        echo "<h1>TODOS HABITACIONES</h1>";
+        echo "<h1>TODOS FOTO</h1>";
         $totalFoto = $foto->obtenerTodo();
         foreach($totalFoto as $hab) {
             echo $hab['foto'] . "<br/>";
         }
     
-        echo "<br/><br/><h1>OBTENER HABITACION POR ID</h1>";
-        $fotoID = $foto2->obtenerId(4);
+        echo "<br/><br/><h1>OBTENER FOTO POR ID</h1>";
+        $fotoID = $foto->obtenerId(4);
         foreach($fotoID as $hab) {
             echo $hab['foto'] . "<br/>";
         }
