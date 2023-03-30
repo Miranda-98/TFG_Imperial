@@ -3,7 +3,7 @@
     require_once "../Modelo/CRUD.php";
 
     $estancia = new Estancia(1, "estancia 1", "exterior", 1, 'lujo', 200, 10, 'madrid');
-    $estancia2 = new CRUD();
+    // $estancia2 = new CRUD();
 
     // $estancia->crearEstancia();
     // $estancia->borrar("estancia", 5);
