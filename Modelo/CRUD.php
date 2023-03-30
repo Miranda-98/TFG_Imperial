@@ -3,21 +3,24 @@
 
     class CRUD extends Conexion {
         private $conexion;
+        private $tabla;
+        
 
-        function __construct()
+        function __construct($tabla)
         {
             parent::__construct();
             $this->conexion = parent::conectar();
+            $this->tabla=$tabla;
         }
 
         /*
 
         */
-        function borrar($tabla, $cod)
+        function borrar($cod)
         {
             try {
                 $cone = $this->conexion;
-                $sql = "DELETE FROM $tabla WHERE cod_".$tabla." = :A";
+                $sql = "DELETE FROM $this->tabla WHERE cod_".$this->tabla." = :A";
                 $stmt = $cone->prepare($sql);
                 $stmt->bindParam(':A', $cod);
                 $stmt->execute();
@@ -30,10 +33,10 @@
         /*
 
         */
-        function obtenerTodo($tabla)
+        function obtenerTodo()
         {
             try {
-                $stmt = $this->conexion->prepare("SELECT * FROM $tabla");
+                $stmt = $this->conexion->prepare("SELECT * FROM $this->tabla");
                 $stmt->execute();
                 $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 
@@ -46,10 +49,10 @@
         /*
 
         */
-        function obtenerId($tabla, $id)
+        function obtenerId( $id)
         {
             try {
-                $sql = $this->conexion->prepare("SELECT * FROM $tabla WHERE cod_".$tabla." = $id");
+                $sql = $this->conexion->prepare("SELECT * FROM $this->tabla WHERE cod_".$this->tabla." = $id");
                 $sql->execute();
                 $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 

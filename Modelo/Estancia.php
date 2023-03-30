@@ -8,7 +8,7 @@
 
             function __construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad)
             {
-                parent::__construct();
+                parent::__construct(self::$TABLA);
                 $this->conexion = parent::conectar();
                 $this->estado = $estado;
                 $this->descripcion = $descripcion;
