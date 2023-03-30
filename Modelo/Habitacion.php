@@ -8,7 +8,7 @@
 
         function __construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $num_camas, $tipo_bano)
         {
-            parent::__construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $num_camas, $tipo_bano);
+            parent::__construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad);
             $this->conexion = parent::conectar();
             $this->cod_estancia = $cod_estancia;
             $this->num_camas = $num_camas;

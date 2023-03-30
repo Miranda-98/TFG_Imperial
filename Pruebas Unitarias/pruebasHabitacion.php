@@ -11,6 +11,9 @@
 
     echo "<h1>TODOS HABITACIONES</h1>";
     $totalHabitacion = $hab->obtenerTodo();
+    echo "<pre>"; 
+    var_dump($totalHabitacion);
+    echo "</pre>";
     foreach($totalHabitacion as $hab) {
         echo $hab['num_camas'] . "<br/>";
     }
