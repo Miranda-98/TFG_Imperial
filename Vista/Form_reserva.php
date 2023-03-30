@@ -14,26 +14,33 @@
 		<input type="submit" value="Enviar">
 	</form>
 
-	<form>
-		<!-- 
-			echo "<option value=".$fila['Nombre'].">".$fila['Nombre']."</option>";
- 		-->
+	<form method="POST">
+		
 		<label>Codigo</label>
 		<select name="codigo" id="codigo_id">
-		<option value="volvo">Volvo</option>
-		<option value="saab">Saab</option>
-		<option value="mercedes">Mercedes</option>
-		<option value="audi">Audi</option>
+			<?php
+				require_once "../Modelo/CRUD.php";
+				$crud = new CRUD('habitacion');
+				$resultado = $crud->obtenerTodo();
+				foreach($resultado as $fila) {
+					echo "<option value=".$fila['cod_habitacion'].">".$fila['cod_habitacion']."</option>";
+				}
+			?>
 		</select>
+		<input type="submit" value="Enviar">
 	</form>
+
+		<!-- boton para cambiar el estado de la habitacion  -->
+		<?php if(isset($_REQUEST['codigo'])){ require_once "../Modelo/Reserva.php"; $reserva = new Reserva(); $reserva->reservarHabitacion($_REQUEST['codigo']);}?>
+	
 </body>
 </html>
-mostrar habitaciones con estado libre
 
 <?php
 	require_once "../Modelo/conexion.php";
 	require_once "../Modelo/Reserva.php";
 	
+	echo "<h3> TABLA DE CONTROL DE ESTADO DE LAS HABITACIONES</h3>";
 	$reserva = new Reserva();
 	$rr = $reserva->mostrarEstadoHabitaciones();
 

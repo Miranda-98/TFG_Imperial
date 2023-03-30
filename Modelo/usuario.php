@@ -63,7 +63,7 @@
                 $sql = "UPDATE " . self::$TABLA ." SET nombre='$nombre', primer_apellido='$primer_apellido', segundo_apellido='$segundo_apellido', telefono='$telefono',
                     correo='$correo', usuario='$usuario', contraseña='$contraseña' WHERE cod_usuario='$cod_usuario'";
                 $cone->exec($sql);
-                echo "<br/>modificado";
+                echo "<br/>modificado usuario";
             } catch (PDOException $e) {
                 echo "<br/>ERROR AL MODIFICAR USUARIO " . $e->getMessage();
             }

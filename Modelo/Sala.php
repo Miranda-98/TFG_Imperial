@@ -77,7 +77,7 @@
                 $cone = $this->conexion;
                 $sql = "UPDATE " . self::$TABLA . " SET aforo='$aforo', tipo_sala='$tipoSala', cod_estancia='$cod_estancia' WHERE cod_sala='$cod_sala'";
                 $cone->exec($sql);
-                echo "<br/>modificado";
+                echo "<br/>modificado sala";
             } catch (PDOException $e) {
                 echo "<br/>ERROR AL MODIFICAR HABITACION " . $e->getMessage();
             }
