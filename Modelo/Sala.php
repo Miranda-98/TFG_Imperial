@@ -3,7 +3,7 @@
 
     class Sala extends Estancia {
 
-        private $conexion, $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $aforo, $tipo_sala;
+        private $conexion,$cod_estancia, $aforo, $tipoSala;
         public static $TABLA = 'sala';
 
         function __construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $aforo, $tipo_sala)
@@ -18,6 +18,18 @@
         /*
 
         */
+        function obtenerTodoSala()
+        {
+            try {
+                $stmt = $this->conexion->prepare("SELECT * FROM estancia, sala WHERE estancia.cod_estancia = sala.cod_estancia;");
+                $stmt->execute();
+                $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                return $resultado;
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER TODOS LAS FOTOS " . $e->getMessage();
+            }
+        } 
         function crearSala()
         {
             try {
@@ -36,6 +48,22 @@
                 echo '<br/>insertado';
             } catch (PDOException $e) {
                 echo "<br/>ERROR AL CREAR SALA " . $e->getMessage();
+            }
+        }
+
+        /*
+
+        */
+        function obtenerIdSala($id)
+        {
+            try {
+                $sql = $this->conexion->prepare("SELECT * FROM estancia, sala WHERE estancia.cod_estancia = sala.cod_estancia AND cod_sala = $id");
+                $sql->execute();
+                $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+                return $resultado;
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER SALA POR ID " . $e->getMessage();
             }
         }
 

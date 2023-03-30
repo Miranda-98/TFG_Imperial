@@ -14,16 +14,16 @@
         // resultado -> OK
     
         echo "<h1>TODOS SALAS</h1>";
-        $totalSala = $sala->obtenerTodo();
-        echo "<pre>"; 
-        var_dump($totalSala);
-        echo "</pre>";
-        foreach($totalSala as $hab) {
-            echo $hab['tipo_sala'] . "<br/>";
+        $totalSala = $sala->obtenerTodoSala();
+        // echo "<pre>"; 
+        // var_dump($totalSala);
+        // echo "</pre>";
+        foreach($totalSala as $habi) {
+            echo $habi['tipo_sala'] . "<br/>";
         }
     
         echo "<br/><br/><h1>OBTENER SALA POR ID</h1>";
-        $salaID = $sala2->obtenerID(3);
+        $salaID = $sala->obtenerIdSala(3);
         foreach($salaID as $hab) {
             echo $hab['tipo_sala'] . "<br/>";
         }

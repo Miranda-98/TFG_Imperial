@@ -5,7 +5,7 @@
     // $estancia2 = new CRUD();
 
     // $estancia->crearEstancia();
-    $estancia->borrar(7);
+    // $estancia->borrar(7);
     // $estancia->modificarEstancia(6, "ocupado", "estancia creada desde DAO", "exterior", 1, "lujo", 200, 10, "madrid");
 
 
