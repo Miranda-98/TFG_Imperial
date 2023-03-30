@@ -49,7 +49,7 @@
         /*
 
         */
-        function obtenerId( $id)
+        function obtenerId($id)
         {
             try {
                 $sql = $this->conexion->prepare("SELECT * FROM $this->tabla WHERE cod_".$this->tabla." = $id");
