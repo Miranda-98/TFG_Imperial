@@ -4,8 +4,8 @@
     $hab = new HabitacionDAO();
     $hab2 = new HabitacionDAO();
 
-    // $hab->crearHabitacion(1,2,'bañera');
-    // $hab->borrarHabitacion(3);
+     $hab->crearHabitacion(6,2,'bañera');
+    // $hab->borrarHabitacion(6);
     // $hab->modificarHabitacion(2, 2, 'jacuzzi');
     // echo $hab->obtenerTodosUsuarios()[0]['nombre'];
 

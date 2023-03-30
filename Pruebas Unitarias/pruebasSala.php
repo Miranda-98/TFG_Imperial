@@ -4,10 +4,13 @@
         $sala = new SalaDAO();
         $sala2 = new SalaDao();
     
+        // caso de prueba 1
         // $sala->crearSala(3,50,'boda');
-        // $sala->borrarSala(2);
+        $sala->borrarSala(2);
         // $sala->modificarSala(3, 250, 'boda');
         // echo $sala->obtenerTodosUsuarios()[0]['nombre'];
+
+        // resultado -> OK
     
         echo "<h1>TODOS HABITACIONES</h1>";
         $totalSala = $sala->obtenerTodoSala();

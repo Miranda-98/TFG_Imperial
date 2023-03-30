@@ -65,35 +65,7 @@
 
         /*
 
-        */
-        function obtenerTodoFoto()
-        {
-            try {
-                $stmt = $this->conexion->prepare("SELECT * FROM " . self::$TABLA);
-                $stmt->execute();
-                $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                
-                return $resultado;
-            } catch (PDOException $e) {
-                echo "<br/>ERROR AL OBTENER TODOS LAS FOTOS " . $e->getMessage();
-            }
-        }
-
-        /*
-
-        */
-        function obtenerFotoId($id)
-        {
-            try {
-                $sql = $this->conexion->prepare("SELECT * FROM " . self::$TABLA . " WHERE cod_foto = $id");
-                $sql->execute();
-                $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-                return $resultado;
-            } catch (PDOException $e) {
-                echo "<br/>ERROR AL OBTENER FOTO POR ID " . $e->getMessage();
-            }
-        }
+        
 
         /*
             getter y setter magico

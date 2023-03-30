@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-03-2023 a las 12:39:12
+-- Tiempo de generación: 29-03-2023 a las 18:04:26
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `estancia` (
   `cod_estancia` int(11) NOT NULL,
-  `estado` tinyint(1) NOT NULL,
+  `estado` enum('libre','ocupado') NOT NULL,
   `descripcion` varchar(500) NOT NULL,
   `ubicacion` enum('exterior','interior','azotea') NOT NULL,
   `planta` int(11) NOT NULL,
@@ -38,6 +38,16 @@ CREATE TABLE `estancia` (
   `descuento` double NOT NULL,
   `localidad` enum('madrid') NOT NULL
 ) ;
+
+--
+-- Volcado de datos para la tabla `estancia`
+--
+
+INSERT INTO `estancia` (`cod_estancia`, `estado`, `descripcion`, `ubicacion`, `planta`, `tipo_estancia`, `precio`, `descuento`, `localidad`) VALUES
+(1, 'libre', 'habitacion 1 pruebas', 'exterior', 1, 'lujo', 2000, 1, 'madrid'),
+(2, 'libre', 'habitacion 2 pruebas', 'exterior', 1, 'lujo', 2000, 1, 'madrid'),
+(3, 'libre', 'habitacion 3 pruebas', 'exterior', 1, 'lujo', 2000, 1, 'madrid'),
+(4, 'ocupado', 'estancia creada desde DAO', 'exterior', 1, 'lujo', 200, 10, 'madrid');
 
 -- --------------------------------------------------------
 
@@ -51,6 +61,15 @@ CREATE TABLE `foto` (
   `foto` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `foto`
+--
+
+INSERT INTO `foto` (`cod_foto`, `cod_estancia`, `foto`) VALUES
+(1, 1, 'habitacionLujo.jpg'),
+(2, 1, 'habitacionLujo1.jpg'),
+(4, 2, 'habitacionImperial.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -58,11 +77,9 @@ CREATE TABLE `foto` (
 --
 
 CREATE TABLE `habitacion` (
-  `cod_habitacion` int(11) NOT NULL,
   `cod_estancia` int(11) NOT NULL,
   `num_camas` enum('1','2') NOT NULL,
-  `tipo_bano` enum('bañera','ducha','jacuzzi') NOT NULL,
-  `planta` int(11) NOT NULL
+  `tipo_bano` enum('bañera','ducha','jacuzzi') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -88,11 +105,18 @@ CREATE TABLE `reserva` (
 --
 
 CREATE TABLE `sala` (
-  `cod_sala` int(11) NOT NULL,
   `cod_estancia` int(11) NOT NULL,
   `aforo` int(11) NOT NULL,
   `tipo_sala` enum('boda','conferencia','reunion') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `sala`
+--
+
+INSERT INTO `sala` (`cod_estancia`, `aforo`, `tipo_sala`) VALUES
+(2, 200, 'conferencia'),
+(3, 250, 'boda');
 
 -- --------------------------------------------------------
 
@@ -110,6 +134,16 @@ CREATE TABLE `usuario` (
   `usuario` varchar(50) NOT NULL,
   `contraseña` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`cod_usuario`, `nombre`, `primer_apellido`, `segundo_apellido`, `telefono`, `correo`, `usuario`, `contraseña`) VALUES
+(1, 'Mario', 'Martin', 'Martin', '666666666', 'mariomartin@gmail.com', 'marioMM', '1234'),
+(2, 'Pedro', 'Martinez', 'Martinez', '666666666', 'pedromartinez@gmail.com', 'pedroMM', '1234'),
+(3, ' ', 'Tatiana', 'Garcia', 'Alvarez', '655555555', 'TatianaGarcias01', '1234'),
+(4, 'Britany', 'Mendez', 'Gomez', '64444444', 'tatianaPanchis@gmail.com', 'Panchis', '1234');
 
 --
 -- Índices para tablas volcadas
@@ -132,7 +166,6 @@ ALTER TABLE `foto`
 -- Indices de la tabla `habitacion`
 --
 ALTER TABLE `habitacion`
-  ADD PRIMARY KEY (`cod_habitacion`),
   ADD KEY `fk_cod_estancia_habitacion` (`cod_estancia`);
 
 --
@@ -147,7 +180,6 @@ ALTER TABLE `reserva`
 -- Indices de la tabla `sala`
 --
 ALTER TABLE `sala`
-  ADD PRIMARY KEY (`cod_sala`),
   ADD KEY `fk_cod_estancia_sala` (`cod_estancia`);
 
 --
@@ -170,13 +202,7 @@ ALTER TABLE `estancia`
 -- AUTO_INCREMENT de la tabla `foto`
 --
 ALTER TABLE `foto`
-  MODIFY `cod_foto` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `habitacion`
---
-ALTER TABLE `habitacion`
-  MODIFY `cod_habitacion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_foto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `reserva`
@@ -185,16 +211,10 @@ ALTER TABLE `reserva`
   MODIFY `cod_reserva` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `sala`
---
-ALTER TABLE `sala`
-  MODIFY `cod_sala` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `cod_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas

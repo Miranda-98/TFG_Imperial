@@ -4,9 +4,9 @@
     $estancia = new EstanciaDAO();
     $estancia2 = new EstanciaDAO();
 
-    // $estancia->crearEstancia(1, "estancia 1", "exterior", 1, 'lujo', 200, 10, 'madrid');
+    $estancia->crearEstancia(1, "estancia 1", "exterior", 1, 'lujo', 200, 10, 'madrid');
     // $estancia->borrarEstancia(5);
-    $estancia->modificarEstancia(4, "ocupado", "estancia creada desde DAO", "exterior", 1, "lujo", 200, 10, "madrid");
+    // $estancia->modificarEstancia(4, "ocupado", "estancia creada desde DAO", "exterior", 1, "lujo", 200, 10, "madrid");
     // estancia $user->obtenerTodosUsuarios()[0]['nombre'];
 
     echo "<h1>TODOS USUARIOS</h1>";
