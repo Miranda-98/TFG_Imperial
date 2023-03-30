@@ -5,6 +5,8 @@
 
             private $conexion;
             public static $TABLA = 'estancia';
+            //FALTAN ATRIBUTOS
+            // HABITACION SALA y FOTOS DEBEN TENER EXTENDIDO ESTANCIA
 
             function __construct()
             {
