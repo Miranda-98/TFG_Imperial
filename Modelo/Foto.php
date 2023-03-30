@@ -1,29 +1,35 @@
 <?php
-    require_once "conexion.php";
+    require_once "CRUD.php";
 
-    class FotoDAO extends Conexion {
+    class Foto extends CRUD {
 
-        private $conexion;
+        private $conexion, $cod_estancia, $foto;
+        //  $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad;
         public static $TABLA = 'foto';
 
-        function __construct()
+        function __construct($cod_estancia, $foto)
         {
-            parent::__construct();
+            parent::__construct($cod_estancia, $foto);
             $this->conexion = parent::conectar();
+            $this->cod_estancia = $cod_estancia;
+            $this->foto = $foto;
         }
 
         /*
 
         */
-        function crearFoto($cod_estancia, $foto)
+        function crearFoto()
         {
             try {
+                $a1 = $this->__get('cod_estancia');
+                $a2 = $this->__get('foto');
+
                 $cone = $this->conexion;
                 $sql = "INSERT INTO " . self::$TABLA . "(cod_estancia, foto) 
                     VALUES (:B, :C)";
                 $stmt = $cone->prepare($sql);
-                $stmt->bindParam(':B', $cod_estancia);
-                $stmt->bindParam(':C', $foto);
+                $stmt->bindParam(':B', $a1);
+                $stmt->bindParam(':C', $a2);
                 $stmt->execute();
                 echo '<br/>insertado';
             } catch (PDOException $e) {
@@ -31,22 +37,6 @@
             }
         }
 
-        /*
-
-        */
-        function borrarFoto($cod_foto)
-        {
-            try {
-                $cone = $this->conexion;
-                $sql = "DELETE FROM " . self::$TABLA . " WHERE cod_foto = :A";
-                $stmt = $cone->prepare($sql);
-                $stmt->bindParam(':A', $cod_foto);
-                $stmt->execute();
-                echo "<br/>eliminado";
-            } catch (PDOException $e) {
-                echo "<br/>ERROR AL ELIMINAR FOTO " . $e->getMessage();
-            }
-        }
 
         /*
 

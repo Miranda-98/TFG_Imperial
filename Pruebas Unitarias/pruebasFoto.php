@@ -1,22 +1,23 @@
 <?php
-        require_once "../Modelo/fotoDAO.php";
+        require_once "../Modelo/Foto.php";
+        require_once "../Modelo/CRUD.php";
 
-        $foto = new FotoDAO();
-        $foto2 = new FotoDAO();
+        $foto = new Foto(6, "foto2.jpeg");
+        $foto2 = new CRUD();
     
-        // $foto->crearFoto(2,'habitacionNormal.jpg');
-        // $foto->borrarFoto(3);
-        // $foto->modificarFoto(4, 2, 'habitacionImperial.jpg');
+        // $foto->crearFoto();
+        // $foto->borrar("foto", 5);
+        // $foto->modificarFoto(4, 6, 'habitacionImperial.jpg');
         // echo $foto->obtenerTodosUsuarios()[0]['nombre'];
     
         echo "<h1>TODOS HABITACIONES</h1>";
-        $totalFoto = $foto->obtenerTodoFoto();
+        $totalFoto = $foto->obtenerTodo('foto');
         foreach($totalFoto as $hab) {
             echo $hab['foto'] . "<br/>";
         }
     
         echo "<br/><br/><h1>OBTENER HABITACION POR ID</h1>";
-        $fotoID = $foto2->obtenerFotoId(1);
+        $fotoID = $foto2->obtenerId('foto',4);
         foreach($fotoID as $hab) {
             echo $hab['foto'] . "<br/>";
         }
