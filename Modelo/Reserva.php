@@ -15,20 +15,47 @@
             $this->conexion = parent::conectar();
         }
 
+        function reservarHabitacion($id)
+        {
+            try{
+                $cone = $this->conexion;
+
+                // sql para obtener el estado actual de la habitacion
+                $sqlEstado = "SELECT estancia.estado as aux FROM habitacion, estancia WHERE estancia.cod_estancia = habitacion.cod_estancia 
+                    AND habitacion.cod_habitacion = :A";
+                $stmt = $cone->prepare($sqlEstado);
+                $stmt->bindParam(':A', $id);
+                $stmt->execute();
+                $estado = $stmt->fetch(PDO::FETCH_ASSOC);
+                
+                // según el estado de la habitacion se cambia con una sql u otra
+                if($estado['aux'] == 'libre'){
+                    $sql = "UPDATE habitacion INNER JOIN estancia ON habitacion.cod_estancia = estancia.cod_estancia SET estancia.estado = 'ocupado' 
+                    WHERE habitacion.cod_habitacion = $id";
+                }else {  
+                    $sql = "UPDATE habitacion INNER JOIN estancia ON habitacion.cod_estancia = estancia.cod_estancia SET estancia.estado = 'libre' 
+                    WHERE habitacion.cod_habitacion = $id";
+                }
+
+                $cone->exec($sql);
+                // echo "<br/>modificado reserva";
+            } catch(PDOException $e) {
+                echo "<br/> ERROR AL RESERVAR HABITACION " . $e->getMessage();
+            }
+        }
+
         function mostrarEstadoHabitaciones()
         {
             try {
                 $cone = $this->conexion;
-                $sql = $cone->prepare("SELECT * FROM habitacion 
-                    INNER JOIN estancia 
-                    WHERE habitacion.cod_habitacion = estancia.cod_estancia
+                $sql = $cone->prepare("SELECT * FROM habitacion, estancia WHERE estancia.cod_estancia = habitacion.cod_estancia;
 
-                    /*BETWEEN '2022-01-01' AND '2022-01-31'*/;");
+                    /*BETWEEN '2022-01-01' AND '2022-01-31'*/");
                 $sql->execute();
                 $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-                echo $resultado[0]['cod_estancia'];
-                echo $resultado[0]['estado'];
+                // echo $resultado[0]['cod_estancia'];
+                // echo $resultado[0]['estado'];
 
 
                 echo "<table border: solid black 2px>
@@ -65,11 +92,7 @@
                             </tr>";
                         
                     }
-                    // foreach ($resultado as $clave => $valor) {
-                    //     foreach($valor as $clave2 => $valor2) {
-                    //         echo "<tr><td>$valor2</td></tr>";
-                    //     }
-                    // }
+                    
                 echo "</table>";
 
                 return $resultado;

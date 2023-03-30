@@ -47,7 +47,7 @@
                 $cone = $this->conexion;
                 $sql = "UPDATE " . self::$TABLA . " SET cod_estancia='$cod_estancia', foto='$foto' WHERE cod_foto='$cod_foto'";
                 $cone->exec($sql);
-                echo "<br/>modificado";
+                echo "<br/>modificado foto";
             } catch (PDOException $e) {
                 echo "<br/>ERROR AL MODIFICAR FOTO " . $e->getMessage();
             }

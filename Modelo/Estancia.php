@@ -66,7 +66,7 @@
                 tipo_estancia='$tipo_estancia',
                  precio='$precio', descuento='$descuento', localidad='$localidad' WHERE cod_estancia='$cod_estancia'";
                 $cone->exec($sql);
-                echo "<br/>modificado";
+                echo "<br/>modificado estancia";
             } catch (PDOException $e) {
                 echo "<br/>ERROR AL MODIFICAR ESTANCIA " . $e->getMessage();
             }
