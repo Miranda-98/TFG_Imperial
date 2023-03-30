@@ -1,6 +1,5 @@
 <?php
     require_once "../Modelo/Habitacion.php";
-    require_once "../Modelo/CRUD.php";
 
     $hab = new Habitacion(1, "estancia 1", "exterior", 1, 'lujo', 200, 10, 'madrid',6, 2, 'jacuzzi');
     // $hab2 = new CRUD();

@@ -9,7 +9,7 @@
 
         function __construct($cod_estancia, $foto)
         {
-            parent::__construct($cod_estancia, $foto);
+            parent::__construct(self::$TABLA);
             $this->conexion = parent::conectar();
             $this->cod_estancia = $cod_estancia;
             $this->foto = $foto;

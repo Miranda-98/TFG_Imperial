@@ -5,9 +5,9 @@
     $user = new Usuario();
     // $user2 = new CRUD();
 
-    // $user->crearUsuario("Tatiana","Garcia","Alvarez","655555555","tatianaPanchis@gmail.com","TatianaGarcias01","1234");
-    // $user->borrarUsuario(6);
-    // $user->modificarUsuario(6,"Britany","Mendez","Gomez","64444444","tatianaPanchis@gmail.com","Panchis","1234");
+    // $user->crearUsuario();
+    // $user2->borrar("usuario", 2);
+    // $user->modificarUsuario(3,"Britany","Mendez","Gomez","64444444","tatianaPanchis@gmail.com","Panchis","1234");
     // echo $user->obtenerTodosUsuarios()[0]['nombre'];
 
     echo "<h1>TODOS USUARIOS</h1>";

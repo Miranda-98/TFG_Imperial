@@ -1,6 +1,5 @@
 <?php
         require_once "../Modelo/Foto.php";
-        require_once "../Modelo/CRUD.php";
 
         $foto = new Foto(6, "foto2.jpeg");
         // $foto2 = new CRUD();
