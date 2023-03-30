@@ -3,7 +3,7 @@
 
     class Habitacion extends Estancia {
 
-        private $conexion, $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $numCamas, $tipoBano;
+        private $conexion, $cod_estancia, $numCamas, $tipo_bano;
         public static $TABLA = 'habitacion';
 
         function __construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $numCamas, $tipo_bano)
@@ -18,6 +18,34 @@
         /*
 
         */
+
+        function obtenerTodoHabitacion()
+        {
+            try {
+                $stmt = $this->conexion->prepare("SELECT * FROM estancia, habitacion WHERE estancia.cod_estancia = habitacion.cod_estancia;");
+                $stmt->execute();
+                $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                return $resultado;
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER TODOS LAS FOTOS " . $e->getMessage();
+            }
+        }
+
+        function obtenerIdHabitacion($id)
+        {
+            try {
+                $sql = $this->conexion->prepare("SELECT * FROM estancia, habitacion WHERE estancia.cod_estancia = habitacion.cod_estancia AND cod_habitacion = $id");
+                $sql->execute();
+                $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+                return $resultado;
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER FOTO POR ID " . $e->getMessage();
+            }
+        }
+
+
         function crearHabitacion()
         {
             try {

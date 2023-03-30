@@ -3,7 +3,7 @@
 
     class Sala extends Estancia {
 
-        private $conexion, $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $aforo, $tipoSala;
+        private $conexion,$cod_estancia, $aforo, $tipoSala;
         public static $TABLA = 'sala';
 
         function __construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $aforo, $tipoSala)
@@ -18,6 +18,19 @@
         /*
 
         */
+
+        function obtenerTodoSala()
+        {
+            try {
+                $stmt = $this->conexion->prepare("SELECT * FROM estancia, sala WHERE estancia.cod_estancia = sala.cod_estancia;");
+                $stmt->execute();
+                $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                return $resultado;
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER TODOS LAS FOTOS " . $e->getMessage();
+            }
+        } 
         function crearSala()
         {
             try {

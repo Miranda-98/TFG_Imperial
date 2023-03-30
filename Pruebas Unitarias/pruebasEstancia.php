@@ -5,7 +5,7 @@
     // $estancia2 = new CRUD();
 
     // $estancia->crearEstancia();
-    $estancia->borrar(7);
+    // $estancia->borrar(7);
     // $estancia->modificarEstancia(6, "ocupado", "estancia creada desde DAO", "exterior", 1, "lujo", 200, 10, "madrid");
 
 
@@ -21,7 +21,7 @@
     }
 
     echo "<br/><br/><h1>OBTENER USUARIO POR ID</h1>";
-    $estanciaID = $estancia2->obtenerId(6);
+    $estanciaID = $estancia->obtenerId(6);
     foreach($estanciaID as $usuario) {
         echo $usuario['estado'] . "<br/>";
     }

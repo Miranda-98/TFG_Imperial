@@ -14,7 +14,7 @@
         // resultado -> OK
     
         echo "<h1>TODOS HABITACIONES</h1>";
-        $totalSala = $sala->obtenerTodo();
+        $totalSala = $sala->obtenerTodoSala();
         foreach($totalSala as $hab) {
             echo $hab['tipo_sala'] . "<br/>";
         }
