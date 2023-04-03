@@ -2,7 +2,7 @@
     require_once "../Modelo/Usuario.php";
     require_once "../Modelo/CRUD.php";
 
-    $user = new Usuario("Tatiana","Garcia","Alvarez","655555555","tatianaPanchis@gmail.com","TatianaGarcias01","1234");
+    $user = new Usuario("Tatiana","Garcia","Alvarez","655555555","tatianaPanchis@gmail.com","TatianaGarcias01","1234",'cliente');
     // $user = new CRUD();
 
      $user->crearUsuario();
@@ -21,5 +21,6 @@
     foreach($usuarioID as $usuario) {
         echo $usuario['nombre'] . "<br/>";
     }
+    print_r($usuarioID);
 
 ?>
