@@ -80,7 +80,7 @@
         </div>
 
         <?php
-            // include '../Controlador/controlador_sesion.php';
+             include '../Controlador/controlador_sesion.php';
         ?>
     </nav>
 
@@ -140,7 +140,7 @@
         </div>
     </nav>
     <?php
-            include '../Controlador/controlador_sesion.php';
+            // include '../Controlador/controlador_sesion.php';
             include '../Controlador/controlador_home.php';
             include "../Controlador/controlador_admin.php";
     ?>

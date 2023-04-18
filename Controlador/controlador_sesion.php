@@ -57,7 +57,7 @@ if(isset($_REQUEST['btnEnviarUsuario'])){
 if(isset($_REQUEST['borrarAdmin'])){
     $cod = $_REQUEST['borrarAdmin'];
     $usuarioPrueba->borrar($cod);
-    echo "usuario eliminado";
+    // echo "usuario eliminado";
     //include 'tabla_usuarios.php';
    
   }
