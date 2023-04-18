@@ -91,10 +91,10 @@
                 if(!empty($resultado[0])){
                     //contraseña y comparamos si coincide
                     if(password_verify($contrasenia, $resultado[0]['contraseña'])){
-                        echo "si";
+                       // echo "si";
                         return true;
                     }else{
-                        echo "no";
+                       // echo "no";
                         return false;
                         
                     }
@@ -106,6 +106,53 @@
                 
             }
 
+
+        }
+
+        function comprobarTipoUsuario($id,$contrasenia){
+           
+            //Comprueba de que tipo es el usuairo que inicia sesión, si cliente o administrador
+
+            try {
+                $sql = $this->conexion->prepare("SELECT * FROM usuario WHERE usuario LIKE '$id' ");
+                $sql->execute();
+                $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+              
+                    //contraseña y comparamos si coincide
+                    if(password_verify($contrasenia, $resultado[0]['contraseña'])){
+                        
+                        return $resultado;
+                    }
+              
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER POR ID " . $e->getMessage();
+                
+            }
+
+        }
+
+        function obtieneTodosAdmin () {
+            try {
+                $stmt = $this->conexion->prepare("SELECT * FROM usuario WHERE usuario.rol LIKE 'admin'");
+                $stmt->execute();
+                $resultado = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+                    foreach($resultado as $x){
+                        echo "<tr>
+                        <td>". $x->nombre . "</td>
+                        <td>". $x->primer_apellido . "</td>
+                        <td>". $x->segundo_apellido ."</td>
+                        <td>". $x->telefono . "</td>
+                        <td>". $x->correo ."</td>
+                        <td>". $x->usuario ."</td>
+                        <td><form method='post'> <button name=borrarAdmin value='$x->cod_usuario]'>Borrar</button></form></td>
+                        </tr>";
+                    }
+
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER TODOS " . $e->getMessage();
+            }
 
         }
 

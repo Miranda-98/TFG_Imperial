@@ -35,117 +35,11 @@
 
 
 </head>
-<?php
-    session_start();
-    if (isset($_SESSION['nom_Usuario'])) {
-        $perfilUsuario = "<button name=perfil_usuario value='perfil_usuario'>" . $_SESSION['nom_Usuario'] . "</button> 
-            <br> <button name=cerrar_usuario value='cerrar_usuario'>Cerrar sesión</button>";
-    } else {
-        $perfilUsuario = "<button class='nav-link' name='inicio_Sesion' value='inicio_Sesion'>Iniciar Sesión</button>";
-    }
 
-?>
 
 <body>
-    <button onclick="changeLanguage('es')">Español</button>
-    <button onclick="changeLanguage('fr')">Français</button>
-    <button onclick="changeLanguage('de')">Deutsch</button>
-
-
-    <!-- BARRA DE NAVEGACION PRINCIPAL -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-        <!-- div icono-->
-        <div>
-            <a class="">
-                <img src="../img/logo3.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="80" height="80" />
-            </a>
-        </div>
-
-        <!-- div nombre-->
-        <div>
-            <a class="titulo">
-                Imperial Retreat
-            </a>
-        </div>
-
-        <!-- div usuario-->
-        <div>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <form method="POST">
-                        <?= $perfilUsuario ?>
-                    </form>
-                </li>
-            </ul>
-        </div>
-
-        <?php
-            // include '../Controlador/controlador_sesion.php';
-        ?>
-    </nav>
-
-    <div id="google_translate_element"></div>
-
-    <!-- BARRA DE NAVEGACION PAGINAS WEB -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid ">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                <!-- <button class="navbar-toggler" id="hamburguesa" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav"> -->
-            <form method="post" >
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <button name="btn_Inicio" class="nav-link active">Inicio</button>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Galeria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Preguntas frecuentes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Habitaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Eventos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Ofertas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Contacto</a>
-                    </li>
-
-                                    <?php
-                                        if (isset($_SESSION['tipo_Usuario']) && $_SESSION['tipo_Usuario'] =='admin'){
-                                    ?>
-                                        <li class="nav-item">
-                                        <button name="btn_Administracion" class="nav-link active">Administración</button>
-                                    </li>
-                                    <?php
-                                        }
-                                    ?>
-
-                </ul>
-            </form>
-    </nav>
-            </div>
-        </div>
-    </nav>
-    <?php
-            include '../Controlador/controlador_sesion.php';
-            include '../Controlador/controlador_home.php';
-            include "../Controlador/controlador_admin.php";
-    ?>
-
-    <!-- CARROUSEL 
+  
+    <!-- CARROUSEL  -->
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -171,10 +65,10 @@
         </button>
     </div>
 
-    <br /><br /><br /><br />-->
+    <br /><br /><br /><br />
 
     <!-- Formulario Reserva -->
-    <!-- <div style="display:flex; justify-content: center;">
+    <div style="display:flex; justify-content: center;">
         <table class="table-responsive">
             <tr>
                 <td>
@@ -201,7 +95,7 @@
                 </td>
             </tr>
         </table>
-    </div> -->
+    </div>
     <!-- <div class="form_reserva">
         <form method="POST" action="" style="justify-content: center;">
             
@@ -221,7 +115,7 @@
 
     
 
-    <!-- <br /><br /><br /><br />  -->
+    <br /><br /><br /><br />
 
 </body>
 

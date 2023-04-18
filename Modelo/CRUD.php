@@ -24,7 +24,7 @@
                 $stmt = $cone->prepare($sql);
                 $stmt->bindParam(':A', $cod);
                 $stmt->execute();
-                echo "<br/>eliminado";
+                // echo "<br/>eliminado";
             } catch (PDOException $e) {
                 echo "<br/>ERROR AL ELIMINAR " . $e->getMessage();
             }
