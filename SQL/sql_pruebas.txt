@@ -1,0 +1,114 @@
+para la reserva -> formulario (cod_reserva auto, cod_usuario auto, cod_estancia select, fecha_inicio formulario, fecha_fin formulario, puntuacion formulario, comentario formulario)
+
+SELECT * FROM estancia 
+	LEFT JOIN reserva ON estancia.cod_estancia = reserva.cod_estancia
+	LEFT JOIN habitacion ON estancia.cod_estancia = habitacion.cod_estancia
+    WHERE estancia.estado = 'libre' BETWEEN '2023-04-01' AND '2023-04-30';
+
+1 -> comprobar el estado de la reserva dentro de las fechas determinadas
+
+
+***********************************************************************************************
+sentencia sql que devuelve todas las habitaciones y las reservas que tengan
+	SELECT habitacion.cod_estancia AS COD_ESTANCIA, 
+		habitacion.cod_habitacion AS COD_HABITACION,
+        estancia.estado AS ESTADO, 
+        estancia.tipo_estancia AS TIPO_ESTANCIA, 
+        reserva.cod_reserva AS RESERVA, 
+        reserva.fecha_inicio AS FECHA_INICIO, 
+        reserva.fecha_fin AS FECHA_FIN
+        
+     FROM habitacion 
+		LEFT JOIN estancia on habitacion.cod_estancia = estancia.cod_estancia
+    	LEFT JOIN reserva on estancia.cod_estancia = reserva.cod_estancia
+    	GROUP BY estancia.cod_estancia
+
+***********************************************************************************************
+sentencia sql que devuelve las habitacion filtrando por fecha
+    SET @fechaInicio:= '2023-04-01';
+    SET @fechaFin:= '2023-04-07';
+
+    SELECT habitacion.cod_estancia AS COD_ESTANCIA, 
+		habitacion.cod_habitacion AS COD_HABITACION,
+        estancia.estado AS ESTADO, 
+        estancia.tipo_estancia AS TIPO_ESTANCIA, 
+        reserva.cod_reserva AS RESERVA, 
+        reserva.fecha_inicio AS FECHA_INICIO, 
+        reserva.fecha_fin AS FECHA_FIN
+        
+     FROM habitacion 
+       LEFT JOIN estancia on habitacion.cod_estancia = estancia.cod_estancia
+    	 LEFT JOIN reserva on estancia.cod_estancia = reserva.cod_estancia
+         WHERE reserva.fecha_inicio BETWEEN @fechaInicio AND @fechaFin
+		 GROUP BY estancia.cod_estancia
+------------------------------------------------------------------------------------------------
+SET @fechaInicio := '2023-04-01';
+SET @fechaFin := '2023-04-30';
+
+SELECT habitacion.cod_estancia AS COD_ESTANCIA, 
+	habitacion.cod_habitacion AS COD_HABITACION,
+    estancia.estado AS ESTADO, 
+    estancia.tipo_estancia AS TIPO_ESTANCIA, 
+    reserva.cod_reserva AS RESERVA, 
+    reserva.fecha_inicio AS FECHA_INICIO, 
+    reserva.fecha_fin AS FECHA_FIN
+        
+FROM habitacion 
+	LEFT JOIN estancia ON habitacion.cod_estancia = estancia.cod_estancia
+	LEFT JOIN reserva ON estancia.cod_estancia = reserva.cod_estancia
+WHERE reserva.fecha_inicio BETWEEN @fechaInicio AND @fechaFin
+
+UNION
+
+SELECT habitacion.cod_estancia AS COD_ESTANCIA, 
+	habitacion.cod_habitacion AS COD_HABITACION,
+    estancia.estado AS ESTADO, 
+    estancia.tipo_estancia AS TIPO_ESTANCIA, 
+    reserva.cod_reserva AS RESERVA, 
+    reserva.fecha_inicio AS FECHA_INICIO, 
+    reserva.fecha_fin AS FECHA_FIN
+        
+FROM habitacion 
+	RIGHT JOIN estancia ON habitacion.cod_estancia = estancia.cod_estancia
+	RIGHT JOIN reserva ON estancia.cod_estancia = reserva.cod_estancia
+WHERE reserva.fecha_inicio BETWEEN @fechaInicio AND @fechaFin
+
+
+
+***********************************************************************************************
+#sentencia sql que devuelve solo las habitaciones disponibles en un rango de fechas determinado
+SET @fechaInicio:= '2023-04-01';
+SET @fechaFin:= '2023-04-07';
+
+SELECT habitacion.cod_estancia AS COD_ESTANCIA, 
+	habitacion.cod_habitacion AS COD_HABITACION,
+    estancia.estado AS ESTADO, 
+    estancia.tipo_estancia AS TIPO_ESTANCIA, 
+    reserva.cod_reserva AS RESERVA, 
+    reserva.fecha_inicio AS FECHA_INICIO, 
+    reserva.fecha_fin AS FECHA_FIN
+    
+ FROM habitacion 
+	 LEFT JOIN estancia on habitacion.cod_estancia = estancia.cod_estancia
+     LEFT JOIN reserva on estancia.cod_estancia = reserva.cod_estancia
+     WHERE reserva.fecha_inicio BETWEEN @fechaInicio AND @fechaFin
+	 GROUP BY estancia.cod_estancia;
+***********************************************************************************************
+#sentencia sql que devuelve las habitaciones disponibles filtrando por tipo de estancia
+
+SELECT habitacion.cod_estancia AS COD_ESTANCIA, 
+	habitacion.cod_habitacion AS COD_HABITACION,
+    habitacion.nombre AS NOMBRE,
+    estancia.estado AS ESTADO, 
+    estancia.tipo_estancia AS TIPO_ESTANCIA, 
+    reserva.cod_reserva AS RESERVA, 
+    reserva.fecha_inicio AS FECHA_INICIO, 
+    reserva.fecha_fin AS FECHA_FIN
+    
+ FROM habitacion 
+	 LEFT JOIN estancia on habitacion.cod_estancia = estancia.cod_estancia
+     LEFT JOIN reserva on estancia.cod_estancia = reserva.cod_estancia
+     WHERE reserva.cod_reserva IS NULL
+     AND estancia.tipo_estancia = 'Presidencial'
+	 GROUP BY estancia.cod_estancia
+     LIMIT 1;

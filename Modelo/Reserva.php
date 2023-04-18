@@ -3,7 +3,7 @@
 
     */
 
-    require_once "../Modelo/CRUD.php";
+    require_once "CRUD.php";
 
     class Reserva extends CRUD {
         private $conexion;
@@ -16,30 +16,69 @@
         }
 
 
-        function reservarHabitacionPorTipo($tipo, $fechaInicio, $fechaFin)
+        function reservarHabitacionPorTipo(/*$tipo, $fechaInicio, $fechaFin*/)
         {
             try {
                 $cone = $this->conexion;
 
                 // sql para reservar la primera habitacion disponible por tipo dentro de un rango de fechas
                 // de momento hace la reserva en la primera habitacion disponible por tipo
-                $sql = "SELECT habitacion.cod_estancia AS COD_ESTANCIA, 
-                            habitacion.cod_habitacion AS COD_HABITACION,
-                            habitacion.nombre AS NOMBRE,
-                            estancia.estado AS ESTADO, 
-                            estancia.tipo_estancia AS TIPO_ESTANCIA, 
-                            reserva.cod_reserva AS RESERVA, 
-                            reserva.fecha_inicio AS FECHA_INICIO, 
-                            reserva.fecha_fin AS FECHA_FIN
-                            
+                $sql = $cone->prepare(
+                            // SELECT habitacion.cod_estancia AS COD_ESTANCIA, 
+                            // habitacion.cod_habitacion AS COD_HABITACION,
+                            // habitacion.nombre AS NOMBRE,
+                            // estancia.estado AS ESTADO, 
+                            // estancia.tipo_estancia AS TIPO_ESTANCIA, 
+                            // reserva.cod_reserva AS RESERVA, 
+                            // reserva.fecha_inicio AS FECHA_INICIO, 
+                            // reserva.fecha_fin AS FECHA_FIN
+                        "SELECT habitacion.*, estancia.*, reserva.*   
                         FROM habitacion 
                             LEFT JOIN estancia on habitacion.cod_estancia = estancia.cod_estancia
                             LEFT JOIN reserva on estancia.cod_estancia = reserva.cod_estancia
                             WHERE reserva.cod_reserva IS NULL
                             AND estancia.tipo_estancia = 'Presidencial'
                             GROUP BY estancia.cod_estancia
-                            LIMIT 1;";
+                            LIMIT 1");
                 
+                $sql->execute();
+                $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+                echo "<style>table, td, th{border: solid black 1px;}</style>
+                <table>
+                <tr>
+                    <th>Código Habitación</th>
+                    <th>Estado</th>
+                    <th>Código Estancia</th>
+                    <th>Descripción</th>
+                    <th>Ubicación</th>
+                    <th>Planta</th>
+                    <th>Tipo Estancia</th>
+                    <th>Precio</th>
+                    <th>Descuento</th>
+                    <th>Localidad</th>
+                    <th>Número de Camas</th>
+                    <th>Tipo de Baño</th>
+                </tr>";
+
+                for ($i = 0; $i < count($resultado); $i++) {
+                    echo "<tr>
+                            <td>".$resultado[$i]['cod_habitacion']."</td>
+                            <td>".$resultado[$i]['estado']."</td>
+                            <td>".$resultado[$i]['cod_estancia']."</td>
+                            <td>".$resultado[$i]['descripcion']."</td>
+                            <td>".$resultado[$i]['ubicacion']."</td>
+                            <td>".$resultado[$i]['planta']."</td>
+                            <td>".$resultado[$i]['tipo_estancia']."</td>
+                            <td>".$resultado[$i]['precio']."</td>
+                            <td>".$resultado[$i]['descuento']."</td>
+                            <td>".$resultado[$i]['localidad']."</td>
+                            <td>".$resultado[$i]['num_camas']."</td>
+                            <td>".$resultado[$i]['tipo_bano']."</td>
+                        </tr>";
+                    
+                }
+                
+            echo "</table>";
             }  catch(PDOException $e) {
                 echo "<br/> ERROR AL COMPROBAR ESTADO POR FECHA " . $e->getMessage();
             }
