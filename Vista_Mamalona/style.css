@@ -3,11 +3,6 @@
     font-size: 58px;
 }
 
-.formReserva {
-    width: 920px; 
-    height: 100px; 
-    align-items: center; 
-    display:flex; 
-    justify-content: center; 
-    background-color: red;
+td{
+    padding: 10px;
 }

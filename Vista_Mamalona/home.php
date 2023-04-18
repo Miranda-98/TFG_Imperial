@@ -16,7 +16,7 @@
     <script src="script.js"></script>
 
 
-    <script type="text/javascript">
+     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en'
@@ -41,12 +41,12 @@
         $perfilUsuario = "<button name=perfil_usuario value='perfil_usuario'>" . $_SESSION['nom_Usuario'] . "</button> 
             <br> <button name=cerrar_usuario value='cerrar_usuario'>Cerrar sesión</button>";
     } else {
-        $perfilUsuario = "<button class='nav-link' href='#' name=inicio_Sesion value='inicio_Sesion'>Iniciar Sesión</button>";
+        $perfilUsuario = "<button class='nav-link' name='inicio_Sesion' value='inicio_Sesion'>Iniciar Sesión</button>";
     }
 
 ?>
 
-<body id="content">
+<body>
     <button onclick="changeLanguage('es')">Español</button>
     <button onclick="changeLanguage('fr')">Français</button>
     <button onclick="changeLanguage('de')">Deutsch</button>
@@ -79,6 +79,9 @@
             </ul>
         </div>
 
+        <?php
+            include '../Controlador/controlador_sesion.php';
+        ?>
     </nav>
 
     <div id="google_translate_element"></div>
@@ -108,7 +111,7 @@
                         <a class="nav-link active" href="#">Habitaciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active">Eventos</a>
+                        <a class="nav-link active" href="#">Eventos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Ofertas</a>
@@ -150,8 +153,33 @@
     <br /><br /><br /><br />
 
     <!-- Formulario Reserva -->
-    <div>
-        <table
+    <div style="display:flex; justify-content: center;">
+        <table class="table-responsive">
+            <tr>
+                <td>
+                    <label for="fechaEntrada">Fecha entrada</label><br/>
+                    <input type="date" id="fechaEntrada">
+                </td>
+
+                <td>
+                    <label for="fechaSalida">Fecha Salida</label><br/>
+                    <input type="date" id="fechaEntrada">
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="nAdultos">Adultos</label><br/>
+                    <input type="number" name="adultos" id="nAdultos">
+                </td>
+
+                <td>
+                    <label for="nNiños">Niños (menores 13 años)</label><br/>
+                    <input type="number" name="niños" id="nNiños">
+                </td>
+            </tr>
+        </table>
     </div>
     <!-- <div class="form_reserva">
         <form method="POST" action="" style="justify-content: center;">
@@ -165,8 +193,7 @@
                 <label for="nAdultos">Adultos</label>
                 <input type="number" name="adultos" id="nAdultos">
 
-                <label for="nNiños">Niños (menores 13 años)</label>
-                <input type="number" name="niños" id="nNiños">
+               
             
         </form>
     </div> -->
@@ -178,6 +205,3 @@
 </body>
 
 </html>
-<?php
-    include '../Controlador/controlador_sesion.php';
-?>

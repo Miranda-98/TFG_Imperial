@@ -2,7 +2,7 @@
 require_once "../Modelo/usuario.php";
 
 if(isset($_REQUEST['inicio_Sesion'])){
-    header("location:Inicio_sesion.php");
+    header("location:../Vista/Inicio_sesion.php");
 }
 
 if(isset($_REQUEST['btnNuevoUsuario'])){
