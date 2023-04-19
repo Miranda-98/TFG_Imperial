@@ -3,12 +3,13 @@
 
     class Estancia extends CRUD {
 
-            private $conexion, $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad;
+            private $conexion,$cod_estancia, $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad;
             public static $TABLA = 'estancia';
 
-            function __construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad)
+            function __construct($cod_estancia,$estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad)
             {
                 parent::__construct(self::$TABLA);
+                $this->cod_estancia=$cod_estancia;
                 $this->conexion = parent::conectar();
                 $this->estado = $estado;
                 $this->descripcion = $descripcion;
@@ -26,6 +27,7 @@
         function crearEstancia() 
         {
             try {
+                $a0 = $this->__get('cod_estancia');
                 $a1 = $this->__get('estado');
                 $a2 = $this->__get('descripcion');
                 $a3 = $this->__get('ubicacion');
@@ -37,8 +39,9 @@
 
                 $cone = $this->conexion;
                 $sql = "INSERT INTO " . self::$TABLA . "(cod_estancia, estado, descripcion, ubicacion, planta, tipo_estancia, precio, descuento, localidad) 
-                    VALUES ('', :B, :C, :D, :E, :F, :G, :H, :I)";
+                    VALUES (:A, :B, :C, :D, :E, :F, :G, :H, :I)";
                 $stmt = $cone->prepare($sql);
+                $stmt->bindParam(':A', $a0);
                 $stmt->bindParam(':B', $a1);
                 $stmt->bindParam(':C', $a2);
                 $stmt->bindParam(':D', $a3);
@@ -48,9 +51,11 @@
                 $stmt->bindParam(':H', $a7);
                 $stmt->bindParam(':I', $a8);
                 $stmt->execute();
-                echo '<br/>insertado';
+               
+                return true;
             } catch (PDOException $e) {
-                echo "<br/>ERROR AL CREAR ESTANCIA " . $e->getMessage();
+                echo "No puede añadir una estancia con el cod_estancia de otra existente.";
+                return false;
             }
         }   
 

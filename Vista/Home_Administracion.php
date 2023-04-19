@@ -12,13 +12,14 @@
     ?>
     <h1>Home Administración</h1>
     <form method="post">
-    <button name="btn_aniadir_Admin" href="From_nuevoAdmin.php">Añadir Administrador</button>
-    <button name="btn_eliminar_Admin" href="tabla_usuarios.php">Administradores</button>
+    <button name="btn_aniadir_Admin" >Añadir Administrador</button>
+    <button name="btn_eliminar_Admin" >Administradores</button>
+    <button name="btn_anadir_estancia" >Añadir Estancia</button>
     </form>
-    
-    <p>Añadir Estancia</p>
     <p>Añadir Habitación</p>
     <p>Añadir Sala</p>
+
+    
     <p>Modificar Estancia</p>
     <p>Modificar Habitacion</p>
     <p>Modificar Sala</p>

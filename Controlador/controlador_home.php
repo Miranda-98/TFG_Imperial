@@ -15,9 +15,13 @@ if(isset($_REQUEST['btn_Administracion'])){
 
     include '../Vista/tabla_usuarios.php';
 
+  }else if (isset($_REQUEST['btn_anadir_estancia'])) {
+
+    include '../Vista/Form_nuevaEstancia.php';
+
   } else{
 
-    include '../Vista/Home_principal.php';
+    //include '../Vista/Home_principal.php';
  }
 
 ?>

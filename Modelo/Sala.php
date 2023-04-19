@@ -6,9 +6,9 @@
         private $conexion,$cod_estancia, $aforo, $tipoSala;
         public static $TABLA = 'sala';
 
-        function __construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $aforo, $tipo_sala)
+        function __construct($cod_estan, $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $aforo, $tipo_sala)
         {
-            parent::__construct($estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad);
+            parent::__construct($cod_estan,$estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad);
             $this->conexion = parent::conectar();
             $this->cod_estancia = $cod_estancia;
             $this->aforo = $aforo;
