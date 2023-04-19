@@ -6,3 +6,55 @@
 td{
     padding: 10px;
 }
+
+.iconos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerPrincipal > div > h4 {
+    display: flex;
+    justify-content: center;
+}
+
+.footerLogo {
+    display:flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.logoEmpresa {
+    display: flex;
+    justify-content: center;
+}
+
+.containerPie {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 200px;
+    height: 800px;
+}
+
+#carouselSpa, #carouselRestaurante, #carouselEventos {
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+.imgCarouselRestaurante > div > img, .imgCarouselEventos > div > img, .imgCarouselSpa > div > img {
+    width: 280px;
+    height: 280px;
+}
+
+footer {
+    margin-bottom: 0px;
+}
+
+
+input:invalid {
+    border: solid 1px red;
+}

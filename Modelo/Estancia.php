@@ -61,7 +61,11 @@
 
 
         /*
-
+SELECT *
+FROM estancia
+LEFT JOIN habitacion
+ON estancia.cod_estancia = habitacion.cod_estancia
+WHERE habitacion.cod_estancia IS NULL;
         */
         function modificarEstancia($cod_estancia, $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad) 
         {

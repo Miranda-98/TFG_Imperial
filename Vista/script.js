@@ -1,3 +1,4 @@
-$('.navbar-nav>li>a').on('click', function(){
+$('#navbarNavAltMarkup').on('click', function(){
     $('.navbar-collapse').collapse('hide');
+    console.log("mamalon");
 });
