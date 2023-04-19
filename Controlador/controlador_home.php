@@ -15,6 +15,10 @@ if(isset($_REQUEST['btn_Administracion'])){
 
     include '../Vista/tabla_usuarios.php';
 
+  } else if (isset($_REQUEST['btn_pagina_Galeria'])) {
+    
+    include '../Vista/Galeria.php';
+  
   } else{
 
     include '../Vista/Home_principal.php';

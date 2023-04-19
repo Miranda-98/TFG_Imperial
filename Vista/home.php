@@ -11,38 +11,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script> -->
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 
 
-     <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en'
-            }, 'google_translate_element');
-        }
+    <script type="text/javascript" src="botonTraducir.js">
+        
     </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="google.js"></script>
+    <!-- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
     <script type="text/javascript">
-        function changeLanguage(lang) {
-            var select = document.querySelector('#google_translate_element select');
-            select.value = lang;
-            select.dispatchEvent(new Event('change'));
-        }
+        
     </script>
 
 
 
 </head>
 <?php
-    session_start();
-    if (isset($_SESSION['nom_Usuario'])) {
-        $perfilUsuario = "<button name=perfil_usuario value='perfil_usuario'>" . $_SESSION['nom_Usuario'] . "</button> 
+session_start();
+if (isset($_SESSION['nom_Usuario'])) {
+    $perfilUsuario = "<button name=perfil_usuario value='perfil_usuario'>" . $_SESSION['nom_Usuario'] . "</button> 
             <br> <button name=cerrar_usuario value='cerrar_usuario'>Cerrar sesión</button>";
-    } else {
-        $perfilUsuario = "<button class='nav-link' name='inicio_Sesion' value='inicio_Sesion'>Iniciar Sesión</button>";
-    }
+} else {
+    $perfilUsuario = "<button class='nav-link' name='inicio_Sesion' value='inicio_Sesion'>Iniciar Sesión</button>";
+}
 
 ?>
 
@@ -50,6 +44,7 @@
     <button onclick="changeLanguage('es')">Español</button>
     <button onclick="changeLanguage('fr')">Français</button>
     <button onclick="changeLanguage('de')">Deutsch</button>
+    <div id="google_translate_element"></div>
 
 
     <!-- BARRA DE NAVEGACION PRINCIPAL -->
@@ -80,11 +75,10 @@
         </div>
 
         <?php
-             include '../Controlador/controlador_sesion.php';
+        include '../Controlador/controlador_sesion.php';
         ?>
     </nav>
 
-    <div id="google_translate_element"></div>
 
     <!-- BARRA DE NAVEGACION PAGINAS WEB -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -100,49 +94,48 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav"> -->
-            <form method="post" >
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <button name="btn_Inicio" class="nav-link active">Inicio</button>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Galeria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Preguntas frecuentes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Habitaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Eventos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Ofertas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Contacto</a>
-                    </li>
+                <form method="post">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button name="btn_Inicio" class="nav-link active">Inicio</button>
+                        <li class="nav-item">
+                            <button class="nav-link active" aria-current="page" name="btn_pagina_Galeria" >Galeria</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link active" href="#">Preguntas frecuentes</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link active" href="#">Habitaciones</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link active" href="#">Eventos</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link active" href="#">Ofertas</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link active" href="#">Contacto</button>
+                        </li>
 
-                                    <?php
-                                        if (isset($_SESSION['tipo_Usuario']) && $_SESSION['tipo_Usuario'] =='admin'){
-                                    ?>
-                                        <li class="nav-item">
-                                        <button name="btn_Administracion" class="nav-link active">Administración</button>
-                                    </li>
-                                    <?php
-                                        }
-                                    ?>
+                        <?php
+                        if (isset($_SESSION['tipo_Usuario']) && $_SESSION['tipo_Usuario'] == 'admin') {
+                        ?>
+                            <li class="nav-item">
+                                <button name="btn_Administracion" class="nav-link active">Administración</button>
+                            </li>
+                        <?php
+                        }
+                        ?>
 
-                </ul>
-            </form>
-    </nav>
+                    </ul>
+                </form>
             </div>
         </div>
     </nav>
     <?php
-            // include '../Controlador/controlador_sesion.php';
-            include '../Controlador/controlador_home.php';
-            include "../Controlador/controlador_admin.php";
+    // include '../Controlador/controlador_sesion.php';
+    include '../Controlador/controlador_home.php';
+    include "../Controlador/controlador_admin.php";
     ?>
 
     <!-- CARROUSEL 
@@ -219,7 +212,64 @@
         </form>
     </div> -->
 
-    
+    <!-- FOOTER -->
+    <!-- <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>© Copyright 2015 - All Rights Reserved</h5>
+                    <p>All Rights Reserved.</p>
+    </footer> -->
+
+    <footer class="footer">
+        <div class="container ">
+            <div class="row footerPrincipal">
+                <div class="col-md-4">
+                    <h4>Contacto</h4>
+                    <p>MADRID CALLE DEL PEPE BOTELLA</p>
+                    <p>Teléfono: 916 535 482 </p>
+                    <p>Correo electrónico: info@imperialretreat.com</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>Redes sociales</h4>
+                    <ul class="list-unstyled iconos">
+                        <li><a href="#"><i class="fab fa-facebook fa-lg"></i> Facebook</a>
+                            <ion-icon name="logo-facebook" size="large"></ion-icon>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter fa-lg"></i> Twitter</a>
+                            <ion-icon name="logo-twitter" size="large"></ion-icon>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram fa-lg"></i> Instagram</a>
+                            <ion-icon name="logo-instagram" size="large"></ion-icon>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>Boletín informativo</h4>
+                    <p>Regístrate para recibir noticias y ofertas especiales</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Correo electrónico">
+                        </div><br/>
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footerLogo" >
+                <div class="col-md-3 ">
+                    <h4>© Copyright 2023 - All Rights Reserved</h4>
+                    <p>All Rights Reserved.</p>
+                </div>
+                <div class="col-md-3 logoEmpresa">
+                  <img src="../img/logo3.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="80" height="80" />
+                </div>
+            </div>
+    </footer>
+                    
 
     <!-- <br /><br /><br /><br />  -->
 
