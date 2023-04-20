@@ -1,6 +1,12 @@
 <?php
 require_once "../Modelo/usuario.php";
 require_once "../Modelo/Estancia.php";
+require_once "../Modelo/Habitacion.php";
+require_once "../Modelo/Sala.php";
+
+//Objetos de uso común:
+$estanciaGeneral = new Estancia('','','','','','','','','');
+$estanciasDisponibles = $estanciaGeneral->obtenerNiSaNiHa();
 
 if(isset($_REQUEST['btnNuevoAdmin'])){
     $nuevoUsuario = new Usuario($_POST['nombrePropio'],
@@ -16,7 +22,9 @@ if(isset($_REQUEST['btnNuevoAdmin'])){
             echo "Usuario creado";
             
         }
- } else if (isset($_REQUEST['btnNuevaEstancia'])) {
+ } 
+
+ if (isset($_REQUEST['btnNuevaEstancia'])) {
     $nuevaEstancia = new Estancia($_POST['cod_estancia'],
                                     $_POST['estado'],
                                     $_POST['descripcion'],
@@ -31,4 +39,20 @@ if(isset($_REQUEST['btnNuevoAdmin'])){
 
     }
  }
+
+ if (isset($_REQUEST['btnNuevaHabitacion'])) {
+    $nuevaHabitacion = new Habitacion($_POST['cod_estancia'],'no','no','no','no','no','no','no','no',$_POST['cod_habitacion'],$_POST['num_camas'],$_POST['tipo_bano']);
+    if($nuevaHabitacion->crearHabitacion()){
+        echo "Habitación creada";
+    }
+    
+ }
+ if (isset($_REQUEST['btnNuevaSala'])) {
+    $nuevaSala = new Sala($_POST['cod_estancia'],'','','','','','','','',$_POST['cod_Sala'],$_POST['aforo'],$_POST['tipo_Sala']);
+    if($nuevaSala->crearSala()){
+        echo "Sala creada";
+    }
+ }
+
+ 
 ?>

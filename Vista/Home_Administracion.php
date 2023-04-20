@@ -12,14 +12,14 @@
     ?>
     <h1>Home Administración</h1>
     <form method="post">
-    <button name="btn_aniadir_Admin" >Añadir Administrador</button>
-    <button name="btn_eliminar_Admin" >Administradores</button>
-    <button name="btn_anadir_estancia" >Añadir Estancia</button>
+    <button name="btn_aniadir_Admin" class="btn">Añadir Administrador</button>
+    <button name="btn_eliminar_Admin" class="btn" >Administradores</button>
+    <button name="btn_anadir_estancia" class="btn" >Añadir Estancia</button>
+    <button name="btn_anadir_habitacion" class="btn" >Añadir Habitación</button>
+    <button name="btn_anadir_sala" class="btn">Añadir Sala</button>
     </form>
-    <p>Añadir Habitación</p>
-    <p>Añadir Sala</p>
+   
 
-    
     <p>Modificar Estancia</p>
     <p>Modificar Habitacion</p>
     <p>Modificar Sala</p>

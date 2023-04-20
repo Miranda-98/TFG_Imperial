@@ -3,13 +3,14 @@
 
     class Sala extends Estancia {
 
-        private $conexion,$cod_estancia, $aforo, $tipoSala;
+        private $conexion,$cod_estan,$cod_estancia, $aforo, $tipoSala;
         public static $TABLA = 'sala';
 
         function __construct($cod_estan, $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad, $cod_estancia, $aforo, $tipo_sala)
         {
             parent::__construct($cod_estan,$estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad);
             $this->conexion = parent::conectar();
+            $this->cod_estan = $cod_estan;
             $this->cod_estancia = $cod_estancia;
             $this->aforo = $aforo;
             $this->tipo_sala = $tipo_sala;
@@ -33,17 +34,19 @@
         function crearSala()
         {
             try {
+                $a1 = $this->__get('cod_estan');
                 $a2 = $this->__get('cod_estancia');
                 $a3 = $this->__get('aforo');
                 $a4 = $this->__get('tipo_sala');
 
                 $cone = $this->conexion;
-                $sql = "INSERT INTO " . self::$TABLA . "(cod_estancia, aforo, tipo_sala) 
-                    VALUES (:A, :B, :C)";
+                $sql = "INSERT INTO " . self::$TABLA . "(cod_sala, cod_estancia, aforo, tipo_sala) 
+                    VALUES (:A, :B, :C, :D)";
                 $stmt = $cone->prepare($sql);
                 $stmt->bindParam(':A', $a2);
-                $stmt->bindParam(':B', $a3);
-                $stmt->bindParam(':C', $a4);
+                $stmt->bindParam(':B', $a1);
+                $stmt->bindParam(':C', $a3);
+                $stmt->bindParam(':D', $a4);
                 $stmt->execute();
                 echo '<br/>insertado';
             } catch (PDOException $e) {

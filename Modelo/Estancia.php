@@ -57,7 +57,34 @@
                 echo "No puede añadir una estancia con el cod_estancia de otra existente.";
                 return false;
             }
-        }   
+        }
+        
+         /*
+
+        */
+        function obtenerNiSaNiHa()
+        {
+            try {
+                $stmt = $this->conexion->prepare("SELECT *
+                FROM estancia
+                WHERE NOT EXISTS (
+                  SELECT *
+                  FROM habitacion
+                  WHERE habitacion.cod_estancia = estancia.cod_estancia
+                )
+                AND NOT EXISTS (
+                  SELECT *
+                  FROM sala
+                  WHERE sala.cod_estancia = estancia.cod_estancia
+                );"
+                                                                            );
+                $stmt->execute();
+                $resultado = $stmt->fetchAll(PDO::FETCH_OBJ);
+                return $resultado;
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER TODOS " . $e->getMessage();
+            }
+        }
 
 
         /*

@@ -32,10 +32,10 @@
 <?php
 session_start();
 if (isset($_SESSION['nom_Usuario'])) {
-    $perfilUsuario = "<button name=perfil_usuario value='perfil_usuario'>" . $_SESSION['nom_Usuario'] . "</button> 
-            <br> <button name=cerrar_usuario value='cerrar_usuario'>Cerrar sesión</button>";
+    $perfilUsuario = "<button name=perfil_usuario value='perfil_usuario' class='btnIni'>" . $_SESSION['nom_Usuario'] . "</button> 
+            <br> <button name=cerrar_usuario value='cerrar_usuario' class='btnIni'>Cerrar sesión</button>";
 } else {
-    $perfilUsuario = "<button class='nav-link' name='inicio_Sesion' value='inicio_Sesion'>Iniciar Sesión</button>";
+    $perfilUsuario = "<button name='inicio_Sesion' value='inicio_Sesion' class='btnIni'>Iniciar Sesión</button>";
 }
 
 ?>
