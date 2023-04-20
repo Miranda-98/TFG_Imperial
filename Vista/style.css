@@ -58,3 +58,12 @@ footer {
 input:invalid {
     border: solid 1px red;
 }
+
+.contenedorFormulario {
+    display: flex; flex-direction: column; align-items: center;
+}
+
+.formularioRegistro {
+    width: 250px; height: 400px;
+}
+
