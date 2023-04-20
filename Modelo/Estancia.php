@@ -61,11 +61,55 @@
 
 
         /*
+SELECT que saca las estancias que no estan siendo usadas en la tabla de habitaciones
+
+subconsultas
+
+SELECT *
+FROM estancia
+WHERE estancia.cod_estancia NOT IN (
+  SELECT cod_estancia
+  FROM habitacion
+  WHERE cod_estancia IS NOT NULL
+);
+
+JOIN
+
 SELECT *
 FROM estancia
 LEFT JOIN habitacion
 ON estancia.cod_estancia = habitacion.cod_estancia
 WHERE habitacion.cod_estancia IS NULL;
+
+SELECT que saca las estancias que no estan siendo usadas en la tabla de salas
+
+subconsultas
+
+SELECT *
+FROM estancia
+WHERE estancia.cod_estancia NOT IN (SELECT cod_estancia FROM habitacion);
+
+JOIN
+
+SELECT *
+FROM estancia
+LEFT JOIN sala
+ON estancia.cod_estancia = sala.cod_estancia
+WHERE sala.cod_estancia IS NULL;
+
+SQL que muestra las estancias que no estan siendo usadas ni en habitaciones ni en salas
+SELECT *
+FROM estancia
+WHERE NOT EXISTS (
+  SELECT *
+  FROM habitacion
+  WHERE habitacion.cod_estancia = estancia.cod_estancia
+)
+AND NOT EXISTS (
+  SELECT *
+  FROM sala
+  WHERE sala.cod_estancia = estancia.cod_estancia
+);
         */
         function modificarEstancia($cod_estancia, $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad) 
         {
