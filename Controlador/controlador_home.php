@@ -35,6 +35,10 @@ if(isset($_REQUEST['btn_Administracion'])){
     
     include '../Vista/Todas_habitaciones.php';
   
+  }else if (isset($_REQUEST['btn_ver_salas'])) {
+    
+    include '../Vista/Todas_salas.php';
+  
   } else{
 
     //include '../Vista/Home_principal.php';
@@ -42,7 +46,7 @@ if(isset($_REQUEST['btn_Administracion'])){
 
 
  
-
+ 
 
 
 ?>

@@ -8,8 +8,7 @@ require_once "../Modelo/Sala.php";
 $estanciaGeneral = new Estancia('','','','','','','','','');
 $estanciasDisponibles = $estanciaGeneral->obtenerNiSaNiHa();
 $habitacionGeneral = new Habitacion('','','','','','','','','','','','');
-// $habitacionGeneral->obtenerTodoHabitacion();
-
+$salaGeneral = new Sala('','','','','','','','','','','','');
 if(isset($_REQUEST['btnNuevoAdmin'])){
     $nuevoUsuario = new Usuario($_POST['nombrePropio'],
                                 $_POST['primerApellido'],

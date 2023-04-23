@@ -43,7 +43,7 @@
                 echo "<tr>
                 <td>". $x->cod_habitacion . "</td>
                 <td>". $x->tipo_estancia . "</td>
-                <td>". $x->precio ."</td>
+                <td>". $x->precio ."€</td>
                 <td>". $x->planta . "</td>
                 <td>". $x->estado ."</td>
                 <td>". $x->num_camas ."</td>
@@ -52,6 +52,7 @@
                 <td>". $x->descripcion ."</td>
                 <td>". $x->localidad ."</td>
                 <td>". $x->cod_estancia ."</td>
+                <td><form method='post'> <button name=sinAccion value='$x->cod_habitacion]'>Reservar</button></form></td>
                 <td><form method='post'> <button name=sinAccion value='$x->cod_habitacion]'>Borrar</button></form></td>
                 <td><form method='post'> <button name=sinAccion value='$x->cod_habitacion]'>Modificar</button></form></td>
                 </tr>";

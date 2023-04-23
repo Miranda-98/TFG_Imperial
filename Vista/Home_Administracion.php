@@ -18,15 +18,9 @@
     <button name="btn_anadir_habitacion" class="btn" >Añadir Habitación</button>
     <button name="btn_anadir_sala" class="btn">Añadir Sala</button>
     <button name="btn_ver_habitaciones" class="btn">Ver habitaciones</button>
+    <button name="btn_ver_salas" class="btn">Ver salas</button>
     </form>
-   
 
-    <p>Modificar Estancia</p>
-    <p>Modificar Habitacion</p>
-    <p>Modificar Sala</p>
-    <p>Borrar Estancia</p>
-    <p>Borrar Habitación</p>
-    <p>Borrar Sala</p>
     <p>Hacer reserva</p>
     <p>Cancelar Reserva</p>
 

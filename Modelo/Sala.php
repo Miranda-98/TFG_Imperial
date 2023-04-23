@@ -24,13 +24,45 @@
             try {
                 $stmt = $this->conexion->prepare("SELECT * FROM estancia, sala WHERE estancia.cod_estancia = sala.cod_estancia;");
                 $stmt->execute();
-                $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $resultado = $stmt->fetchAll(PDO::FETCH_OBJ);
                 
                 return $resultado;
             } catch (PDOException $e) {
                 echo "<br/>ERROR AL OBTENER TODOS LAS FOTOS " . $e->getMessage();
             }
         } 
+
+
+        function muestraSalas () {
+            try {
+                  $registro = $this->obtenerTodoSala();
+            foreach($registro as $x){
+                echo "<tr>
+                <td>". $x->cod_sala . "</td>
+                <td>". $x->tipo_estancia . "</td>
+                <td>". $x->precio ."€</td>
+                <td>". $x->planta . "</td>
+                <td>". $x->estado ."</td>
+                <td>". $x->aforo ."</td>
+                <td>". $x->tipo_sala ."</td>
+                <td>". $x->ubicacion ."</td>
+                <td>". $x->descripcion ."</td>
+                <td>". $x->localidad ."</td>
+                <td>". $x->cod_estancia ."</td>
+                <td><form method='post'> <button name=sinAccion value='$x->cod_sala]'>Reservar</button></form></td>
+                <td><form method='post'> <button name=sinAccion value='$x->cod_sala]'>Borrar</button></form></td>
+                <td><form method='post'> <button name=sinAccion value='$x->cod_sala]'>Modificar</button></form></td>
+                </tr>";
+            }
+        }  catch (PDOException $e) {
+            echo "<br/>ERROR AL OBTENER TODOS " . $e->getMessage();
+        }
+    }
+
+/*
+
+        */
+
         function crearSala()
         {
             try {
