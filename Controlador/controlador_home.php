@@ -31,10 +31,17 @@ if(isset($_REQUEST['btn_Administracion'])){
     
     include '../Vista/Form_nuevaSala.php';
   
+  }else if (isset($_REQUEST['btn_ver_habitaciones'])) {
+    
+    include '../Vista/Todas_habitaciones.php';
+  
   } else{
 
     //include '../Vista/Home_principal.php';
  }
+
+
+ 
 
 
 

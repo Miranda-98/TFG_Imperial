@@ -25,13 +25,45 @@
             try {
                 $stmt = $this->conexion->prepare("SELECT * FROM estancia, habitacion WHERE estancia.cod_estancia = habitacion.cod_estancia;");
                 $stmt->execute();
-                $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $resultado = $stmt->fetchAll(PDO::FETCH_OBJ);
                 
                 return $resultado;
             } catch (PDOException $e) {
                 echo "<br/>ERROR AL OBTENER TODOS LAS FOTOS " . $e->getMessage();
             }
         }
+ /*
+
+        */
+
+        function muestraHabitaciones () {
+            try {
+                  $registro = $this->obtenerTodoHabitacion();
+            foreach($registro as $x){
+                echo "<tr>
+                <td>". $x->cod_habitacion . "</td>
+                <td>". $x->tipo_estancia . "</td>
+                <td>". $x->precio ."</td>
+                <td>". $x->planta . "</td>
+                <td>". $x->estado ."</td>
+                <td>". $x->num_camas ."</td>
+                <td>". $x->tipo_bano ."</td>
+                <td>". $x->ubicacion ."</td>
+                <td>". $x->descripcion ."</td>
+                <td>". $x->localidad ."</td>
+                <td>". $x->cod_estancia ."</td>
+                <td><form method='post'> <button name=sinAccion value='$x->cod_habitacion]'>Borrar</button></form></td>
+                <td><form method='post'> <button name=sinAccion value='$x->cod_habitacion]'>Modificar</button></form></td>
+                </tr>";
+            }
+        }  catch (PDOException $e) {
+            echo "<br/>ERROR AL OBTENER TODOS " . $e->getMessage();
+        }
+    }
+
+         /*
+
+        */
 
         function obtenerIdHabitacion($id)
         {

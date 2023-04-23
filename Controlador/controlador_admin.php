@@ -7,6 +7,8 @@ require_once "../Modelo/Sala.php";
 //Objetos de uso común:
 $estanciaGeneral = new Estancia('','','','','','','','','');
 $estanciasDisponibles = $estanciaGeneral->obtenerNiSaNiHa();
+$habitacionGeneral = new Habitacion('','','','','','','','','','','','');
+// $habitacionGeneral->obtenerTodoHabitacion();
 
 if(isset($_REQUEST['btnNuevoAdmin'])){
     $nuevoUsuario = new Usuario($_POST['nombrePropio'],
