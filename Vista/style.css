@@ -1,105 +1,123 @@
-.titulo {
-    text-decoration: none;
-    font-size: 58px;
-}
+/* Tamaño Carrousel Principal de home_principal.php */
+                .carousel-inner {
+                    max-height:30rem !important;
+                    
+                }
+                .carousel-item.active img {
+                    object-position: center !important;                  
+                }
+                
+/*  */
 
-td{
-    padding: 10px;
-}
+                .titulo {
+                    color: #ffdd84;
+                    text-decoration: none;
+                    font-size: 58px;
+                }
 
-.iconos {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
+                td{
+                    padding: 10px;
+                }
 
-.footerPrincipal > div > h4 {
-    display: flex;
-    justify-content: center;
-}
+                .iconos {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                }
 
-.footerLogo {
-    display:flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
-}
+                .footerPrincipal > div > h4 {
+                    display: flex;
+                    justify-content: center;
+                }
 
-.logoEmpresa {
-    display: flex;
-    justify-content: center;
-}
+                .footerLogo {
+                    display:flex;
+                    flex-direction: column; 
+                    justify-content: center; 
+                    align-items: center;
+                }
 
-.containerPie {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-top: 200px;
-    height: 800px;
-}
+                .logoEmpresa {
+                    display: flex;
+                    justify-content: center;
+                }
 
-#carouselSpa, #carouselRestaurante, #carouselEventos {
-    width: 300px;
-    height: 300px;
-    margin-left: 20px;
-}
-
-.imgCarouselRestaurante > div > img, .imgCarouselEventos > div > img, .imgCarouselSpa > div > img {
-    width: 280px;
-    height: 280px;
-}
-
-footer {
-    margin-bottom: 0px;
-}
+                .containerPie {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    margin-top: 200px;
+                    height: 800px;
+                }
 
 
-input:invalid {
-    border: solid 1px red;
-}
+/* CAMBIAR POR MEDIDAS RELATIVAS */
+                #carouselSpa, #carouselRestaurante, #carouselEventos {
+                    width: 300px;
+                    height: 300px;
+                    margin-left: 20px;
+                }
 
-.contenedorFormulario {
-    display: flex; flex-direction: column; align-items: center;
-}
-
-.formularioRegistro {
-    width: 250px; height: 400px;
-}
+                .imgCarouselRestaurante > div > img, .imgCarouselEventos > div > img, .imgCarouselSpa > div > img {
+                    width: 280px;
+                    height: 280px;
+                }
 
 
-.btn {
-    background-color: #6f6d6d;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    opacity: 0.6;
-    transition: 0.3s;
-  }
-  
-  .btn:hover {
-    opacity: 1;
-    color: white;
-    background-color: rgb(139, 195, 183);
-}
+/*  */
+                footer {
+                    margin-bottom: 0px;
+                }
 
-.btnIni {
-    background-color: #b4b1b1;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    opacity: 0.6;
-    transition: 0.3s;
-  }
-  
-  .btnIni:hover {
-    opacity: 1;
-    color: white;
-    background-color: rgb(139, 195, 183);
-}
+
+                input:invalid {
+                    border: solid 1px red;
+                }
+
+                .contenedorFormulario {
+                    display: flex; flex-direction: column; align-items: center;
+                }
+
+                .formularioRegistro {
+                    width: 250px; height: 400px;
+                }
+
+
+
+/* Diseño de botones de inicio de sesion, administrador */
+                .btn {
+                    background-color: #6f6d6d;
+                    border: none;
+                    color: white;
+                    padding: 16px 32px;
+                    text-align: center;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                    opacity: 0.6;
+                    transition: 0.3s;
+                }
+                
+                .btn:hover {
+                    opacity: 1;
+                    color: white;
+                    background-color: rgb(139, 195, 183);
+                }
+
+                .btnIni {
+                    background-color: #b4b1b1;
+                    border: none;
+                    color: white;
+                    padding: 16px 32px;
+                    text-align: center;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                    opacity: 0.6;
+                    transition: 0.3s;
+                }
+                
+                .btnIni:hover {
+                    opacity: 1;
+                    color: white;
+                    background-color: rgb(139, 195, 183);
+                }
