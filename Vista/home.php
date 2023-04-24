@@ -50,11 +50,11 @@ if (isset($_SESSION['nom_Usuario'])) {
 
 
     <!-- BARRA DE NAVEGACION PRINCIPAL -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+    <nav id="headerSuperior" class="navbar navbar-expand-lg navbar-light bg-secondary justify-content-between">
         <!-- div icono-->
         <div>
             <a class="">
-                <img src="../img/logo3.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="80" height="80" />
+                <img src="../img/logo4.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="80" height="80" />
             </a>
         </div>
 
@@ -223,7 +223,7 @@ if (isset($_SESSION['nom_Usuario'])) {
                     <p>All Rights Reserved.</p>
     </footer> -->
 
-    <div class="container footer">
+    <div class="container footer ">
        <footer class="footer">        
             <div class="row footerPrincipal">
                 <div class="col-md-4">
@@ -263,12 +263,12 @@ if (isset($_SESSION['nom_Usuario'])) {
             </div>
             <div class="footerLogo" >
                 <div class="col-md-3 ">
-                    <h4>© Copyright 2023 - All Rights Reserved</h4>
-                    <p>All Rights Reserved.</p>
+                    <h6>© Copyright 2023 - All Rights Reserved</h6>
+                    <!-- <p>All Rights Reserved.</p> -->
                 </div>
-                <div class="col-md-3 logoEmpresa">
+                <!-- <div class="col-md-3 logoEmpresa">
                   <img src="../img/logo3.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="80" height="80" />
-                </div>
+                </div> -->
             </div>
         </footer>
     </div>               

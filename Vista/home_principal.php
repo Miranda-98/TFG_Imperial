@@ -7,13 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imperial Retreat</title>
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> -->
-    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script> -->
-
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="mediaQuery.css">
 
@@ -45,26 +38,26 @@
 
     <div class="container">
         <!-- CARROUSEL  -->
-    <div id="carouselPrincipal" class="carousel slide" data-bs-ride="carousel">
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../img/fotos/cuarto_frente_completo.jpg" class="d-block w-100" alt="..." height="500px">
+                <img src="../img/fotos/habitacion_naranja.jpeg" class="d-block w-100" alt="..." >
             </div>
             <div class="carousel-item">
-                <img src="../img/fotos/cuarto_horizontal.jpg" class="d-block w-100" alt="..." height="500px">
+                <img src="../img/fotos/comida.jpeg" class="d-block w-100" alt="..." >
             </div>
             <div class="carousel-item">
-                <img src="../img/fotos/terraza_completo.jpg" class="d-block w-100" alt="..." height="500px">
+                <img src="../img/fotos/hawai.jpeg" class="d-block w-100 " alt="..." >
             </div>
             <div class="carousel-item">
-                <img src="../img/fotos/baño_completo.jpg" class="d-block w-100" alt="..." height="500px">
+                <img src="../img/fotos/restaurantete.jpeg" class="d-block w-100" alt="..." >
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPrincipal" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselPrincipal" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
