@@ -21,6 +21,13 @@
         background-color: green;
         margin-top: 260%;
     }
+
+    .formularioReservaPrincipal {
+        height: 500px;
+        background-color: red;
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }
 
 

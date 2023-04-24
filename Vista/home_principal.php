@@ -15,6 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script> -->
 
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mediaQuery.css">
+
     <!-- <script src="script.js"></script>
 
 
@@ -70,40 +72,46 @@
 
     <br /><br /><br /><br />
 
-    <!-- Formulario Reserva -->
-    <div style="display:flex; justify-content: center;">
-        <table class="table-responsive">
-            <tr>
-                <td>
-                    <label for="fechaEntrada">Fecha entrada</label><br />
-                    <input type="date" id="fechaEntrada">
-                </td>
+<!-- Formulario Reserva -->
+<div class="container formularioReserva">
+        <div class="form_reserva">
+            <label for="fechaEntrada">Fecha entrada</label><br />
+        </div>
 
-                <td>
-                    <label for="fechaSalida">Fecha Salida</label><br />
-                    <input type="date" id="fechaEntrada">
-                </td>
-            </tr>
+        <div class="form_reserva">
+            <label for="fechaSalida">Fecha Salida</label><br />
+        </div>
+
+        <div class="form_reserva">
+            <input type="date" id="fechaEntrada">
+        </div>
 
 
-            <tr>
-                <td>
-                    <label for="nAdultos">Adultos</label><br />
-                    <input type="number" name="adultos" id="nAdultos">
-                </td>
 
-                <td>
-                    <label for="nNiños">Niños (menores 13 años)</label><br />
-                    <input type="number" name="niños" id="nNiños">
-                </td>
-            </tr>
+        <div class="form_reserva">
+            <input type="date" id="fechaSalida">
+        </div>
 
-            <tr>
-                <td>
-                    <input type="submit" class="submi"
-                </td>
-            </tr>
-        </table>
+        <div class="form_reserva">
+            <label for="nAdultos">Adultos</label><br />
+
+        </div>
+        <div class="form_reserva">
+            <input type="number" name="adultos" id="nAdultos">
+        </div>
+
+        <div class="form_reserva">
+            <label for="nNiños">Niños (menores 13 años)</label><br />
+        </div>
+
+        <div class="form_reserva">
+            <input type="number" name="niños" id="nNiños">
+        </div>
+
+        <div class="form_reserva">
+            <input class="btn btn-primary" type="submit" class="submi" />
+        </div>
+
     </div>
 
 
