@@ -41,7 +41,8 @@
 
 <body>
 
-    <!-- CARROUSEL  -->
+    <div class="container">
+        <!-- CARROUSEL  -->
     <div id="carouselPrincipal" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -238,6 +239,8 @@
 
 
     <br /><br /><br /><br />
+    </div>
+    
 
 </body>
 

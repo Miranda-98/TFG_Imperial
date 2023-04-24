@@ -1,0 +1,54 @@
+/* 
+    tamaños genericos
+        - Para dispositivos móviles: 320px a 480px de ancho
+        - Para dispositivos de tamaño medio (como tablets): 481px a 768px de ancho
+        - Para dispositivos de pantalla grande: 769px a 1200px de ancho
+
+*/
+@media only screen and (min-width: 390px) and (max-width: 1024px) {
+    /* tamaño iphone se */
+    .footer {
+        height: 100%;
+        background-color: peru;
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    /* tamaño iphone se */
+    .footer {
+        height: 100%;
+        background-color: green;
+        margin-top: 260%;
+    }
+}
+
+
+/* @media (max-width: 768px) {
+    .footer {
+        height: 500px;
+        background-color: peru;
+        margin-top: 120%;
+        // otras reglas CSS 
+    }
+} */
+
+/* @media only screen and (min-width: 900px) and (max-width: 1024px) {
+
+    // Estilos para tablets 
+    .footer {
+        height: 500px;
+        background-color: peru;
+        margin-top: 10%;
+    }
+} */
+
+/* @media only screen and (max-width: 800px) {
+
+    // Estilos para móviles 
+    .footer {
+        height: 500px;
+        background-color: green;
+        margin-top: 60%;
+    }
+} */

@@ -14,6 +14,8 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mediaQuery.css">
+
     <!-- <script src="script.js"></script> -->
 
 
@@ -221,8 +223,8 @@ if (isset($_SESSION['nom_Usuario'])) {
                     <p>All Rights Reserved.</p>
     </footer> -->
 
-    <footer class="footer">
-        <div class="container ">
+    <div class="container footer">
+       <footer class="footer">        
             <div class="row footerPrincipal">
                 <div class="col-md-4">
                     <h4>Contacto</h4>
@@ -268,8 +270,8 @@ if (isset($_SESSION['nom_Usuario'])) {
                   <img src="../img/logo3.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="80" height="80" />
                 </div>
             </div>
-    </footer>
-                    
+        </footer>
+    </div>               
 
     <!-- <br /><br /><br /><br />  -->
 

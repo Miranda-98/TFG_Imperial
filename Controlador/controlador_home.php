@@ -41,7 +41,7 @@ if(isset($_REQUEST['btn_Administracion'])){
   
   } else{
 
-    //include '../Vista/Home_principal.php';
+    // include '../Vista/Home_principal.php';
  }
 
 
