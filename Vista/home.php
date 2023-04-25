@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imperial Retreat</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script> -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -16,17 +16,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="mediaQuery.css">
 
+
     <!-- <script src="script.js"></script> -->
 
-
-    <script type="text/javascript" src="botonTraducir.js">
-        
-    </script>
-    <script type="text/javascript" src="google.js"></script>
-    <!-- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
-    <script type="text/javascript">
-        
-    </script>
 
 
 
@@ -43,10 +35,7 @@ if (isset($_SESSION['nom_Usuario'])) {
 ?>
 
 <body>
-    <button onclick="changeLanguage('es')">Español</button>
-    <button onclick="changeLanguage('fr')">Français</button>
-    <button onclick="changeLanguage('de')">Deutsch</button>
-    <div id="google_translate_element"></div>
+
 
 
     <!-- BARRA DE NAVEGACION PRINCIPAL -->
@@ -101,11 +90,9 @@ if (isset($_SESSION['nom_Usuario'])) {
                         <li class="nav-item">
                             <button name="btn_Inicio" class="nav-link active">Inicio</button>
                         <li class="nav-item">
-                            <button class="nav-link active" aria-current="page" name="btn_pagina_Galeria" >Galeria</button>
+                            <button class="nav-link active" aria-current="page" name="btn_pagina_Galeria">Galeria</button>
                         </li>
-                        <li class="nav-item">
-                            <button class="nav-link active" href="#">Preguntas frecuentes</button>
-                        </li>
+
                         <li class="nav-item">
                             <button class="nav-link active" href="#">Habitaciones</button>
                         </li>
@@ -134,11 +121,14 @@ if (isset($_SESSION['nom_Usuario'])) {
             </div>
         </div>
     </nav>
-    <?php
-    // include '../Controlador/controlador_sesion.php';
-    include '../Controlador/controlador_home.php';
-    include "../Controlador/controlador_admin.php";
-    ?>
+    <div class="container">
+        <?php
+        // include '../Controlador/controlador_sesion.php';
+        include '../Controlador/controlador_home.php';
+        include "../Controlador/controlador_admin.php";
+        ?>
+    </div>
+
 
     <!-- CARROUSEL 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -223,55 +213,58 @@ if (isset($_SESSION['nom_Usuario'])) {
                     <p>All Rights Reserved.</p>
     </footer> -->
 
-    <div class="container footer ">
-       <footer class="footer">        
-            <div class="row footerPrincipal">
-                <div class="col-md-4">
-                    <h4>Contacto</h4>
-                    <p>MADRID CALLE DEL PEPE BOTELLA</p>
-                    <p>Teléfono: 916 535 482 </p>
-                    <p>Correo electrónico: info@imperialretreat.com</p>
-                </div>
-
-                <div class="col-md-4">
-                    <h4>Redes sociales</h4>
-                    <ul class="list-unstyled iconos">
-                        <li><a href="#"><i class="fab fa-facebook fa-lg"></i> Facebook</a>
-                            <ion-icon name="logo-facebook" size="large"></ion-icon>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-twitter fa-lg"></i> Twitter</a>
-                            <ion-icon name="logo-twitter" size="large"></ion-icon>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-instagram fa-lg"></i> Instagram</a>
-                            <ion-icon name="logo-instagram" size="large"></ion-icon>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4">
-                    <h4>Boletín informativo</h4>
-                    <p>Regístrate para recibir noticias y ofertas especiales</p>
-                    <form>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Correo electrónico">
-                        </div><br/>
-                        <button type="submit" class="btn btn-primary">Suscribirse</button>
-                    </form>
-                </div>
+    <!-- <div class="container pepe"> -->
+    <footer class="footer">
+        <div class="row footerPrincipal">
+            <div class="col-md-4">
+                <h4>Contacto</h4>
+                <p>MADRID CALLE DEL PEPE BOTELLA</p>
+                <p>Teléfono: 916 535 482 </p>
+                <p>Correo electrónico: info@imperialretreat.com</p>
+                <form>
+                    <button class="nav-link active" aria-current="page" name="btn_pagina_FQ">Preguntas frecuentes</button>
+                </form>
             </div>
-            <div class="footerLogo" >
-                <div class="col-md-3 ">
-                    <h6>© Copyright 2023 - All Rights Reserved</h6>
-                    <!-- <p>All Rights Reserved.</p> -->
-                </div>
-                <!-- <div class="col-md-3 logoEmpresa">
+
+            <div class="col-md-4">
+                <h4>Redes sociales</h4>
+                <ul class="list-unstyled iconos">
+                    <li><a href="#"><i class="fab fa-facebook fa-lg"></i> Facebook</a>
+                        <ion-icon name="logo-facebook" size="large"></ion-icon>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter fa-lg"></i> Twitter</a>
+                        <ion-icon name="logo-twitter" size="large"></ion-icon>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-instagram fa-lg"></i> Instagram</a>
+                        <ion-icon name="logo-instagram" size="large"></ion-icon>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h4>Boletín informativo</h4>
+                <p>Regístrate para recibir noticias y ofertas especiales</p>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Correo electrónico">
+                    </div><br />
+                    <button type="submit" class="btn btn-primary">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footerLogo">
+            <div class="col-md-3 ">
+                <h6>© Copyright 2023 - All Rights Reserved</h6>
+                <!-- <p>All Rights Reserved.</p> -->
+            </div>
+            <!-- <div class="col-md-3 logoEmpresa">
                   <img src="../img/logo3.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="80" height="80" />
                 </div> -->
-            </div>
-        </footer>
-    </div>               
+        </div>
+    </footer>
+    <!-- </div>                -->
 
     <!-- <br /><br /><br /><br />  -->
 

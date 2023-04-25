@@ -1,5 +1,8 @@
-const input = document.getElementById("contraseña");
+const input = document.getElementById("password");
 const fuerzaDiv = document.getElementById("fuerza");
+
+console.log(input);
+
 
 input.addEventListener("input", function (event) {
     const valorInput = event.target.value;

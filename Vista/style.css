@@ -1,85 +1,146 @@
 /* Tamaño Carrousel Principal de home_principal.php */
-                .carousel-inner {
-                    max-height:30rem !important;
-                    
-                }
-                .carousel-item.active img {
-                    object-position: center !important;                  
-                }
-                
+.carousel-inner {
+    max-height: 30rem !important;
+
+}
+
+.carousel-item.active img {
+    object-position: center !important;
+}
+
 /*  */
 
-                .titulo {
-                    color: #ffdd84;
-                    text-decoration: none;
-                    font-size: 58px;
-                }
+.titulo {
+    color: #ffdd84;
+    text-decoration: none;
+    font-size: 58px;
+}
 
-                td{
-                    padding: 10px;
-                }
+td {
+    padding: 10px;
+}
 
-                .iconos {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
-                }
+.iconos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
-.footerPrincipal > div > h4 {
+/* FOOTER PAGINA PRINCIPAL */
+
+footer {
+    /* background-color: red; */
+    width: 100%;
+    margin-top: 2%;
+    margin-right: 0%;
+    margin-left: 0%;
+}
+
+.footerPrincipal>div>h4 {
     display: flex;
     justify-content: center;
 }
 
 .footerLogo {
-    display:flex;
-    flex-direction: column; 
-    justify-content: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-                .logoEmpresa {
-                    display: flex;
-                    justify-content: center;
-                }
+.logoEmpresa {
+    display: flex;
+    justify-content: center;
+}
 
-                .containerPie {
-                    display: flex;
-                    flex-wrap: nowrap;
-                    justify-content: center;
-                    margin-top: 200px;
-                    height: 800px;
-                }
+.containerPie {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 200px;
+    height: 800px;
+}
 
-#carouselSpa, #carouselRestaurante, #carouselEventos {
+#carouselSpa,
+#carouselRestaurante,
+#carouselEventos {
     width: 300px;
     height: 300px;
     margin-left: 20px;
 }
 
-.imgCarouselRestaurante > div > img, .imgCarouselEventos > div > img, .imgCarouselSpa > div > img {
+.imgCarouselRestaurante>div>img,
+.imgCarouselEventos>div>img,
+.imgCarouselSpa>div>img {
     width: 280px;
     height: 280px;
 }
 
 
-/*  */
-                footer {
-                    margin-bottom: 0px;
-                }
 
-
-                input:invalid {
-                    border: solid 1px red;
-                }
+input:invalid {
+    border: solid 1px red;
+}
 
 .contenedorFormulario {
-    display: flex; flex-direction: column; align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .formularioRegistro {
-    width: 250px; height: 400px;
+    width: 250px;
+    height: 400px;
 }
+
+/* Cabecera Carousel PAGINA PRINCIPAL */
+.cabeceraCarousel {
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* FORMULARIO RESERVA PAGINA PRINCIPAL */
+.formularioReserva {
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    /* background-color: red;; */
+}
+
+.form_reserva {
+    /* background-color: green; */
+    flex-basis: 50%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* .formularioReserva>div:nth-child(1),
+.formularioReserva>div:nth-child(3),
+.formularioReserva>div:nth-child(5),
+.formularioReserva>div:nth-child(7) {
+    margin-right: 10px;
+}
+
+.formularioReserva>div:nth-child(2),
+.formularioReserva>div:nth-child(4),
+.formularioReserva>div:nth-child(6),
+.formularioReserva>div:nth-child(8) {
+    margin-left: 10px;
+} */
+
+.formularioReserva>div:nth-child(9) {
+    /* background-color: peru; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 
 
 .btn {
@@ -92,9 +153,9 @@
     margin: 4px 2px;
     opacity: 0.6;
     transition: 0.3s;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     opacity: 1;
     color: white;
     background-color: rgb(139, 195, 183);
@@ -110,9 +171,9 @@
     margin: 4px 2px;
     opacity: 0.6;
     transition: 0.3s;
-  }
-  
-  .btnIni:hover {
+}
+
+.btnIni:hover {
     opacity: 1;
     color: white;
     background-color: rgb(139, 195, 183);

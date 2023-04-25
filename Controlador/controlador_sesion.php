@@ -6,7 +6,6 @@ $usuarioPrueba = new Usuario('','','','','','','','admin');
 
 if(isset($_REQUEST['inicio_Sesion'])){
    header("location:Inicio_sesion.php");
-
 }
 
 if(isset($_REQUEST['btnNuevoUsuario'])){

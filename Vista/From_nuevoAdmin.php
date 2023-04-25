@@ -25,25 +25,26 @@
 
                 <legend>Registro</legend>
                 <label for="nombre">Nombre:</label>
-                <input type="text" name="nombrePropio" id="nombre" class="form-control" pattern="[A-Za-z]{3,20}" required>
-
+                <input type="text" name="nombrePropio" id="nombre" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,20}$" required>
+                
                 <label for="apellido1">Primer apellido:</label>
-                <input type="text" name="primerApellido" id="apellido1" class="form-control" pattern="[A-Za-z]{3,20}" required>
-
+                <input type="text" name="primerApellido" id="apellido1" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,20}$" required>
+                
                 <label for="apellido2">Segundo apellido:</label>
-                <input type="text" name="segundoApellido" id="apellido2" class="form-control" pattern="[A-Za-z]{0,20}">
-
+                <input type="text" name="segundoApellido" id="apellido2" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,20}$">
+                
                 <label for="celular">Teléfono de contacto:</label require>
-                <input type="number" name="telefono" id="celular" class="form-control" pattern="[6789]{1}[0-9]{8}" required>
-
+                <input type="tel" name="telefono" id="celular" pattern="[6789]\d{8}$" required>
+                
                 <label for="mail">Correo electrónico</label>
-                <input type="email" name="correoElectronico" id="email" class="form-control" required>
-
+                <input type="email" name="correoElectronico" id="email" required>
+                
                 <label for="user">Nombre de usuario:</label>
-                <input type="text" name="nombreUsuario" id="nombreUsuario" class="form-control" pattern="[A-Za-z0-9]{3,20}" required>
-
+                <input type="text" name="nombreUsuario" id="nombreUsuario" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ0-9\s]{3,20}$" required>
+                
                 <label for="pass">Contraseña:</label>
-                <input type="password" name="contraseñaUsuario" id="contraseña" class="form-control" required>
+                <input type="password" id="password" name="contraseñaUsuario" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,./?]).{8,20}" maxlength="20">
+                
 
                 <div id="fuerza" value=""></div>
                 <input type="submit" name="btnNuevoAdmin" id="botonRegistro">
@@ -60,5 +61,6 @@
     ?>
 </body>
 <script type="text/javascript" src="validacionFormulario.js"></script>
+<script type="text/javascript" src="fuerzaContraseña.js"></script>
 
 </html>

@@ -38,10 +38,14 @@ if(isset($_REQUEST['btn_Administracion'])){
   }else if (isset($_REQUEST['btn_ver_salas'])) {
     
     include '../Vista/Todas_salas.php';
+
+  } else if (isset($_REQUEST['btn_pagina_FQ'])) {
+    
+    include '../Vista/Preguntas_frecuentes.php';
   
   } else{
 
-    // include '../Vista/Home_principal.php';
+    include '../Vista/Home_principal.php';
  }
 
 
