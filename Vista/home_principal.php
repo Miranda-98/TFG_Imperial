@@ -52,7 +52,9 @@
     <br /><br /><br /><br />
 
 <!-- Formulario Reserva -->
+<form method="post">
 <div class="container formularioReserva">
+    <!-- <form method="post"> -->
         <div class="form_reserva">
             <label for="fechaEntrada">Fecha entrada</label><br />
         </div>
@@ -62,11 +64,11 @@
         </div>
 
         <div class="form_reserva">
-            <input type="date" id="fechaEntrada">
+            <input type="date" id="fechaEntrada" name="datoFechaInicio">
         </div>
 
         <div class="form_reserva">
-            <input type="date" id="fechaSalida">
+            <input type="date" id="fechaSalida" name="datoFechaFin">
         </div>
 
         <div class="form_reserva">
@@ -86,11 +88,11 @@
         </div>
 
         <div class="form_reserva">
-            <input class="btn btn-primary" type="submit" class="submi" />
+            <input class="btn btn-primary" type="submit" class="submi" name="bton_formulario_principal" >
         </div>
-
-    </div>
-
+    <!-- </form> -->
+</div>
+</form>
 
 
     <!-- PIE -->

@@ -119,6 +119,7 @@
         }
 
 
+
         /*
             getter y setter magico
         */
@@ -132,4 +133,19 @@
             $this->$valor = $nuevoValor;
         }
     }
+
+
+
+
+/*
+Esta pinta mejor
+SELECT *
+FROM habitacion
+WHERE cod_estancia NOT IN (
+    SELECT cod_estancia 
+    FROM reserva
+    WHERE fecha_inicio BETWEEN '2023-05-01' AND '2023-05-09'
+    OR fecha_fin BETWEEN '2023-05-03' AND '2023-05-09'
+)
+    */
 ?>
