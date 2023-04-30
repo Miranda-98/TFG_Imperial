@@ -46,44 +46,11 @@ if(isset($_REQUEST['btn_Administracion'])){
     include '../Vista/Preguntas_frecuentes.php';
   
   } else if (isset($_REQUEST['bton_formulario_principal'])) {
-    
-    $ReservaPrueba = new Reserva();
-    $registro = $ReservaPrueba->disponibilidad();
-    echo "<style>table, td, th{border: solid black 1px;}</style>
-    <table>
-    <tr>
-        <th>cod_habitación</th>
-        <th>Tipo</th>
-        <th>Precio</th>
-        <th>Planta</th>
-        <th>Estado</th>
-        <th>nº camas</th>
-        <th>Tipo de baño</th>
-        <th>Ubicación</th>
-        <th>Descripción</th>
-        <th>Localidad</th>
-        <th>cod_estancia</th>
+    include '../Vista/habitaciones_reservar.php';
 
-    </tr>";
-    foreach($registro as $x){
-      echo "<tr>
-      <td>". $x->cod_estancia . "</td>
-      <td>". $x->estado . "</td>
-      <td>". $x->descripcion ."</td>
-      <td>". $x->ubicacion . "</td>
-      <td>". $x->planta ."</td>
-      <td>". $x->tipo_estancia ."</td>
-      <td>". $x->precio ."</td>
-      <td>". $x->cod_habitacion ."</td>
-      <td>". $x->num_camas ."</td>
-      <td>". $x->tipo_bano ."</td>
-      <td><form method='post'> <button name=borrarAdmin value='DatoPrueba'>Borrar</button></form></td>
-      </tr>";
-  }
-  echo "
-  </table>";
-    // print_r($registro);
-  
+  }else if (isset($_REQUEST['btn_enviar_reservas'])) {
+    include '../Controlador/controlador_carrito.php';
+    
   } else{
 
     include '../Vista/Home_principal.php';

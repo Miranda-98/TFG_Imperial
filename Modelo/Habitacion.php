@@ -79,6 +79,19 @@
             }
         }
 
+        function obtenerIdHabitacionConEstancia($id)
+        {
+            try {
+                $sql = $this->conexion->prepare("SELECT * FROM estancia, habitacion WHERE estancia.cod_estancia = habitacion.cod_estancia AND estancia.cod_estancia = $id");
+                $sql->execute();
+                $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+                return $resultado;
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER FOTO POR ID " . $e->getMessage();
+            }
+        }
+
 
         function crearHabitacion()
         {

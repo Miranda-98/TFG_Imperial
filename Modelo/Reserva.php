@@ -250,7 +250,7 @@ Función que recoge las fechas del cliente y busca habitaciones disponibles (Da 
                     WHERE fecha_inicio BETWEEN :A AND :B
                     OR fecha_fin BETWEEN :C AND :D
                     OR fecha_inicio < :E AND fecha_fin > :F 
-                );";
+                ) ORDER BY tipo_estancia;";
                 $stmt = $cone->prepare($sql);
                 $stmt->bindParam(':A', $fechaInicio);
                 $stmt->bindParam(':B', $fechaFin);
