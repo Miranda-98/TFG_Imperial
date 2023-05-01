@@ -1,4 +1,6 @@
 <?php
+require_once '../Modelo/Reserva.php';
+
 if(isset($_REQUEST['btn_Administracion'])){
    
     include '../Vista/Home_Administracion.php';
@@ -43,6 +45,12 @@ if(isset($_REQUEST['btn_Administracion'])){
     
     include '../Vista/Preguntas_frecuentes.php';
   
+  } else if (isset($_REQUEST['bton_formulario_principal'])) {
+    include '../Vista/habitaciones_reservar.php';
+
+  }else if (isset($_REQUEST['btn_enviar_reservas'])) {
+    include '../Controlador/controlador_carrito.php';
+    
   } else{
 
     include '../Vista/Home_principal.php';

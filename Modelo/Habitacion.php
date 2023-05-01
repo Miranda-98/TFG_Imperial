@@ -79,6 +79,19 @@
             }
         }
 
+        function obtenerIdHabitacionConEstancia($id)
+        {
+            try {
+                $sql = $this->conexion->prepare("SELECT * FROM estancia, habitacion WHERE estancia.cod_estancia = habitacion.cod_estancia AND estancia.cod_estancia = $id");
+                $sql->execute();
+                $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+                return $resultado;
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER FOTO POR ID " . $e->getMessage();
+            }
+        }
+
 
         function crearHabitacion()
         {
@@ -119,6 +132,7 @@
         }
 
 
+
         /*
             getter y setter magico
         */
@@ -132,4 +146,19 @@
             $this->$valor = $nuevoValor;
         }
     }
+
+
+
+
+/*
+Esta pinta mejor
+SELECT *
+FROM habitacion
+WHERE cod_estancia NOT IN (
+    SELECT cod_estancia 
+    FROM reserva
+    WHERE fecha_inicio BETWEEN '2023-05-01' AND '2023-05-09'
+    OR fecha_fin BETWEEN '2023-05-03' AND '2023-05-09'
+)
+    */
 ?>
