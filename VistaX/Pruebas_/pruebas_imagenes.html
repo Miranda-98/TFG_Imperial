@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <style>
+    
     img {
         width: 400px;
         height: 400px;
@@ -29,6 +30,22 @@
     .image-container:hover .overlay {
         opacity: 1;
     }
+
+    .transparencia {
+        opacity: 0.5;
+    }
+
+    .noTransparencia {
+        opacity: 1;
+    }
+
+    .contenedorImagen:hover {
+        background-color: black;
+        opacity: 0.9;
+    }
+    body{
+        background-color: red;
+    }
 </style>
 <script>
     // function cambiarRuta(a) {
@@ -38,11 +55,14 @@
     // function volverRuta() {
     //     document.getElementById(a).src = "../../img/fotos/instalacion1.jpg";
     // }
+
+    // <!-- FUNCIONA --> //
     function cambiarImagen(event) {
         const image = event.target;
-        const newSrc = '../../img/lupa.jpg'; // Ruta nueva de la imagen
+        const newSrc = '../../img/lupaBuena.png'; // Ruta nueva de la imagen
 
         image.setAttribute('src', newSrc);
+        image.style.opacity = '0.5';
     }
 
     function recuperar_imagen(event) {
@@ -51,14 +71,15 @@
         console.log("ruta vieja -> ",originalSrc);
 
         image.setAttribute('src', originalSrc);
+        image.style.opacity = '1';
     }
 
 </script>
 
 
 <body>
-    <div>
-        <img src="../../img/fotos/instalacion1.jpg" data-original-src="../../img/fotos/instalacion1.jpg"
+    <div >
+        <img  src="../../img/fotos/instalacion1.jpg" data-original-src="../../img/fotos/instalacion1.jpg"
             onmouseover="cambiarImagen(event)" onmouseout="recuperar_imagen(event)">
         <img src="../../img/fotos/instalacion2.jpg" data-original-src="../../img/fotos/instalacion2.jpg"
             onmouseover="cambiarImagen(event)" onmouseout="recuperar_imagen(event)">
