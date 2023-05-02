@@ -28,7 +28,7 @@
             <div id="colapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <!-- Comienzo galeria de fotos -->
-                    <div class="contenedor containerCollageFotos">
+                    <div class="contenedor containerCollageFotos ">
                         <div class="item foto1"><img src="../img/fotos/balcon_hd.jpg"></div>
                         <div class="item foto2"><img src="../img/fotos/restaurantete.jpeg"></div>
                         <div class="item foto3"><img src="../img/fotos/playa_hd.jpg"></div>
@@ -70,7 +70,8 @@
                         <div class="item foto10"><img src="../img/habitaciones/hab_presidencial/foto10.jpg"></div>
                     </div>
 
-                    <br/><br/><br/><h1>Lujo</h1>
+                    <br /><br /><br />
+                    <h1>Lujo</h1>
                     <div class="contenedor containerFotosHabitacionLujo">
                         <div class="item foto1"><img src="../img/habitaciones/hab_lujo/foto1.jpg"></div>
                         <div class="item foto2"><img src="../img/habitaciones/hab_lujo/foto2.jpg"></div>
@@ -81,8 +82,9 @@
                         <div class="item foto7"><img src="../img/habitaciones/hab_lujo/foto7.jpg"></div>
                         <div class="item foto8"><img src="../img/habitaciones/hab_lujo/foto8.jpg"></div>
                     </div>
-                    
-                    <br/><br/><br/><h1>Comun</h1>
+
+                    <br /><br /><br />
+                    <h1>Comun</h1>
                     <div class="contenedor containerFotosHabitacionComun">
                         <div class="item foto1"><img src="../img/habitaciones/hab_comun/foto1.jpg"></div>
                         <div class="item foto2"><img src="../img/habitaciones/hab_comun/foto2.jpg"></div>
@@ -91,26 +93,54 @@
                         <div class="item foto5"><img src="../img/habitaciones/hab_comun/foto5.jpg"></div>
                     </div>
                     <!-- Fin galeria de fotos -->
-                    </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colapse3" aria-expanded="false" aria-controls="colapse3">
-                        Salas de Eventos
-                    </button>
-                </h2>
-                <div id="colapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <!-- Comienzo galeria de fotos -->
-                            
-                        <!-- Fin galeria de fotos -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colapse4" aria-expanded="false" aria-controls="colapse4">
+                    Salas de Eventos
+                </button>
+            </h2>
+            <div id="colapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <!-- Comienzo galeria de fotos -->
 
-            <!-- <h1>PAGINA DE GALERIA DE FOTOS </h1>
+                    <!-- Fin galeria de fotos -->
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colapse5" aria-expanded="false" aria-controls="colapse5">
+                    Spa
+                </button>
+            </h2>
+            <div id="colapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <!-- Comienzo galeria de fotos -->
+
+                    <!-- Fin galeria de fotos -->
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colapse6" aria-expanded="false" aria-controls="colapse6">
+                    Gimnasio
+                </button>
+            </h2>
+            <div id="colapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <!-- Comienzo galeria de fotos -->
+
+                    <!-- Fin galeria de fotos -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <h1>PAGINA DE GALERIA DE FOTOS </h1>
     <div class="row">
         <div class="col-md-3">
             <a href="img/fotos/instalacion1.jpg" target="_blank">

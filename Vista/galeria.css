@@ -3,6 +3,10 @@ img {
     max-height: 100%;
 }
 
+.contenedor {
+    display: flex;
+}
+
 /* LUPA */
 .contenedor > div {
     position: relative;
@@ -88,10 +92,10 @@ img {
 
 .containerCollageFotos {
     display: grid;
-    grid-template-columns: repeat(12, 100em);
+    /* grid-template-columns: repeat(12, 100em); */
     /* grid-template-rows: 1.2fr 1.5fr 1fr; */
-    grid-template-rows: 10em 10em 10em;
-    grid-template-columns: 10em 10em 10em;
+    /* grid-template-rows: 10em 10em 10em;
+    grid-template-columns: 10em 10em 10em; */
     grid-template-areas:
         "foto1 foto1 foto1 foto2 foto2  foto2  foto3  foto3  foto3  foto4  foto4  foto4"
         "foto5 foto5 foto5 foto5 foto6  foto6  foto6  foto6  foto7  foto7  foto7  foto7"

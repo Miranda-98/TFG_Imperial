@@ -68,7 +68,12 @@ footer {
     padding-left: 30%;
 }
 
-
+.boletinFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 

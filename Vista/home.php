@@ -257,7 +257,7 @@ if (isset($_SESSION['nom_Usuario'])) {
                 </ul>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 boletinFooter">
                 <h4>Boletín informativo</h4>
                 <p>Regístrate para recibir noticias y ofertas especiales</p>
                 <form>
