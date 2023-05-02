@@ -49,9 +49,13 @@ if (isset($_SESSION['nom_Usuario'])) {
 
         <!-- div nombre-->
         <div>
-            <a class="titulo">
+            <!-- <a class="titulo">
                 Imperial Retreat
-            </a>
+            </a> -->
+            <form method="post">
+                <button name="btn_Inicio" class="nav-link active titulo">Imperial Retreat</button>
+            </form>
+           
         </div>
 
         <!-- div usuario-->
@@ -93,6 +97,13 @@ if (isset($_SESSION['nom_Usuario'])) {
                             <button class="nav-link active" aria-current="page" name="btn_pagina_Galeria">Galeria</button>
                         </li>
 
+                        <!-- <li class="nav-item">
+                            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option selected>Reservas</option>
+                                <option value="1">Habitaciones</option>
+                                <option value="2">Sala de Evento</option>
+                            </select>
+                        </li> -->
                         <li class="nav-item">
                             <button class="nav-link active" href="#">Habitaciones</button>
                         </li>
@@ -216,14 +227,17 @@ if (isset($_SESSION['nom_Usuario'])) {
     <!-- <div class="container pepe"> -->
     <footer class="footer bg-secondary text-white">
         <div class="row footerPrincipal">
-            <div class="col-md-3 m-4">
+            <div class="col-md-3 contactoFooter">
                 <h4>Contacto</h4>
-                <p>MADRID CALLE DEL PEPE BOTELLA</p>
-                <p>Teléfono: 916 535 482 </p>
-                <p>Correo electrónico: info@imperialretreat.com</p>
-                <form>
-                    <button class="nav-link active" aria-current="page" name="btn_pagina_FQ">Preguntas frecuentes</button>
-                </form>
+                <div class="contenidoContacto">
+                    <p>MADRID CALLE DEL PEPE BOTELLA</p>
+                    <p>Teléfono: 916 535 482 </p>
+                    <p>Correo electrónico: info@imperialretreat.com</p>
+                    <form>
+                        <button class="nav-link active" aria-current="page" name="btn_pagina_FQ">Preguntas frecuentes</button>
+                    </form>
+                </div>
+                
             </div>
 
             <div class="col-md-4 m-4">
@@ -255,7 +269,7 @@ if (isset($_SESSION['nom_Usuario'])) {
             </div>
         </div>
         <div class="footerLogo">
-            <div class="col-md-3 ">
+            <div class="col-md-3 "><br/><br/>
                 <h6>© Copyright 2023 - All Rights Reserved</h6>
                 <!-- <p>All Rights Reserved.</p> -->
             </div>
