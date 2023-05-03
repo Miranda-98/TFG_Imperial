@@ -240,7 +240,7 @@ if (isset($_SESSION['nom_Usuario'])) {
                 
             </div>
 
-            <div class="col-md-4 m-4">
+            <div class="col-md-4 ">
                 <h4>Redes sociales</h4>
                 <ul class="list-unstyled iconos">
                     <li><a href="#"><i class="fab fa-facebook fa-lg text-white"></i> Facebook</a>
@@ -257,7 +257,7 @@ if (isset($_SESSION['nom_Usuario'])) {
                 </ul>
             </div>
 
-            <div class="col-md-4 m-4">
+            <div class="col-md-4 ">
                 <h4>Boletín informativo</h4>
                 <p>Regístrate para recibir noticias y ofertas especiales</p>
                 <form>
@@ -269,7 +269,7 @@ if (isset($_SESSION['nom_Usuario'])) {
             </div>
         </div>
         <div class="footerLogo">
-            <div class="col-md-3 "><br/><br/>
+            <div class="col-md-4 "><br/><br/>
                 <h6>© Copyright 2023 - All Rights Reserved</h6>
                 <!-- <p>All Rights Reserved.</p> -->
             </div>

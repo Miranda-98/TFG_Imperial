@@ -52,7 +52,7 @@
     <br /><br /><br /><br />
 
 <!-- Formulario Reserva -->
-<form method="post">
+<form method="post" >
 <div class="container formularioReserva">
     <!-- <form method="post"> -->
         <div class="form_reserva">
