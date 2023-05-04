@@ -196,3 +196,13 @@ input:invalid {
     color: white;
     background-color: rgb(139, 195, 183);
 }
+
+.btn-custom {
+    
+    background-color: black;
+  }
+
+  .formulario_cambio_parametros{
+    padding: 2%;
+   
+  }

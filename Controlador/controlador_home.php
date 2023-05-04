@@ -44,14 +44,20 @@ if(isset($_REQUEST['btn_Administracion'])){
   } else if (isset($_REQUEST['btn_pagina_FQ'])) {
     
     include '../Vista/Preguntas_frecuentes.php';
-  
-  } else if (isset($_REQUEST['bton_formulario_principal'])) {
-    include '../Vista/habitaciones_reservar.php';
 
-  }else if (isset($_REQUEST['btn_enviar_reservas'])) {
-    include '../Controlador/controlador_carrito.php';
+  }else if (isset($_REQUEST['bton_formulario_principal'])) {
     
-  } else{
+    include '../Vista/habitaciones_reservar.php';
+    
+  }else if (isset($_REQUEST['btn_cambio_parametros'])) {
+    
+    include '../Vista/habitaciones_reservar.php';
+    
+  } else if (isset($_REQUEST['btn_enviar_reservas'])) {
+    
+    include '../Vista/form_carrito.php';
+    
+  }else{
 
     include '../Vista/Home_principal.php';
  }
@@ -59,6 +65,6 @@ if(isset($_REQUEST['btn_Administracion'])){
 
  
  
-
+ 
 
 ?>
