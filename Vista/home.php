@@ -225,9 +225,9 @@ if (isset($_SESSION['nom_Usuario'])) {
     </footer> -->
 
     <!-- <div class="container pepe"> -->
-    <footer class="footer">
+    <footer class="footer bg-secondary text-white">
         <div class="row footerPrincipal">
-            <div class="col-md-4 contactoFooter">
+            <div class="col-md-3 contactoFooter">
                 <h4>Contacto</h4>
                 <div class="contenidoContacto">
                     <p>MADRID CALLE DEL PEPE BOTELLA</p>
@@ -240,18 +240,18 @@ if (isset($_SESSION['nom_Usuario'])) {
                 
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 m-4">
                 <h4>Redes sociales</h4>
                 <ul class="list-unstyled iconos">
-                    <li><a href="#"><i class="fab fa-facebook fa-lg"></i> Facebook</a>
+                    <li><a href="#"><i class="fab fa-facebook fa-lg text-white"></i> Facebook</a>
                         <ion-icon name="logo-facebook" size="large"></ion-icon>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-twitter fa-lg"></i> Twitter</a>
+                        <a href="#"><i class="fab fa-twitter fa-lg text-white"></i> Twitter</a>
                         <ion-icon name="logo-twitter" size="large"></ion-icon>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-instagram fa-lg"></i> Instagram</a>
+                        <a href="#"><i class="fab fa-instagram fa-lg text-white"></i> Instagram</a>
                         <ion-icon name="logo-instagram" size="large"></ion-icon>
                     </li>
                 </ul>

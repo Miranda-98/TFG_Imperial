@@ -105,7 +105,18 @@
             <div id="colapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <!-- Comienzo galeria de fotos -->
-
+                    <div class="contenedor containerFotosEventos">
+                        <div class="item foto1"><img src="../img/evento/jardin1.jpg"></div>
+                        <div class="item foto2"><img src="../img/evento/jardin2.jpeg"></div>
+                        <div class="item foto3"><img src="../img/evento/jardin3.jpg"></div>
+                        <div class="item foto4"><img src="../img/evento/jardin4.jpg"></div>
+                        <div class="item foto5"><img src="../img/evento/jardin5.jpg"></div>
+                        <div class="item foto6"><img src="../img/evento/sala1.jpg"></div>
+                        <div class="item foto7"><img src="../img/evento/sala2.jpg"></div>
+                        <div class="item foto8"><img src="../img/evento/sala3.jpg"></div>
+                        <div class="item foto9"><img src="../img/evento/sala4.jpg"></div>
+                        <div class="item foto10"><img src="../img/evento/sala5.jpg"></div>
+                    </div>
                     <!-- Fin galeria de fotos -->
                 </div>
             </div>
@@ -119,7 +130,13 @@
             <div id="colapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <!-- Comienzo galeria de fotos -->
-
+                    <div class="contenedor containerFotosSpa">
+                        <div class="item foto1"><img src="../img/spa/foto1.jpg"></div>
+                        <div class="item foto2"><img src="../img/spa/foto2.jpg"></div>
+                        <div class="item foto3"><img src="../img/spa/foto3.jpg"></div>
+                        <div class="item foto4"><img src="../img/spa/foto4.jpg"></div>
+                        <div class="item foto5"><img src="../img/spa/foto5.jpg"></div>
+                    </div>
                     <!-- Fin galeria de fotos -->
                 </div>
             </div>
@@ -184,7 +201,58 @@
         </div>
     </div> -->
 
+<script>
+   function preloadImages(imageArray) {
+  let images = [];
+  for (let i = 0; i < imageArray.length; i++) {
+    images[i] = new Image();
+    images[i].src = imageArray[i];
+    
+  }
+  return images;
+}
 
+// Definir la lista de imágenes para pre-cargar
+let imageList = [
+    // habitaciones
+  '../img/habitaciones/hab_presidencial/foto1.jpg',
+"../img/habitaciones/hab_presidencial/foto2.jpg",
+"../img/habitaciones/hab_presidencial/foto3.jpg",
+"../img/habitaciones/hab_presidencial/foto4.jpg",
+"../img/habitaciones/hab_presidencial/foto5.jpg",
+"../img/habitaciones/hab_presidencial/foto6.jpg",
+"../img/habitaciones/hab_presidencial/foto7.jpg",
+"../img/habitaciones/hab_presidencial/foto8.jpg",
+"../img/habitaciones/hab_presidencial/foto9.jpg",
+"../img/habitaciones/hab_presidencial/foto10.jpg",
+"../img/habitaciones/hab_lujo/foto1.jpg",
+"../img/habitaciones/hab_lujo/foto2.jpg",
+"../img/habitaciones/hab_lujo/foto3.jpg",
+"../img/habitaciones/hab_lujo/foto4.jpg",
+"../img/habitaciones/hab_lujo/foto5.jpg",
+"../img/habitaciones/hab_lujo/foto6.jpg",
+"../img/habitaciones/hab_lujo/foto7.jpg",
+"../img/habitaciones/hab_lujo/foto8.jpg",
+"../img/habitaciones/hab_comun/foto1.jpg",
+"../img/habitaciones/hab_comun/foto2.jpg",
+"../img/habitaciones/hab_comun/foto3.jpg",
+"../img/habitaciones/hab_comun/foto4.jpg",
+"../img/habitaciones/hab_comun/foto5.jpg",
+    // eventos
+    // spa
+    // gimnasio
+  
+];
+
+// Pre-cargar las imágenes
+let preloadedImages = preloadImages(imageList);
+
+// Esperar a que todas las imágenes estén cargadas
+Promise.all(preloadedImages.map(img => img.decode())).then(() => {
+  // Aquí se puede hacer algo después de que todas las imágenes estén cargadas
+  console.log('Todas las imágenes están cargadas');
+}); 
+</script>
 </body>
 
 </html>
