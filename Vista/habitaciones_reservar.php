@@ -79,7 +79,7 @@
     </form>
     <?php
     //Escondemos el dato en la web del numero de habitaciones para poder cogerlo con JS
-    echo "<form><input type='hidden' name='numeroMaximoHabitaciones' value='" . $numHabitaciones . "'></form>";
+    echo "<form method='post'><input type='hidden' name='numeroMaximoHabitaciones' value='" . $numHabitaciones . "'></form>";
 
     //Escondemos los datos necesarios para la reserva  
 

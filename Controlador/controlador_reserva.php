@@ -22,3 +22,14 @@ require_once '../Modelo/Reserva.php';
   //Recogemos el registro de habitaciones disponibles en las fechas seleccionadas
   $ReservaPrueba = new Reserva();
   $registro = $ReservaPrueba->disponibilidad();
+
+  $arrayDeDatos= array(
+    "fechaInicio" => $fechaInicioFormateada,
+    "fechaFin" => $fechaFinFormateada,
+    "numeroDias" => $diff->days,
+    "numeroHabitaciones" => $numHabitaciones,
+    "numeroPersonas" => $numPersonas,
+    "numeroNiños" => $numNiños,
+  );
+
+  $_SESSION['arrayReserva']=$arrayDeDatos;

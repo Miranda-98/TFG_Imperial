@@ -233,7 +233,7 @@ if (isset($_SESSION['nom_Usuario'])) {
                     <p>MADRID CALLE DEL PEPE BOTELLA</p>
                     <p>Teléfono: 916 535 482 </p>
                     <p>Correo electrónico: info@imperialretreat.com</p>
-                    <form>
+                    <form method="post">
                         <button class="nav-link active" aria-current="page" name="btn_pagina_FQ">Preguntas frecuentes</button>
                     </form>
                 </div>
