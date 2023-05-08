@@ -156,6 +156,20 @@
 
         }
 
+        function obtieneInfoUsuario ($nombreUser) {
+            try {
+                $stmt = $this->conexion->prepare("SELECT * FROM usuario WHERE usuario.usuario LIKE '$nombreUser'");
+                $stmt->execute();
+                $resultado = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+                 return $resultado;
+
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER TODOS " . $e->getMessage();
+            }
+
+        }
+
         /*
             getter y setter magico
         */

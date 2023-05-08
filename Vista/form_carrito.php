@@ -29,7 +29,7 @@ print_r($_SESSION['arrayReserva']);
     </div>
   </div>
   <div>
-    <h4>Todo Incluido (100€xnoche[aun sin implementar x noche]):</h4>
+    <h4>Todo Incluido +100€ x noche:</h4>
     <div class="form-check form-check-inline">
       <input type="radio" id="todoIncluidoNo" name="todoIncluido" value="No"  class="form-check-input" checked>
       <label for="todoIncluidoNo" class="form-check-label">No</label>
@@ -52,7 +52,10 @@ print_r($_SESSION['arrayReserva']);
   </div>
   <div>
     <input type="hidden" name="precioEscondido" id="preciototal" value="<?=$precioTotal?>">
-    <input type="hidden" name="totalHabitaciones" id="totalHabitaciones" value="<?=$totalHabitaciones?>">
+    <input type="hidden" name="totalHabitaciones" id="totalHabitaciones" value="<?=$_SESSION['arrayReserva']['numeroHabitaciones']?>">
+    <input type="hidden" name="totalNoches" id="totalNoches" value="<?=$_SESSION['arrayReserva']['numeroDias']?>">
+
+    
     <h4>Precio Total:</h4>
     <h2 id="precio" class=""><?=($precioTotal)?>€</h2>
   </div>
@@ -62,10 +65,12 @@ print_r($_SESSION['arrayReserva']);
 <script>
   const precioBase = parseInt(document.getElementById('preciototal').value);
   const numeroHabitaciones = parseInt(document.getElementById('totalHabitaciones').value);
+  const numeroNoches = parseInt(document.getElementById('totalNoches').value);
+
   console.log(precioBase);
   const preciosAdicionales = {
     lateCheckOut: 20*numeroHabitaciones,
-    todoIncluido: 100,
+    todoIncluido: 100*numeroNoches,
     aeropuerto: 75
     // pagoAhora: -10
   }

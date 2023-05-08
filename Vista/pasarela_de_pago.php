@@ -64,19 +64,19 @@
                 <div class="col-12">
                     <div class="d-flex flex-column">
                         <p class="text mb-1">Nombre del titular</p>
-                        <input class="form-control mb-3" type="text" placeholder="Nombre" >
+                        <input class="form-control mb-3" type="text" placeholder="Nombre" name="nombreTarjeta">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="d-flex flex-column">
                         <p class="text mb-1">Numero de la tarjeta</p>
-                        <input class="form-control mb-3" type="text" placeholder="1234 5678 435678" >
+                        <input class="form-control mb-3" type="text" placeholder="1234 5678 435678" name="numeroTarjeta">
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="d-flex flex-column">
                         <p class="text mb-1">Fecha de caducidad</p>
-                        <input class="form-control mb-3" type="text" placeholder="MM/YYYY" >
+                        <input class="form-control mb-3" type="text" placeholder="MM/YYYY" name="caducidadTarjeta">
                     </div>
                 </div>
                 <div class="col-6">
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <input type="submit" value="Pagar <?=$_SESSION['arrayReserva']['precioFinal'] ?>€" class="btn btn-primary mb-3" id="enviarPago">
+                    <input type="submit" value="Pagar <?=$_SESSION['arrayReserva']['precioFinal'] ?>€" class="btn btn-primary mb-3" id="enviar_Pago" name="enviar_Pago">
                 </div>
             </div>
         </div>

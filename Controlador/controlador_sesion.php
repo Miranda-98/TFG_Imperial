@@ -39,6 +39,8 @@ if(isset($_REQUEST['cerrar_usuario'])){
 if(isset($_REQUEST['btnEnviarUsuario'])){
     $usuarioEjemplo = new Usuario('','','','','',$_POST['user'],$_POST['contrasena'],'');
     if($usuarioEjemplo->comprobarUsuarioBD($_POST['user'],$_POST['contrasena'],$usuarioEjemplo)){
+
+        $idUsuario = $usuarioEjemplo->obtenerId($_POST['user']);
         session_start();
         $_SESSION['nom_Usuario']= $usuarioEjemplo->__get('usuario');
         $registros = $usuarioEjemplo->comprobarTipoUsuario($_POST['user'],$_POST['contrasena']);

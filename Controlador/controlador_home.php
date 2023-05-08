@@ -63,6 +63,10 @@ if(isset($_REQUEST['btn_Administracion'])){
     
     include '../Vista/pasarela_de_pago.php';
     
+  } else if (isset($_REQUEST['enviar_Pago'])) {
+    
+    include '../Vista/factura_reserva.php';
+    
   }else{
 
     include '../Vista/Home_principal.php';
