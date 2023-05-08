@@ -46,8 +46,8 @@ $reserva = new Reserva();
     $arrayRecuperaCarrito['precioFinal']= $_POST['precioEscondido'];
     $_SESSION['arrayReserva']=$arrayRecuperaCarrito;
             
-            print_r($_SESSION['arrayReserva']);
-            print_r($_SESSION['arrayhabitaciones']);
+            // print_r($_SESSION['arrayReserva']);
+            // print_r($_SESSION['arrayhabitaciones']);
     
   } else if (isset($_REQUEST['enviar_Pago'])) {
     $arrayRecuperaCarrito = $_SESSION['arrayReserva'];
@@ -61,16 +61,16 @@ $reserva = new Reserva();
 
     $_SESSION['arrayReserva']=$arrayRecuperaCarrito;
 
-          print_r($_SESSION['arrayReserva']);
-          echo "<br>";
-          print_r($_SESSION['arrayhabitaciones']);
-          echo "<br>";
+          // print_r($_SESSION['arrayReserva']);
+          // echo "<br>";
+          // print_r($_SESSION['arrayhabitaciones']);
+          // echo "<br>";
 
     $informacionUsuario = $usuarioPrueba->obtieneInfoUsuario($_SESSION['nom_Usuario']);
 
-        print_r($informacionUsuario);
-        echo "<br>";
-        echo $informacionUsuario[0]->nombre;
+        // print_r($informacionUsuario);
+        // echo "<br>";
+        // echo $informacionUsuario[0]->nombre;
         foreach ($habitaciones as $habitacion=>$precio) { 
 
           $reserva->añadirReserva($informacionUsuario[0]->cod_usuario,$habitacion,$_SESSION['arrayReserva']['fechaInicio'],$_SESSION['arrayReserva']['fechaFin']);

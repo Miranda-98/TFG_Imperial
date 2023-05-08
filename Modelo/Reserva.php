@@ -53,7 +53,7 @@
               
 
                 $cone = $this->conexion;
-                $sql = "INSERT INTO " . self::$TABLA . "(cod_usuario, cod_estancia, fecha_inicio, fecha_fin ); 
+                $sql = "INSERT INTO " . self::$TABLA . "(cod_usuario, cod_estancia, fecha_inicio, fecha_fin ) 
                     VALUES (:A, :B, :C, :D)";
                 $stmt = $cone->prepare($sql);
                 $stmt->bindParam(':A', $codigoUser);

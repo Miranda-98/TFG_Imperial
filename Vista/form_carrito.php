@@ -13,7 +13,7 @@
 <body>
 <?php
 include '../Controlador/controlador_carrito.php';
-print_r($_SESSION['arrayReserva']);
+// print_r($_SESSION['arrayReserva']);
 ?>
 <h2 class="mt-4 mb-4">Seleccione los extras de las habitaciones:</h2>
 <form id="formulario" class="shadow p-3 mb-5 bg-body rounded" method="post">
