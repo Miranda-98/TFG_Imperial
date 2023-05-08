@@ -34,7 +34,7 @@
         <h3>Datos de la Reserva</h3>
 
         <h5>Datos del usuario</h5>
-        <p>Nombre completo</p>
+        <p>Nombre: <?php echo $informacionUsuario[0]->nombre . " " . $informacionUsuario[0]->primer_apellido ." " . $informacionUsuario[0]->segundo_apellido ?></p>
 
         <h5>Habitaciones Reservadas</h5>
         <?php 

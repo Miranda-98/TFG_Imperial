@@ -61,7 +61,7 @@
                 $stmt->bindParam(':C', $fechaInicio);
                 $stmt->bindParam(':D', $fechaFin);
                 $stmt->execute();
-                echo '<br/>insertado';
+                // echo '<br/>insertado';
             } catch (PDOException $e) {
                 echo "<br/>ERROR AL CREAR HABITACION " . $e->getMessage();
             }
