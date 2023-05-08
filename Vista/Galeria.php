@@ -135,7 +135,6 @@
                         <div class="item foto2"><img src="../img/spa/foto2.jpg"></div>
                         <div class="item foto3"><img src="../img/spa/foto3.jpg"></div>
                         <div class="item foto4"><img src="../img/spa/foto4.jpg"></div>
-                        <div class="item foto5"><img src="../img/spa/foto5.jpg"></div>
                     </div>
                     <!-- Fin galeria de fotos -->
                 </div>
@@ -150,7 +149,12 @@
             <div id="colapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <!-- Comienzo galeria de fotos -->
-
+                    <div class="contenedor containerFotosGym">
+                        <div class="item foto1"><img src="../img/gym/foto1.jpg"></div>
+                        <div class="item foto2"><img src="../img/gym/foto2.jpg"></div>
+                        <div class="item foto3"><img src="../img/gym/foto3.jpg"></div>
+                        <div class="item foto4"><img src="../img/gym/foto4.jpg"></div>
+                    </div>
                     <!-- Fin galeria de fotos -->
                 </div>
             </div>
@@ -239,8 +243,27 @@ let imageList = [
 "../img/habitaciones/hab_comun/foto4.jpg",
 "../img/habitaciones/hab_comun/foto5.jpg",
     // eventos
+"../img/evento/jardin1.jpg",
+"../img/evento/jardin2.jpg",
+"../img/evento/jardin3.jpg",
+"../img/evento/jardin4.jpg",
+"../img/evento/jardin5.jpg",
+"../img/evento/sala1.jpg",
+"../img/evento/sala2.jpg",
+"../img/evento/sala3.jpg",
+"../img/evento/sala4.jpg",
+"../img/evento/sala5.jpg",
     // spa
+"../img/spa/foto1.jpg",
+"../img/spa/foto2.jpg",
+"../img/spa/foto3.jpg",
+"../img/spa/foto4.jpg",
     // gimnasio
+"../img/gym/foto1.jpg",
+"../img/gym/foto1.jpg",
+"../img/gym/foto1.jpg",
+"../img/gym/foto1.jpg"
+
   
 ];
 

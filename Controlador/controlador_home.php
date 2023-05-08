@@ -25,7 +25,22 @@ if(isset($_REQUEST['btn_Administracion'])){
     
     include '../Vista/Galeria.php';
   
-  }else if (isset($_REQUEST['btn_anadir_habitacion'])) {
+  }
+  else if (isset($_REQUEST['btn_pagina_Contacto'])) {
+      
+    include '../Vista/Contacto.php';
+
+  }
+  else if (isset($_REQUEST['btn_pagina_Habitaciones'])) {
+      
+    include '../Vista/Habitacion.php';
+  
+  } else if (isset($_REQUEST['btn_pagina_Eventos'])) {
+      
+    include '../Vista/Eventos.php';
+  
+  
+}else if (isset($_REQUEST['btn_anadir_habitacion'])) {
     
     include '../Vista/Form_nuevaHabitacion.php';
   
@@ -71,10 +86,3 @@ if(isset($_REQUEST['btn_Administracion'])){
 
     include '../Vista/Home_principal.php';
  }
-
-
- 
- 
- 
-
-?>

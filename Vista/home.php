@@ -105,16 +105,16 @@ if (isset($_SESSION['nom_Usuario'])) {
                             </select>
                         </li> -->
                         <li class="nav-item">
-                            <button class="nav-link active" href="#">Habitaciones</button>
+                            <button class="nav-link active" aria-current="page" name="btn_pagina_Habitaciones">Habitaciones</button>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link active" href="#">Eventos</button>
+                            <button class="nav-link active" aria-current="page" name="btn_pagina_Eventos">Salas de eventos</button>
                         </li>
                         <li class="nav-item">
                             <button class="nav-link active" href="#">Ofertas</button>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link active" href="#">Contacto</button>
+                            <button class="nav-link active" aria-current="page" name="btn_pagina_Contacto">Contacto</button>
                         </li>
 
                         <?php
@@ -233,8 +233,8 @@ if (isset($_SESSION['nom_Usuario'])) {
                     <p>MADRID CALLE DEL PEPE BOTELLA</p>
                     <p>Teléfono: 916 535 482 </p>
                     <p>Correo electrónico: info@imperialretreat.com</p>
-                    <form method="post">
-                        <button class="nav-link active" aria-current="page" name="btn_pagina_FQ">Preguntas frecuentes</button>
+                    <form>
+                        <button class="nav-link active" aria-current="page" name="btn_pagina_FQ"><u>Preguntas frecuentes</u></button>
                     </form>
                 </div>
                 
