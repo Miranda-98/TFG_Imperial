@@ -137,7 +137,8 @@
 
             <div class="descripcionRestaurante">
                 <div>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem incidunt a quibusdam voluptatum quasi, sed id porro rerum maiores, neque sapiente quisquam ea suscipit deserunt amet quod autem nostrum obcaecati?
+                El restaurante del Imperial Retreat es una experiencia culinaria sin igual, con una amplia variedad de platos exquisitos preparados por chefs de renombre internacional. El ambiente es sofisticado y elegante, perfecto para cenas románticas o eventos especiales. Los ingredientes son cuidadosamente seleccionados de los mercados locales y de productores de alta calidad para ofrecer una cocina de temporada fresca y deliciosa. Además, el restaurante ofrece una extensa lista de vinos finos y bebidas artesanales para complementar tu comida.
+                    <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem incidunt a quibusdam voluptatum quasi, sed id porro rerum maiores, neque sapiente quisquam ea suscipit deserunt amet quod autem nostrum obcaecati? -->
                     <!-- Bienvenidos al restaurante de Imperial Retreat. Aquí podrá disfrutar de una experiencia gastronómica excepcional en un ambiente elegante y acogedor. Nuestro menú, cuidadosamente seleccionado por nuestro chef, ofrece una amplia variedad de platos de alta cocina con ingredientes frescos y de alta calidad, que se complementan perfectamente con nuestra selección de vinos finos de todo el mundo. Nuestro personal altamente capacitado lo atenderá con amabilidad y profesionalismo, mientras disfruta de una vista impresionante de la ciudad o del mar. En nuestro restaurante, su experiencia culinaria será inolvidable y lo dejaremos con ganas de volver. -->
                 </div>
             </div>
@@ -152,7 +153,7 @@
                         <img src="../img/evento/jardin1.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="../img/evento/jardin2.jpg" class="d-block w-100" alt="...">
+                        <img src="../img/evento/jardin2.jpeg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
                         <img src="../img/evento/sala1.jpg" class="d-block w-100" alt="...">
@@ -179,7 +180,8 @@
 
             <div class="descripcionEventos">
                 <div>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit totam quasi voluptas neque recusandae officia veniam porro ea. Quia veritatis, tempora laboriosam praesentium ipsam adipisci architecto voluptatibus minus illo perspiciatis.
+                Las salas de eventos del Imperial Retreat ofrecen un ambiente elegante y sofisticado para la celebración de cualquier tipo de evento, desde reuniones de negocios hasta bodas y banquetes. Con un servicio personalizado y una amplia variedad de opciones de catering, nuestras salas de eventos garantizan una experiencia inolvidable para todos los asistentes. Además, nuestras instalaciones están equipadas con la última tecnología de audio y visual para satisfacer todas las necesidades de su evento. Confíe en nosotros para hacer de su evento un éxito memorable.
+                    <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit totam quasi voluptas neque recusandae officia veniam porro ea. Quia veritatis, tempora laboriosam praesentium ipsam adipisci architecto voluptatibus minus illo perspiciatis. -->
                     <!-- La Sala de Eventos del Imperial Retreat es el lugar perfecto para llevar a cabo eventos y reuniones de gran importancia. Con su imponente arquitectura, esta sala es un espacio elegante y sofisticado, diseñado para impresionar a los invitados más exigentes. Con una capacidad de hasta 500 personas, la Sala de Eventos cuenta con tecnología de última generación y un equipo de expertos en organización de eventos para asegurar que cada detalle sea perfecto. Además, sus amplios ventanales ofrecen vistas impresionantes al entorno natural que rodea al hotel, creando una atmósfera única y acogedora para cualquier tipo de evento. Ya sea una boda, una conferencia o una cena de gala, la Sala de Eventos del Imperial Retreat es la elección ideal para hacer de cualquier evento una ocasión memorable e inolvidable. -->
                 </div>
             </div>
@@ -218,7 +220,8 @@
 
             <div class="descripcionSpa">
                 <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dicta error facere sint, natus quidem quod ipsum eligendi nam officia id eveniet cumque, mollitia esse, aliquid quaerat! Necessitatibus, nulla officiis!
+                El spa del Imperial Retreat es un refugio de tranquilidad y bienestar. Disfruta de un ambiente relajante y acogedor mientras te deleitas con una amplia variedad de servicios y tratamientos personalizados para rejuvenecer tu cuerpo y mente. Desde masajes y tratamientos faciales hasta saunas y baños turcos, nuestro spa es el lugar perfecto para desconectar y revitalizarte durante tu estancia en nuestro hotel.
+                    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dicta error facere sint, natus quidem quod ipsum eligendi nam officia id eveniet cumque, mollitia esse, aliquid quaerat! Necessitatibus, nulla officiis! -->
                     <!-- Bienvenido al Spa Imperial Retreat, donde la relajación y la renovación se unen en un ambiente lujoso y tranquilo. Nuestro spa ofrece una amplia variedad de tratamientos y servicios para satisfacer todas sus necesidades de bienestar. Desde masajes relajantes y faciales rejuvenecedores, hasta tratamientos corporales terapéuticos y servicios de peluquería y manicura, nuestro equipo altamente capacitado está aquí para brindarle una experiencia de spa inolvidable. Además, nuestro spa cuenta con instalaciones de última generación, como piscina climatizada, sauna, baño turco y sala de fitness, para asegurarnos de que su visita sea completa. Permítanos guiarlo en un viaje de relajación y revitalización en nuestro spa de clase mundial. -->
                 </div>
             </div>

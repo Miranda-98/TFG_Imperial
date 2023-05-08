@@ -40,10 +40,19 @@ img {
     border: 1px solid peru;
 } */
 
+.containerFotosGym{
+    display: grid;
+    grid-template-areas: 
+    "foto1 foto2 foto3 foto4 "
+    ;
+    grid-gap: 5px;
+}
+
 .containerFotosSpa {
     display: grid;
     grid-template-areas: 
-    "foto1 foto2 foto3 foto4 foto5 "
+    "foto1 foto2 "
+    "foto3 foto4 "
     ;
     grid-gap: 5px;
 }

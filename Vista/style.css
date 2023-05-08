@@ -75,25 +75,14 @@ footer {
     align-items: center;
 }
 
+li > a{
+    color: white;
+    
+}
+
 
 
 /*******************************************************/
-
-
-#carouselSpa,
-#carouselRestaurante,
-#carouselEventos {
-    width: 300px;
-    height: 300px;
-    margin-left: 20px;
-}
-
-.imgCarouselRestaurante>div>img,
-.imgCarouselEventos>div>img,
-.imgCarouselSpa>div>img {
-    width: 280px;
-    height: 280px;
-}
 
 
 
@@ -112,10 +101,12 @@ input:invalid {
     height: 400px;
 }
 
-/* Cabecera Carousel PAGINA PRINCIPAL */
-.cabeceraCarousel {
-    font-weight: bold;
-    font-size: 20px;
+.formularioContacto {
+    width: 250px;
+    height: 600px;
+}
+
+.botonEnvio {
     display: flex;
     justify-content: center;
 }
@@ -159,7 +150,41 @@ input:invalid {
 
 }
 
+.formulario_cambio_parametros{
+    padding: 2%;
+   
+  }
 
+/*******************************************************/
+
+
+#carouselSpa,
+#carouselRestaurante,
+#carouselEventos {
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+.imgCarouselRestaurante>div>img,
+.imgCarouselEventos>div>img,
+.imgCarouselSpa>div>img {
+    width: 280px;
+    height: 280px;
+}
+
+/* Cabecera Carousel PAGINA PRINCIPAL */
+.cabeceraCarousel {
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/*******************************************************/
+
+
+/* Botones */
 
 .btn {
     background-color: #6f6d6d;
@@ -202,7 +227,3 @@ input:invalid {
     background-color: black;
   }
 
-  .formulario_cambio_parametros{
-    padding: 2%;
-   
-  }
