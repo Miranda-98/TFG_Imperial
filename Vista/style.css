@@ -84,10 +84,10 @@ li > a{
 /*******************************************************/
 
 
-
+/* 
 input:invalid {
     border: solid 1px red;
-}
+} */
 
 .contenedorFormulario {
     display: flex;

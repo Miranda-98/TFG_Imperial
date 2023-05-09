@@ -61,12 +61,12 @@ $reserva = new Reserva();
 
     $_SESSION['arrayReserva']=$arrayRecuperaCarrito;
 
-          // print_r($_SESSION['arrayReserva']);
+          //  print_r($_SESSION['arrayReserva']);
           // echo "<br>";
           // print_r($_SESSION['arrayhabitaciones']);
-          // echo "<br>";
+          //  echo "<br>";
 
-    $informacionUsuario = $usuarioPrueba->obtieneInfoUsuario($_SESSION['nom_Usuario']);
+    $informacionUsuario = $usuarioPrueba->obtieneInfoUsuario($_SESSION['correo_Usuario']);
 
         // print_r($informacionUsuario);
         // echo "<br>";

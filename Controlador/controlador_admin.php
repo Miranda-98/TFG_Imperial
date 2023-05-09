@@ -15,14 +15,21 @@ if(isset($_REQUEST['btnNuevoAdmin'])){
                                 $_POST['segundoApellido'],
                                 $_POST['telefono'],
                                 $_POST['correoElectronico'],
-                                $_POST['nombreUsuario'],
+                                // $_POST['nombreUsuario'],
                                 $_POST['contraseñaUsuario'],
                                 'admin');
                                 
-        if($nuevoUsuario->crearUsuario()){
-            echo "Usuario creado";
-            
-        }
+                                if(!$nuevoUsuario->comprobarCorreoExistente($_POST['correoElectronico'])){
+                                    if($nuevoUsuario->crearUsuario()){
+                                            
+                                        header("location:Inicio_sesion.php");
+                                    }else {
+                                        echo "Algo salió mal";
+                                    }
+                                } else {
+                                    include "Correo ya existente";
+                                    $msg = "Correo ya existente";
+                                }  
  } 
 
  if (isset($_REQUEST['btnNuevaEstancia'])) {
