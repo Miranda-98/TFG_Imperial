@@ -113,8 +113,8 @@ input:invalid {
 /* FORMULARIO RESERVA PAGINA PRINCIPAL */
 .formularioReserva {
     /* background-color: red; */
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     /* width: 500px; */
     /* background-color: red;; */
 }
