@@ -53,42 +53,43 @@
 
 <!-- Formulario Reserva -->
 <form method="post" >
-<div class="container formularioReserva">
+    <h3>Haz tu reserva:</h3>
+<div class="container formularioReserva shadow p-3 mb-5 bg-body rounded form-group row">
     <!-- <form method="post"> -->
         <div class="form_reserva">
-            <label for="fechaEntrada">Fecha entrada</label><br />
+            <label for="fechaEntrada" class="col-sm-2 col-form-label">Fecha entrada</label><br />
         </div>
 
         <div class="form_reserva">
-            <label for="fechaSalida">Fecha Salida</label><br />
+            <input type="date" id="fechaEntrada" name="datoFechaInicio"  class="form-control">
         </div>
 
         <div class="form_reserva">
-            <input type="date" id="fechaEntrada" name="datoFechaInicio">
+            <label for="fechaSalida" class="col-sm-2 col-form-label">Fecha Salida</label><br />
         </div>
 
         <div class="form_reserva">
-            <input type="date" id="fechaSalida" name="datoFechaFin">
+            <input type="date" id="fechaSalida" name="datoFechaFin"  class="form-control">
         </div>
 
         <div class="form_reserva">
-            <label for="nAdultos">Adultos</label><br />
+            <label for="nAdultos" class="col-sm-2 col-form-label">Adultos</label><br />
         </div>
         
         <div class="form_reserva">
-            <input type="number" name="adultos" id="nAdultos">
+            <input type="number" name="adultos" id="nAdultos"  class="form-control">
         </div>
 
         <div class="form_reserva">
-            <label for="nNiños">Niños (menores 13 años)</label><br />
+            <label for="nNiños" class="col-sm-4 col-form-label">Niños (menores 13 años)</label><br />
         </div>
 
         <div class="form_reserva">
-            <input type="number" name="niños" id="nNiños">
+            <input type="number" name="niños" id="nNiños"  class="form-control">
         </div>
 
         <div class="form_reserva">
-            <input class="btn btn-primary" type="submit" class="submi" name="bton_formulario_principal" >
+            <input class="btn btn-primary" type="submit" class="submi form-control" name="bton_formulario_principal" >
         </div>
     <!-- </form> -->
 </div>

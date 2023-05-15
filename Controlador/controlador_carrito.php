@@ -71,6 +71,8 @@ $reserva = new Reserva();
         // print_r($informacionUsuario);
         // echo "<br>";
         // echo $informacionUsuario[0]->nombre;
+
+        //Aquí hacemos la insercción de datos de la reserva: tablas RESERVAS y FACTURAS
         foreach ($habitaciones as $habitacion=>$precio) { 
           //Añadimos las reservas, tantas como habitaciones seleccionadas por el cliente
           $reserva->añadirReserva($informacionUsuario[0]->cod_usuario,$habitacion,$_SESSION['arrayReserva']['fechaInicio'],$_SESSION['arrayReserva']['fechaFin']);
@@ -91,5 +93,5 @@ $reserva = new Reserva();
           $reserva ->añadirFactura($numeroFactura,$stringExtras,$arrayRecuperaCarrito['precioFinal'] );
          }
     
-    //Aquí hacemos la insercción de datos de la reserva: tablas RESERVAS y FACTURAS
+    
   }

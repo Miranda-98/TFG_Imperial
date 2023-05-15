@@ -115,7 +115,7 @@ input:invalid {
     /* background-color: red; */
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    /* width: 500px; */
     /* background-color: red;; */
 }
 
