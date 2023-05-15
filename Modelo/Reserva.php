@@ -15,6 +15,10 @@
             $this->conexion = parent::conectar();
         }
 
+
+         /* 
+        Función que recoge las habitaciones disponibles entre un rango de fechas dadas
+        */
         function disponibilidad () {
             try {
 
@@ -48,10 +52,13 @@
             }
         }
 
+        /* 
+        Función que añade la reserva a la tabla reservas
+        */
+
         function añadirReserva ($codigoUser, $codigoEstancia,$fechaInicio, $fechaFin) {
             try {
               
-
                 $cone = $this->conexion;
                 $sql = "INSERT INTO " . self::$TABLA . "(cod_usuario, cod_estancia, fecha_inicio, fecha_fin ) 
                     VALUES (:A, :B, :C, :D)";
@@ -60,6 +67,42 @@
                 $stmt->bindParam(':B', $codigoEstancia);
                 $stmt->bindParam(':C', $fechaInicio);
                 $stmt->bindParam(':D', $fechaFin);
+                $stmt->execute();
+                // echo '<br/>insertado';
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL CREAR HABITACION " . $e->getMessage();
+            }
+        }
+
+        /* 
+        Función que recoge el numero de reservas que existen para introducirlo en facturas
+        */
+        function nuevaFactura () {
+            try {
+                $cone = $this->conexion;
+                $sql = "SELECT COUNT(*) FROM reserva ;";
+                $stmt = $cone->prepare($sql);
+
+                $stmt->execute();
+
+                $resultado = $stmt->fetchColumn(); //Obtiene el valor de la primera columna de la primera fila del conjunto de resultados
+                return $resultado;
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER TODOS " . $e->getMessage();
+            }
+        }
+
+        function añadirFactura ( $codigoReserva,$extras, $precioTotal ) {
+            try {
+              
+                $cone = $this->conexion;
+                $sql = "INSERT INTO factura (cod_reserva, extras, precio_total) 
+                    VALUES (:A, :B, :C)";
+                $stmt = $cone->prepare($sql);
+                $stmt->bindParam(':A', $codigoReserva);
+                $stmt->bindParam(':B', $extras);
+                $stmt->bindParam(':C', $precioTotal);
+                
                 $stmt->execute();
                 // echo '<br/>insertado';
             } catch (PDOException $e) {

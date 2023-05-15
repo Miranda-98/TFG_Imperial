@@ -72,9 +72,23 @@ $reserva = new Reserva();
         // echo "<br>";
         // echo $informacionUsuario[0]->nombre;
         foreach ($habitaciones as $habitacion=>$precio) { 
-
+          //Añadimos las reservas, tantas como habitaciones seleccionadas por el cliente
           $reserva->añadirReserva($informacionUsuario[0]->cod_usuario,$habitacion,$_SESSION['arrayReserva']['fechaInicio'],$_SESSION['arrayReserva']['fechaFin']);
-
+          //Recogemos el numero de reserva efectuada para usarlo en la factura
+          $numeroFactura = $reserva->nuevaFactura();
+          //Vemos los extras que ha añadido el cliente y creamos un String de extras
+          $stringExtras = "";
+          if ($arrayRecuperaCarrito['lateCheckOut'] == "Si") {
+            $stringExtras = $stringExtras . "LateCheckOut ";
+          }
+          if ($arrayRecuperaCarrito['todoIncluido'] == "Si") {
+            $stringExtras =  $stringExtras . "TodoIncluido ";
+          }
+          if ($arrayRecuperaCarrito['recogidaAeropuerto'] == "Si") {
+            $stringExtras =  $stringExtras . "RecogidaAeropuerto ";
+          }
+          //Añadimos la factura de la reserva
+          $reserva ->añadirFactura($numeroFactura,$stringExtras,$arrayRecuperaCarrito['precioFinal'] );
          }
     
     //Aquí hacemos la insercción de datos de la reserva: tablas RESERVAS y FACTURAS
