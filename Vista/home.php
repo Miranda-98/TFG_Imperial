@@ -42,8 +42,8 @@ if (isset($_SESSION['nom_Usuario'])) {
     <nav id="headerSuperior" class="navbar navbar-expand-lg navbar-light bg-secondary justify-content-between">
         <!-- div icono-->
         <div>
-            <a class="">
-                <img src="../img/logo4.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="80" height="80" />
+            <a class="" href="home.php">
+                <img src="../img/logoOriginalSinTextoSinFondo.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="150px" height="150px"/>
             </a>
         </div>
 
@@ -55,7 +55,7 @@ if (isset($_SESSION['nom_Usuario'])) {
             <form method="post">
                 <button name="btn_Inicio" class="nav-link active titulo">Imperial Retreat</button>
             </form>
-           
+
         </div>
 
         <!-- div usuario-->
@@ -230,18 +230,18 @@ if (isset($_SESSION['nom_Usuario'])) {
             <div class="col-md-3 contactoFooter">
                 <h4>Contacto</h4>
                 <div class="contenidoContacto">
-                    <p>MADRID CALLE DEL PEPE BOTELLA</p>
+                    <p>MADRID CALLE MARQUÉS DE LA ENSENADA</p>
                     <p>Teléfono: 916 535 482 </p>
                     <p>Correo electrónico: info@imperialretreat.com</p>
                     <form>
                         <button class="nav-link active" aria-current="page" name="btn_pagina_FQ"><u>Preguntas frecuentes</u></button>
                     </form>
                 </div>
-                
+
             </div>
 
             <div class="col-md-4 ">
-                <h4>Redes sociales</h4>
+                <h4 class="iconos">Redes sociales</h4>
                 <ul class="list-unstyled iconos">
                     <li><a href="#"><i class="fab fa-facebook fa-lg text-white"></i> Facebook</a>
                         <ion-icon name="logo-facebook" size="large"></ion-icon>
@@ -269,14 +269,15 @@ if (isset($_SESSION['nom_Usuario'])) {
             </div>
         </div>
         <div class="footerLogo">
-            <div class="col-md-4 "><br/><br/>
+            <div class="col-md-4 "><br /><br />
                 <h6>© Copyright 2023 - All Rights Reserved</h6>
                 <!-- <p>All Rights Reserved.</p> -->
             </div>
-            <!-- <div class="col-md-3 logoEmpresa">
-                  <img src="../img/logo3.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="80" height="80" />
-                </div> -->
+            <div class="col-md-3 logoEmpresa">
+                <img src="../img/logoOriginalSinFondo.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="150px" height="150px" />
+            </div>
         </div>
+
     </footer>
     <!-- </div>                -->
 

@@ -16,7 +16,56 @@
 
 </head>
 
+<script>
+
+    function abrirCarrusel(index) {
+        // Obtener las imágenes de la galería
+        let galeria = document.getElementsByClassName('item');
+        let imagenes = [];
+
+        // Recorrer las imágenes y agregarlas al carrusel modal
+        for (var i = 0; i < galeria.length; i++) {
+            var imagenSrc = galeria[i].getElementsByTagName('img')[0].src;
+            imagenes.push(`<div class="carousel-item ${i + 1 === index ? 'active' : ''}">
+                      <img src="${imagenSrc}" alt="imagen ${i + 1}">
+                    </div>`);
+        }
+
+        // Insertar las imágenes en el carrusel modal
+        var carouselInner = document.querySelector('#carouselModal .carousel-inner');
+        carouselInner.innerHTML = imagenes.join('');
+
+        // Mostrar el carrusel modal
+        var carouselModal = new bootstrap.Modal(document.getElementById('carouselModal'));
+        carouselModal.show();
+    }
+</script>
+
 <body>
+    <!-- Carrusel modal -->
+    <div id="carouselModal" class="modal fade" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="carouselItems" class="carousel slide" data-bs-ride="carousel" style="">
+                        <div class="carousel-inner">
+                            <!-- Aquí se agregarán los elementos del carrusel dinámicamente -->
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselItems"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselItems"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <h1>PÁGINA DE GALERIA DE FOTOS ROBADAS</h1>
     <div class="accordion" id="accordionExample">
         <div class="accordion-item">
@@ -29,19 +78,19 @@
                 <div class="accordion-body">
                     <!-- Comienzo galeria de fotos -->
                     <div class="contenedor containerCollageFotos ">
-                        <div class="item foto1"><img src="../img/fotos/balcon_hd.jpg"></div>
-                        <div class="item foto2"><img src="../img/fotos/restaurantete.jpeg"></div>
-                        <div class="item foto3"><img src="../img/fotos/playa_hd.jpg"></div>
-                        <div class="item foto4"><img src="../img/fotos/instalacion1.jpg"></div>
-                        <div class="item foto5"><img src="../img/fotos/instalacion3.jpg"></div>
-                        <div class="item foto6"><img src="../img/fotos/instalacion2.jpg"></div>
-                        <div class="item foto7"><img src="../img/fotos/comida.jpeg"></div>
-                        <div class="item foto8"><img src="../img/fotos/jardin.jpg"></div>
-                        <div class="item foto9"><img src="../img/fotos/terraza_completo.jpg"></div>
-                        <div class="item foto10"><img src="../img/fotos/baño_vertical.jpg"></div>
-                        <div class="item foto11"><img src="../img/fotos/baño_completo.jpg"></div>
-                        <div class="item foto12"><img src="../img/fotos/baño_horizontal.jpg"></div>
-                        <div class="item foto13"><img src="../img/fotos/baño_horizontal.jpg"></div>
+                        <div class="item foto1"><img src="../img/fotos/balcon_hd.jpg" onclick="abrirCarrusel(1)"></div>
+                        <div class="item foto2"><img src="../img/fotos/restaurantete.jpeg" onclick="abrirCarrusel(2)"></div>
+                        <div class="item foto3"><img src="../img/fotos/playa_hd.jpg" onclick="abrirCarrusel(3)"></div>
+                        <div class="item foto4"><img src="../img/fotos/instalacion1.jpg" onclick="abrirCarrusel(4)"></div>
+                        <div class="item foto5"><img src="../img/fotos/instalacion3.jpg" onclick="abrirCarrusel(5)"></div>
+                        <div class="item foto6"><img src="../img/fotos/instalacion2.jpg" onclick="abrirCarrusel(6)"></div>
+                        <div class="item foto7"><img src="../img/fotos/comida.jpeg" onclick="abrirCarrusel(7)"></div>
+                        <div class="item foto8"><img src="../img/fotos/jardin.jpg" onclick="abrirCarrusel(8)"></div>
+                        <div class="item foto9"><img src="../img/fotos/terraza_completo.jpg" onclick="abrirCarrusel(9)"></div>
+                        <div class="item foto10"><img src="../img/fotos/baño_vertical.jpg" onclick="abrirCarrusel(10)"></div>
+                        <div class="item foto11"><img src="../img/fotos/baño_completo.jpg" onclick="abrirCarrusel(11)"></div>
+                        <div class="item foto12"><img src="../img/fotos/baño_horizontal.jpg" onclick="abrirCarrusel(12)"></div>
+                        <div class="item foto13"><img src="../img/fotos/baño_horizontal.jpg" onclick="abrirCarrusel(13)"></div>
                     </div>
                     <!-- Fin galeria de fotos -->
                 </div>
@@ -58,39 +107,39 @@
                     <!-- Comienzo galeria de fotos -->
                     <h1>Presidencial</h1>
                     <div class="contenedor containerFotosHabitacionPresidencial">
-                        <div class="item foto1"><img src="../img/habitaciones/hab_presidencial/foto1.jpg"></div>
-                        <div class="item foto2"><img src="../img/habitaciones/hab_presidencial/foto2.jpg"></div>
-                        <div class="item foto3"><img src="../img/habitaciones/hab_presidencial/foto3.jpg"></div>
-                        <div class="item foto4"><img src="../img/habitaciones/hab_presidencial/foto4.jpg"></div>
-                        <div class="item foto5"><img src="../img/habitaciones/hab_presidencial/foto5.jpg"></div>
-                        <div class="item foto6"><img src="../img/habitaciones/hab_presidencial/foto6.jpg"></div>
-                        <div class="item foto7"><img src="../img/habitaciones/hab_presidencial/foto7.jpg"></div>
-                        <div class="item foto8"><img src="../img/habitaciones/hab_presidencial/foto8.jpg"></div>
-                        <div class="item foto9"><img src="../img/habitaciones/hab_presidencial/foto9.jpg"></div>
-                        <div class="item foto10"><img src="../img/habitaciones/hab_presidencial/foto10.jpg"></div>
+                        <div class="item foto1"><img src="../img/habitaciones/hab_presidencial/foto1.jpg" onclick="abrirCarrusel(14)"></div>
+                        <div class="item foto2"><img src="../img/habitaciones/hab_presidencial/foto2.jpg" onclick="abrirCarrusel(15)"></div>
+                        <div class="item foto3"><img src="../img/habitaciones/hab_presidencial/foto3.jpg" onclick="abrirCarrusel(16)"></div>
+                        <div class="item foto4"><img src="../img/habitaciones/hab_presidencial/foto4.jpg" onclick="abrirCarrusel(17)"></div>
+                        <div class="item foto5"><img src="../img/habitaciones/hab_presidencial/foto5.jpg" onclick="abrirCarrusel(18)"></div>
+                        <div class="item foto6"><img src="../img/habitaciones/hab_presidencial/foto6.jpg" onclick="abrirCarrusel(19)"></div>
+                        <div class="item foto7"><img src="../img/habitaciones/hab_presidencial/foto7.jpg" onclick="abrirCarrusel(20)"></div>
+                        <div class="item foto8"><img src="../img/habitaciones/hab_presidencial/foto8.jpg" onclick="abrirCarrusel(21)"></div>
+                        <div class="item foto9"><img src="../img/habitaciones/hab_presidencial/foto9.jpg" onclick="abrirCarrusel(22)"></div>
+                        <div class="item foto10"><img src="../img/habitaciones/hab_presidencial/foto10.jpg" onclick="abrirCarrusel(23)"></div>
                     </div>
 
                     <br /><br /><br />
                     <h1>Lujo</h1>
                     <div class="contenedor containerFotosHabitacionLujo">
-                        <div class="item foto1"><img src="../img/habitaciones/hab_lujo/foto1.jpg"></div>
-                        <div class="item foto2"><img src="../img/habitaciones/hab_lujo/foto2.jpg"></div>
-                        <div class="item foto3"><img src="../img/habitaciones/hab_lujo/foto3.jpg"></div>
-                        <div class="item foto4"><img src="../img/habitaciones/hab_lujo/foto4.jpg"></div>
-                        <div class="item foto5"><img src="../img/habitaciones/hab_lujo/foto5.jpg"></div>
-                        <div class="item foto6"><img src="../img/habitaciones/hab_lujo/foto6.jpg"></div>
-                        <div class="item foto7"><img src="../img/habitaciones/hab_lujo/foto7.jpg"></div>
-                        <div class="item foto8"><img src="../img/habitaciones/hab_lujo/foto8.jpg"></div>
+                        <div class="item foto1"><img src="../img/habitaciones/hab_lujo/foto1.jpg" onclick="abrirCarrusel(24)"></div>
+                        <div class="item foto2"><img src="../img/habitaciones/hab_lujo/foto2.jpg" onclick="abrirCarrusel(25)"></div>
+                        <div class="item foto3"><img src="../img/habitaciones/hab_lujo/foto3.jpg" onclick="abrirCarrusel(26)"></div>
+                        <div class="item foto4"><img src="../img/habitaciones/hab_lujo/foto4.jpg" onclick="abrirCarrusel(27)"></div>
+                        <div class="item foto5"><img src="../img/habitaciones/hab_lujo/foto5.jpg" onclick="abrirCarrusel(28)"></div>
+                        <div class="item foto6"><img src="../img/habitaciones/hab_lujo/foto6.jpg" onclick="abrirCarrusel(29)"></div>
+                        <div class="item foto7"><img src="../img/habitaciones/hab_lujo/foto7.jpg" onclick="abrirCarrusel(30)"></div>
+                        <div class="item foto8"><img src="../img/habitaciones/hab_lujo/foto8.jpg" onclick="abrirCarrusel(31)"></div>
                     </div>
 
                     <br /><br /><br />
                     <h1>Comun</h1>
                     <div class="contenedor containerFotosHabitacionComun">
-                        <div class="item foto1"><img src="../img/habitaciones/hab_comun/foto1.jpg"></div>
-                        <div class="item foto2"><img src="../img/habitaciones/hab_comun/foto2.jpg"></div>
-                        <div class="item foto3"><img src="../img/habitaciones/hab_comun/foto3.jpg"></div>
-                        <div class="item foto4"><img src="../img/habitaciones/hab_comun/foto4.jpg"></div>
-                        <div class="item foto5"><img src="../img/habitaciones/hab_comun/foto5.jpg"></div>
+                        <div class="item2 foto1"><img src="../img/habitaciones/hab_comun/foto1.jpg" onclick="abrirCarrusel(32)"></div>
+                        <div class="item2 foto2"><img src="../img/habitaciones/hab_comun/foto2.jpg" onclick="abrirCarrusel(33)"></div>
+                        <div class="item2 foto3"><img src="../img/habitaciones/hab_comun/foto3.jpg" onclick="abrirCarrusel(34)"></div>
+                        <div class="item2 foto4"><img src="../img/habitaciones/hab_comun/foto4.jpg" onclick="abrirCarrusel(35)"></div>
+                        <div class="item2 foto5"><img src="../img/habitaciones/hab_comun/foto5.jpg" onclick="abrirCarrusel(36)"></div>
                     </div>
                     <!-- Fin galeria de fotos -->
                 </div>
@@ -106,16 +155,16 @@
                 <div class="accordion-body">
                     <!-- Comienzo galeria de fotos -->
                     <div class="contenedor containerFotosEventos">
-                        <div class="item foto1"><img src="../img/evento/jardin1.jpg"></div>
-                        <div class="item foto2"><img src="../img/evento/jardin2.jpeg"></div>
-                        <div class="item foto3"><img src="../img/evento/jardin3.jpg"></div>
-                        <div class="item foto4"><img src="../img/evento/jardin4.jpg"></div>
-                        <div class="item foto5"><img src="../img/evento/jardin5.jpg"></div>
-                        <div class="item foto6"><img src="../img/evento/sala1.jpg"></div>
-                        <div class="item foto7"><img src="../img/evento/sala2.jpg"></div>
-                        <div class="item foto8"><img src="../img/evento/sala3.jpg"></div>
-                        <div class="item foto9"><img src="../img/evento/sala4.jpg"></div>
-                        <div class="item foto10"><img src="../img/evento/sala5.jpg"></div>
+                        <div class="item3 foto1"><img src="../img/evento/jardin1.jpg" onclick="abrirCarrusel(37)"></div>
+                        <div class="item3 foto2"><img src="../img/evento/jardin2.jpeg" onclick="abrirCarrusel(38)"></div>
+                        <div class="item3 foto3"><img src="../img/evento/jardin3.jpg" onclick="abrirCarrusel(39)"></div>
+                        <div class="item3 foto4"><img src="../img/evento/jardin4.jpg" onclick="abrirCarrusel(40)"></div>
+                        <div class="item3 foto5"><img src="../img/evento/jardin5.jpg" onclick="abrirCarrusel(41)"></div>
+                        <div class="item3 foto6"><img src="../img/evento/sala1.jpg" onclick="abrirCarrusel(42)"></div>
+                        <div class="item3 foto7"><img src="../img/evento/sala2.jpg" onclick="abrirCarrusel(43)"></div>
+                        <div class="item3 foto8"><img src="../img/evento/sala3.jpg" onclick="abrirCarrusel(44)"></div>
+                        <div class="item3 foto9"><img src="../img/evento/sala4.jpg" onclick="abrirCarrusel(45)"></div>
+                        <div class="item3 foto10"><img src="../img/evento/sala5.jpg" onclick="abrirCarrusel(56)"></div>
                     </div>
                     <!-- Fin galeria de fotos -->
                 </div>
@@ -131,10 +180,10 @@
                 <div class="accordion-body">
                     <!-- Comienzo galeria de fotos -->
                     <div class="contenedor containerFotosSpa">
-                        <div class="item foto1"><img src="../img/spa/foto1.jpg"></div>
-                        <div class="item foto2"><img src="../img/spa/foto2.jpg"></div>
-                        <div class="item foto3"><img src="../img/spa/foto3.jpg"></div>
-                        <div class="item foto4"><img src="../img/spa/foto4.jpg"></div>
+                        <div class="item foto1"><img src="../img/spa/foto1.jpg" onclick="abrirCarrusel(47)"></div>
+                        <div class="item foto2"><img src="../img/spa/foto2.jpg" onclick="abrirCarrusel(48)"></div>
+                        <div class="item foto3"><img src="../img/spa/foto3.jpg" onclick="abrirCarrusel(49)"></div>
+                        <div class="item foto4"><img src="../img/spa/foto4.jpg" onclick="abrirCarrusel(50)"></div>
                     </div>
                     <!-- Fin galeria de fotos -->
                 </div>
@@ -150,10 +199,10 @@
                 <div class="accordion-body">
                     <!-- Comienzo galeria de fotos -->
                     <div class="contenedor containerFotosGym">
-                        <div class="item foto1"><img src="../img/gym/foto1.jpg"></div>
-                        <div class="item foto2"><img src="../img/gym/foto2.jpg"></div>
-                        <div class="item foto3"><img src="../img/gym/foto3.jpg"></div>
-                        <div class="item foto4"><img src="../img/gym/foto4.jpg"></div>
+                        <div class="item foto1"><img src="../img/gym/foto1.jpg" onclick="abrirCarrusel(51)"></div>
+                        <div class="item foto2"><img src="../img/gym/foto2.jpg" onclick="abrirCarrusel(52)"></div>
+                        <div class="item foto3"><img src="../img/gym/foto3.jpg" onclick="abrirCarrusel(53)"></div>
+                        <div class="item foto4"><img src="../img/gym/foto4.jpg" onclick="abrirCarrusel(54)"></div>
                     </div>
                     <!-- Fin galeria de fotos -->
                 </div>

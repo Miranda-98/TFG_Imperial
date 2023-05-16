@@ -15,11 +15,12 @@
     </style>
 </head>
 
+
 <body>
     <div class="contenedorFormulario">
         <h1>Nuevo Usuario</h1>
         <div class="formularioRegistro">
-            <form method="post">
+            <form onsubmit="return validarFormulario()" method="post">
                 <fieldset>
                 <legend>Registro</legend>
                 <label for="nombre">Nombre: *</label>
@@ -35,7 +36,8 @@
                 <input type="tel" name="telefono" id="celular" pattern="[6789]\d{8}$" required>
                 
                 <label for="mail">Correo electrónico: *</label>
-                <input type="email" name="correoElectronico" id="email" pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" required>
+                <input type="email" name="correoElectronico" id="email" required>
+                <!-- pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" -->
                 
                 <label for="user">Nombre de usuario: *</label>
                 <input type="text" name="nombreUsuario" id="nombreUsuario" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ0-9\s]{3,20}$" required>
@@ -60,5 +62,20 @@
     ?>
 </body>
 <script type="text/javascript" src="fuerzaContraseña.js"></script>
+<script>
+    function validarFormulario() {
+        let nombre = document.getElementById("nombre").value;
+        let apellido = document.getElementById("apellido").value;
+        let correo = document.getElementById("email").value;
+        let regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
+        if (!correo.match(regex)) {
+            alert("Correo electrónico inválido");
+            return false; // Evita enviar el formulario si el correo es inválido
+        }
+
+        // Si todo está válido, se envía el formulario
+        return true;
+    }
+</script>
 </html>

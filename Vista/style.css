@@ -20,12 +20,7 @@ td {
     padding: 10px;
 }
 
-.iconos {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 /* FOOTER PAGINA PRINCIPAL */
 
@@ -37,7 +32,12 @@ footer {
     margin-left: 0%;
 }
 
-.footerPrincipal>div>h4 {
+.footerPrincipal>div>h4, .footerPrincipal {
+    display: flex;
+    justify-content: center;
+}
+
+.footerLogo>div>h6 {
     display: flex;
     justify-content: center;
 }
@@ -66,6 +66,15 @@ footer {
     display: flex;
     flex-direction: column;
     padding-left: 30%;
+}
+
+.iconos {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20%;
 }
 
 .boletinFooter {
@@ -222,7 +231,22 @@ input:invalid {
 }
 
 .btn-custom {
-    
     background-color: black;
-  }
+}
 
+li > button:hover {
+    background-color: rgb(139, 195, 183);
+}
+
+li > button {
+    width: 150px;
+}
+
+
+/*******************************************************/
+        /* Iconos caracteristicas de las habitaciones */
+.caracteristicas {
+    font-size: 40px;
+}
+
+/*******************************************************/
