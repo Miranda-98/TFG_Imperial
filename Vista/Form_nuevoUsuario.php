@@ -36,11 +36,11 @@
                 <input type="tel" name="telefono" id="celular" pattern="[6789]\d{8}$" required>
                 
                 <label for="mail">Correo electrónico: *</label>
-                <input type="email" name="correoElectronico" id="email" pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" required>
-                  
-<!--                 
-                <label for="user">Nombre de usuario: *</label>
-                <input type="text" name="nombreUsuario" id="nombreUsuario" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ0-9\s]{3,20}$" required> -->
+                <input type="text" name="correoElectronico" id="email" required>
+                <!-- pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" -->
+                
+                <!-- <label for="user">Nombre de usuario: *</label>
+                <input type="text" name="nombreUsuario" id="nombreUsuario" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ0-9\s]{3,20}$" required>  -->
                 
                 <label for="pass">Contraseña: *</label>
                 <input type="password" id="password" name="contraseñaUsuario" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,./?]).{8,20}">
