@@ -1,0 +1,11 @@
+window.addEventListener('DOMContentLoaded', function() {
+    var inputFecha = document.getElementById('fechaEntrada');
+
+    var fechaActual = new Date();
+    var yyyy = fechaActual.getFullYear();
+    var mm = String(fechaActual.getMonth() + 1).padStart(2, '0');
+    var dd = String(fechaActual.getDate()).padStart(2, '0');
+    var fechaMinima = yyyy + '-' + mm + '-' + dd;
+
+    inputFecha.min = fechaMinima;
+});
