@@ -14,19 +14,20 @@ if(isset($_REQUEST['btnNuevoUsuario'])){
                                 $_POST['segundoApellido'],
                                 $_POST['telefono'],
                                 $_POST['correoElectronico'],
-                                $_POST['nombreUsuario'],
+                                // $_POST['nombreUsuario'],
                                 $_POST['contraseñaUsuario'],
                                 'cliente');
-                                
-        if($nuevoUsuario->crearUsuario()){
-            echo "Usuario creado";
-            session_start();
-            $_SESSION['nom_Usuario']= $nuevoUsuario->__get('usuario');
-            
-            header("location:home.php");
-        }else {
-            echo "Algo salió mal";
-        }
+            if(!$nuevoUsuario->comprobarCorreoExistente($_POST['correoElectronico'])){
+                if($nuevoUsuario->crearUsuario()){
+                        
+                    header("location:Inicio_sesion.php");
+                }else {
+                    echo "Algo salió mal";
+                }
+            } else {
+                $msg = "Correo ya existente";
+            }               
+
 }
 
 if(isset($_REQUEST['cerrar_usuario'])){
@@ -37,16 +38,19 @@ if(isset($_REQUEST['cerrar_usuario'])){
 }
 
 if(isset($_REQUEST['btnEnviarUsuario'])){
-    $usuarioEjemplo = new Usuario('','','','','',$_POST['user'],$_POST['contrasena'],'');
+
+    $usuarioEjemplo = new Usuario('','','','',$_POST['user'],$_POST['contrasena'],'');
     if($usuarioEjemplo->comprobarUsuarioBD($_POST['user'],$_POST['contrasena'],$usuarioEjemplo)){
 
-        $idUsuario = $usuarioEjemplo->obtenerId($_POST['user']);
+       
         session_start();
-        $_SESSION['nom_Usuario']= $usuarioEjemplo->__get('usuario');
+        $registro = $usuarioEjemplo->obtieneInfoUsuario($_POST['user']);
+       
+        $_SESSION['nom_Usuario']= $registro[0]->nombre;
         $registros = $usuarioEjemplo->comprobarTipoUsuario($_POST['user'],$_POST['contrasena']);
-        // print_r($registros[0]['rol']);
+        $_SESSION['correo_Usuario'] = $registro[0]->correo;
         $_SESSION['tipo_Usuario']=$registros[0]['rol'];
-        header("location:home.php");
+           header("location:home.php");
 
         
         

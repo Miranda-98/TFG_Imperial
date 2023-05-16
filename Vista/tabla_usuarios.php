@@ -22,7 +22,7 @@
                         <th>2º Apellido</th>
                         <th>Telefono</th>
                         <th>Correo</th>
-                        <th>Usuario</th>
+                        <!-- <th>Usuario</th> -->
                     </tr>
 <?php
    $usuarioPrueba->obtieneTodosAdmin();

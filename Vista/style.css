@@ -93,10 +93,10 @@ li > a{
 /*******************************************************/
 
 
-
+/* 
 input:invalid {
     border: solid 1px red;
-}
+} */
 
 .contenedorFormulario {
     display: flex;
@@ -122,10 +122,10 @@ input:invalid {
 /* FORMULARIO RESERVA PAGINA PRINCIPAL */
 .formularioReserva {
     /* background-color: red; */
-    display: flex;
-    flex-wrap: wrap;
-    width: 500px;
-    /* background-color: red;; */
+    /* display: flex; */
+    /* flex-wrap: wrap;  
+     width: 500px;  */
+    /* background-color: red;;
 }
 
 .form_reserva {

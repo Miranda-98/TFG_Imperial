@@ -25,7 +25,7 @@
             <form method="post">
                 <!-- <fieldset> -->
 
-                <legend>Registro</legend>
+                <!-- <legend>Registro</legend>
                 <label for="nombre">Nombre:</label>
                 <input type="text" name="nombrePropio" id="nombre" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,20}$" required>
                 
@@ -49,20 +49,45 @@
                 
 
                 <div id="fuerza" value=""></div>
-                <input type="submit" name="btnNuevoAdmin" id="botonRegistro">
+                <input type="submit" name="btnNuevoAdmin" id="botonRegistro"> -->
 
                 <!-- </fieldset> -->
+                <legend>Registro</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombrePropio" id="nombre">
+                
+                <label for="apellido1">Primer apellido:</label>
+                <input type="text" name="primerApellido" id="apellido1">
+                
+                <label for="apellido2">Segundo apellido:</label>
+                <input type="text" name="segundoApellido" id="apellido2" >
+                
+                <label for="celular">Teléfono de contacto:</label >
+                <input type="tel" name="telefono" id="celular" >
+                
+                <label for="mail">Correo electrónico</label>
+                <input type="email" name="correoElectronico" id="email" >
+                
+                <!-- <label for="user">Nombre de usuario:</label>
+                <input type="text" name="nombreUsuario" id="nombreUsuario" > -->
+                
+                <label for="pass">Contraseña:</label>
+                <input type="password" id="password" name="contraseñaUsuario" >
+                
 
+                <div id="fuerza" value=""></div>
+                <input type="submit" name="btnNuevoAdmin" id="botonRegistro">
+                                                                                            <p><?php echo $msg ?? '' ?></p>
             </form>
         </div>
     </div>
-    <br /><br /><br /><br />
+
 
     <?php
     include '../Controlador/controlador_admin.php';
     ?>
 </body>
 <script type="text/javascript" src="validacionFormulario.js"></script>
-<script type="text/javascript" src="fuerzaContraseña.js"></script>
+<!-- <script type="text/javascript" src="fuerzaContraseña.js"></script>  -->
 
 </html>

@@ -17,7 +17,7 @@
 
     <form method="post">
         <legend>Inicio de sesión</legend>
-        <label for="user">Nombre de usuario:</label>
+        <label for="user">Correo electrónico:</label>
         <input type="text" name="user" require>
 
         <br>
