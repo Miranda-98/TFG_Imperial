@@ -13,6 +13,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script> -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="mediaQuery.css">
 
@@ -244,15 +247,15 @@ if (isset($_SESSION['nom_Usuario'])) {
                 <h4 class="iconos">Redes sociales</h4>
                 <ul class="list-unstyled iconos">
                     <li><a href="#"><i class="fab fa-facebook fa-lg text-white"></i> Facebook</a>
-                        <ion-icon name="logo-facebook" size="large"></ion-icon>
+                        
                     </li>
                     <li>
                         <a href="#"><i class="fab fa-twitter fa-lg text-white"></i> Twitter</a>
-                        <ion-icon name="logo-twitter" size="large"></ion-icon>
+                        
                     </li>
                     <li>
                         <a href="#"><i class="fab fa-instagram fa-lg text-white"></i> Instagram</a>
-                        <ion-icon name="logo-instagram" size="large"></ion-icon>
+                        
                     </li>
                 </ul>
             </div>

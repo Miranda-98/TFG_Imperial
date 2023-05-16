@@ -47,7 +47,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <div id="carouselItems" class="carousel slide" data-bs-ride="carousel" style="">
+                    <div id="carouselItems" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <!-- Aquí se agregarán los elementos del carrusel dinámicamente -->
                         </div>
