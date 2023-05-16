@@ -17,7 +17,10 @@
 
 
 <body>
-    <div>
+    <br>
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <h3>Nuestras Habitaciones:</h3>
+        <p>
         En el Imperial Retreat, todas nuestras habitaciones son un oasis de lujo y confort.
         Ofrecemos tres tipos de habitaciones, cada una con su propia personalidad y características únicas.
         Las habitaciones tipo Imperial son las más exclusivas, con una decoración majestuosa y comodidades de alta gama.
@@ -25,16 +28,18 @@
         variedad de servicios. Incluso nuestras habitaciones tipo estándar ofrecen un alto nivel de confort y calidad, con
         una decoración moderna y todas las comodidades necesarias para una estancia relajante. Todas nuestras habitaciones
         están diseñadas para brindar una experiencia inolvidable a nuestros huéspedes.
+        </p>
     </div>
-
+    <hr>
     <div class="accordion" id="accordionExample">
 
 
         <div id="colapse2" class="accordion-collapse " data-bs-parent="#accordionExample">
-            <div class="accordion-body">
+            <div class="accordion-body ">
                 <!-- Comienzo galeria de fotos Presidencial -->
+                <div></div>
                 <h1>Presidencial</h1>
-                <div class="descripcion">
+                <div class="descripcion ">
                 La Suite Presidencial del Hotel Imperial es un alojamiento de lujo con cuatro habitaciones, una de ellas principal, y dos baños. Cuenta con un amplio salón, una habitación principal espaciosa con una cama king-size, un baño privado con bañera de hidromasaje, una ducha de lluvia y una selección de productos de baño de lujo. También dispone de un elegante comedor privado, un área de trabajo bien equipada y vistas panorámicas impresionantes de la ciudad. Los huéspedes disfrutan de servicios exclusivos como un mayordomo personal disponible las 24 horas del día, servicio de limusina y acceso privilegiado a áreas VIP del hotel. Es la opción perfecta para quienes buscan una experiencia de lujo, comodidad y servicio personalizado.
                 </div>
                 <div class="caracteristicas">
@@ -159,7 +164,7 @@
                 </div>
                 <!-- FIN fotos galeria Presidencial -->
 
-                <br /><br /><br />
+                <br /><br /> <hr><br />
                 <h1>Lujo</h1>
                 <div class="descripcion">
                     

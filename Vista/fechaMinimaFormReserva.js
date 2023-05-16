@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
     var inputFecha = document.getElementById('fechaEntrada');
-
+    var inputFecha2 = document.getElementById('fechaSalida');
     var fechaActual = new Date();
     var yyyy = fechaActual.getFullYear();
     var mm = String(fechaActual.getMonth() + 1).padStart(2, '0');
@@ -8,4 +8,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var fechaMinima = yyyy + '-' + mm + '-' + dd;
 
     inputFecha.min = fechaMinima;
+
+    //RECOGER FECHA SELECCIONADA Y APLICARLA EN EL MINIMO DE SALIDA?????
+    inputFecha2.min = fechaMinima;
 });
