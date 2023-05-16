@@ -15,7 +15,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    
+
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="mediaQuery.css">
 
@@ -191,9 +191,9 @@ if (isset($_SESSION['nom_Usuario'])) {
             <div class="col-md-4 "><br /><br />
                 <h6>© Copyright 2023 - All Rights Reserved</h6>
                 <!-- <p>All Rights Reserved.</p> -->
-            </div>
-            <div class="col-md-3 logoEmpresa">
-                <img src="../img/logoOriginalSinFondo.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="150px" height="150px" />
+            </div>      
+            <div class="col-md-3 logoEmpresa" style=" width:150px; height:150px">
+                <img src="../img/logoOriginalSinFondo.png" alt="Imperial Retreat Logo" title="Imperial Retreat" style="width: 100%; height: 100%;"/>
             </div>
         </div>
 
