@@ -34,13 +34,16 @@
             <div class="accordion-body">
                 <!-- Comienzo galeria de fotos Presidencial -->
                 <h1>Presidencial</h1>
+                <div class="descripcion">
+                La Suite Presidencial del Hotel Imperial es el máximo nivel de lujo y elegancia. Con amplios espacios y detalles sofisticados, esta suite ofrece una experiencia de confort inigualable. Cuenta con un lujoso salón, dormitorio principal espacioso con una cama king-size de lujo, un baño privado con bañera de hidromasaje y ducha de lluvia, y vistas panorámicas de la ciudad. Además, ofrece servicios exclusivos como un mayordomo personal las 24 horas y acceso a áreas VIP del hotel. En resumen, la Suite Presidencial del Hotel Imperial es el lugar perfecto para quienes buscan lujo, comodidad y un servicio personalizado de alta calidad.
+                </div>
                 <div class="caracteristicas">
                     <i class="fas fa-bed fa-0.5x"></i>4
                     <i class="fas fa-bath fa-0.5x"></i>2
                     <ion-icon name="person-outline" style="font-size: 40px;"></ion-icon>6
                     <i class="fas fa-ruler-combined fa-1x"></i> 80m&sup2
                 </div>
-               
+
                 <div class="contenedor containerFotosHabitacionPresidencial">
                     <div class="corouselImagenes" style="background-color: green;">
                         <div id="carousel" class="carousel slide carouselImagenes " data-bs-ride="carousel">
@@ -158,6 +161,21 @@
 
                 <br /><br /><br />
                 <h1>Lujo</h1>
+                <div class="descripcion">
+                    La Suite de Lujo del Hotel Imperial es un oasis de elegancia y comodidad. Diseñada para aquellos que buscan una experiencia lujosa y exclusiva, esta suite ofrece un amplio espacio y una decoración sofisticada que combina a la perfección con detalles de lujo.
+
+                    Al ingresar a la suite, te recibirán exquisitos muebles y una atmósfera de lujo que te hará sentir como en un verdadero palacio. La sala de estar cuenta con cómodos sofás y una decoración refinada, creando un ambiente acogedor y elegante.
+
+                    La habitación principal está equipada con una cama king-size con sábanas de alta calidad y almohadas mullidas, asegurando un descanso reparador. Además, encontrarás un amplio vestidor y un baño privado con acabados de mármol, una bañera de hidromasaje y una ducha de lluvia, donde podrás relajarte y rejuvenecer.
+
+                    La Suite de Lujo también cuenta con una sala de estar separada, ideal para recibir a invitados o disfrutar de momentos de tranquilidad. Además, ofrece un área de trabajo con escritorio, conexión Wi-Fi de alta velocidad y servicios exclusivos de conserjería.
+
+                    Desde las amplias ventanas de la suite, podrás disfrutar de vistas panorámicas de la ciudad o de hermosos jardines, dependiendo de la ubicación de la habitación. Esto te permitirá disfrutar de paisajes impresionantes mientras te relajas en la comodidad de tu suite.
+
+                    Como huésped de la Suite de Lujo, también tendrás acceso a las exclusivas instalaciones del hotel, como el spa de clase mundial, el gimnasio totalmente equipado y los restaurantes de alta cocina que ofrecen una experiencia gastronómica inigualable.
+
+                    En resumen, la Suite de Lujo del Hotel Imperial es el lugar perfecto para aquellos que buscan vivir una experiencia de lujo inigualable. Con su elegante decoración, comodidades de primera clase y servicios exclusivos, esta suite te brindará una estadía inolvidable y llena de confort.
+                </div>
                 <div class="caracteristicas">
                     <i class="fas fa-bed fa-0.5x"></i>3
                     <i class="fas fa-couch fa-0.5x"></i>1
@@ -274,6 +292,23 @@
                 </div> -->
                 <br /><br /><br />
                 <h1>Estándar</h1>
+                <div class="descripcion">
+                    Las Habitaciones Estándar del Hotel Imperial ofrecen un espacio acogedor y confortable para aquellos huéspedes que buscan una opción más accesible sin sacrificar la calidad y comodidad.
+
+                    Cada habitación está elegantemente decorada con un estilo clásico y sutilmente moderno. Los tonos suaves y relajantes de la decoración crean un ambiente tranquilo y sereno, ideal para descansar después de un día de actividades.
+
+                    Las Habitaciones Estándar están equipadas con una cómoda cama matrimonial, perfecta para una o dos personas. La ropa de cama de alta calidad y las almohadas mullidas te brindarán un descanso placentero y revitalizador.
+
+                    El baño privado adjunto a cada habitación cuenta con todas las comodidades necesarias, incluyendo una ducha revitalizante y artículos de aseo de cortesía.
+
+                    En el área de descanso, encontrarás un cómodo espacio de trabajo con un escritorio y una silla ergonómica, lo que te permitirá mantenerte productivo durante tu estancia si lo necesitas.
+
+                    Las Habitaciones Estándar también están equipadas con televisión de pantalla plana, minibar y acceso a Internet de alta velocidad, brindándote entretenimiento y conectividad en todo momento.
+
+                    El servicio de limpieza diario garantiza que tu habitación se mantenga impecable durante tu estancia, y el personal amable y atento del hotel está disponible las 24 horas del día para atender cualquier solicitud adicional que puedas tener.
+
+                    En resumen, las Habitaciones Estándar del Hotel Imperial son la elección perfecta para aquellos viajeros que buscan una estancia cómoda y asequible sin comprometer la calidad y el servicio del hotel.
+                </div>
                 <div class="caracteristicas">
                     <i class="fas fa-bed fa-0.5x"></i>2
                     <i class="fas fa-couch fa-0.5x"></i>1
