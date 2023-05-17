@@ -22,10 +22,10 @@
     <div class="contenedorFormulario">
         <h1>Nuevo Administrador</h1>
         <div class="formularioRegistro">
-            <form method="post">
-                <!-- <fieldset> -->
+            <form onsubmit="return validarFormulario()" method="post">
+                <fieldset>
 
-                <!-- <legend>Registro</legend>
+                <legend>Registro</legend>
                 <label for="nombre">Nombre:</label>
                 <input type="text" name="nombrePropio" id="nombre" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,20}$" required>
                 
@@ -39,45 +39,21 @@
                 <input type="tel" name="telefono" id="celular" pattern="[6789]\d{8}$" required>
                 
                 <label for="mail">Correo electrónico</label>
-                <input type="email" name="correoElectronico" id="email" required>
+                <input type="text" name="correoElectronico" id="email" required>
                 
-                <label for="user">Nombre de usuario:</label>
-                <input type="text" name="nombreUsuario" id="nombreUsuario" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ0-9\s]{3,20}$" required>
                 
                 <label for="pass">Contraseña:</label>
                 <input type="password" id="password" name="contraseñaUsuario" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,./?]).{8,20}" maxlength="20">
                 
 
                 <div id="fuerza" value=""></div>
-                <input type="submit" name="btnNuevoAdmin" id="botonRegistro"> -->
+                <input type="submit" name="btnNuevoAdmin" id="botonRegistro"> 
 
-                <!-- </fieldset> -->
-                <legend>Registro</legend>
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombrePropio" id="nombre">
-                
-                <label for="apellido1">Primer apellido:</label>
-                <input type="text" name="primerApellido" id="apellido1">
-                
-                <label for="apellido2">Segundo apellido:</label>
-                <input type="text" name="segundoApellido" id="apellido2" >
-                
-                <label for="celular">Teléfono de contacto:</label >
-                <input type="tel" name="telefono" id="celular" >
-                
-                <label for="mail">Correo electrónico</label>
-                <input type="email" name="correoElectronico" id="email" >
-                
-                <!-- <label for="user">Nombre de usuario:</label>
-                <input type="text" name="nombreUsuario" id="nombreUsuario" > -->
-                
-                <label for="pass">Contraseña:</label>
-                <input type="password" id="password" name="contraseñaUsuario" >
+                 </fieldset>
+               
                 
 
-                <div id="fuerza" value=""></div>
-                <input type="submit" name="btnNuevoAdmin" id="botonRegistro">
-                                                                                            <p><?php echo $msg ?? '' ?></p>
+            <p><?php echo $msg ?? '' ?></p>
             </form>
         </div>
     </div>
@@ -89,5 +65,21 @@
 </body>
 <script type="text/javascript" src="validacionFormulario.js"></script>
 <!-- <script type="text/javascript" src="fuerzaContraseña.js"></script>  -->
+<script>
+    function validarFormulario() {
+        let nombre = document.getElementById("nombre").value;
+        let apellido = document.getElementById("apellido").value;
+        let correo = document.getElementById("email").value;
+        let regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+
+        if (!correo.match(regex)) {
+            alert("Correo electrónico inválido");
+            return false; // Evita enviar el formulario si el correo es inválido
+        }
+
+        // Si todo está válido, se envía el formulario
+        return true;
+    }
+</script>
 
 </html>
