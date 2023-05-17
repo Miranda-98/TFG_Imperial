@@ -9,6 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="mediaQuery.css">
+
+    <script src="fechaMinimaFormReserva.js"></script>
 </head>
 
 <body>
@@ -24,19 +26,19 @@
         <div class="formulario_cambio_parametros bg-secondary text-white form-group row">
             <div class="col">
                 <label for="fechaEntrada">Fecha entrada</label>
-                <input type="date" name="datoFechaInicio" value=<?= $fechaInicioFormateada ?> class="form-control">
+                <input type="date" id="fechaEntrada" name="datoFechaInicio" value=<?= $fechaInicioFormateada ?> class="form-control">
             </div>
             <div class="col">
                 <label for="fechaSalida">Fecha Salida</label>
-                <input type="date" name="datoFechaFin" value=<?= $fechaFinFormateada ?> class="form-control"> 
+                <input type="date" id="fechaSalida" name="datoFechaFin" value=<?= $fechaFinFormateada ?> class="form-control"> 
             </div>
             <div class="col">
                 <label for="nAdultos">Adultos</label>
-                <input type="number" name="adultos" id="nAdultos" value='<?= $numPersonas?>' class="form-control">
+                <input type="number" name="adultos" id="nAdultos" value='<?= $numPersonas?>' class="form-control" min="1" max="5">
             </div>
             <div class="col">
                 <label for="nNiños">Niños (menores 13 años)</label>
-                <input type="number" name="niños" id="nNiños" value='<?= $numNiños?>' class="form-control">
+                <input type="number" name="niños" id="nNiños" value='<?= $numNiños?>' class="form-control"  min="0" max="5">
             </div>
             <div class="col">
                 <input class="btn btn-primary btn-custom" type="submit" class="submi" name="btn_cambio_parametros" >

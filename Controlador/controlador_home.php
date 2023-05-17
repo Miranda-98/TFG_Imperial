@@ -19,7 +19,7 @@ if(isset($_REQUEST['btn_Administracion'])){
 
   }else if (isset($_REQUEST['btn_anadir_estancia'])) {
 
-    include '../Vista/Form_nuevaEstancia.php';
+    include '../Vista/decision_estancia.php';
 
   } else if (isset($_REQUEST['btn_pagina_Galeria'])) {
     
@@ -40,7 +40,7 @@ if(isset($_REQUEST['btn_Administracion'])){
     include '../Vista/Eventos.php';
   
   
-}else if (isset($_REQUEST['btn_anadir_habitacion'])) {
+  }else if (isset($_REQUEST['btn_anadir_habitacion'])) {
     
     include '../Vista/Form_nuevaHabitacion.php';
   
@@ -82,7 +82,19 @@ if(isset($_REQUEST['btn_Administracion'])){
     
     include '../Vista/factura_reserva.php';
     
+  } else if (isset($_REQUEST['btn_aniadir_habitacion'])) {         // -----------------------------------------
+    
+    include '../Vista/Form_nuevaHabitacion.php';
+    
+  }else if (isset($_REQUEST['btn_aniadir_sala'])) {                  // -----------------------------------------
+    
+    include '../Vista/Form_nuevaSala.php';
+    
   }else{
 
     include '../Vista/Home_principal.php';
  }
+
+ 
+//  btn_aniadir_sala
+//  btn_anadir_estancia

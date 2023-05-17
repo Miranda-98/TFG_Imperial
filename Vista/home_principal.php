@@ -53,43 +53,32 @@
         <br /><br /><br /><br />
 
         <!-- Formulario Reserva -->
-        <form method="post">
-            <div class="container formularioReserva">
+        <h3>Haz tu reserva:</h3>
+        <form method="post" class=" bg-secondary mb-3 text-white p-3">
+            <div class="container formularioReserva  bg-secondary text-white form-group row">
                 <!-- <form method="post"> -->
-                <div class="form_reserva">
-                    <label for="fechaEntrada">Fecha entrada</label><br />
+                <div class="form_reserva col">
+                    <label for="fechaEntrada">Fecha entrada</label>
+                    <input type="date" class="form-control" id="fechaEntrada" name="datoFechaInicio" required>
                 </div>
 
-                <div class="form_reserva">
-                    <label for="fechaSalida">Fecha Salida</label><br />
+                <div class="form_reserva col">
+                    <label for="fechaSalida">Fecha Salida</label>
+                    <input type="date"  class="form-control" id="fechaSalida" name="datoFechaFin" required>
                 </div>
 
-                <div class="form_reserva">
-                    <input type="date" id="fechaEntrada" name="datoFechaInicio">
-                </div>
-
-                <div class="form_reserva">
-                    <input type="date" id="fechaSalida" name="datoFechaFin">
-                </div>
-
-                <div class="form_reserva">
+                <div class="form_reserva col">
                     <label for="nAdultos">Adultos</label><br />
+                    <input type="number" class="form-control" name="adultos" id="nAdultos" min="1" max="5" value="1" required>
                 </div>
 
-                <div class="form_reserva">
-                    <input type="number" name="adultos" id="nAdultos">
+                <div class="form_reserva col">
+                    <label for="nNiños">Niños (menores 13 años)</label>
+                    <input type="number" class="form-control" name="niños" id="nNiños"  min="0" max="5" value="0" required>
                 </div>
 
-                <div class="form_reserva">
-                    <label for="nNiños">Niños (menores 13 años)</label><br />
-                </div>
-
-                <div class="form_reserva">
-                    <input type="number" name="niños" id="nNiños">
-                </div>
-
-                <div class="form_reserva">
-                    <input class="btn btn-primary" type="submit" class="submi" name="bton_formulario_principal">
+                <div class="form_reserva col">
+                    <input class="btn btn-primary btn-custom" type="submit" class="submi" name="bton_formulario_principal">
                 </div>
                 <!-- </form> -->
             </div>

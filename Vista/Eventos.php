@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    
     <div>
         Las salas de eventos son espacios diseñados para acoger y celebrar una gran variedad de actividades, desde reuniones de
         negocios y conferencias hasta bodas, cumpleaños y otras celebraciones sociales. Estas salas suelen ser grandes y

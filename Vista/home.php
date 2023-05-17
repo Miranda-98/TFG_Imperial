@@ -21,7 +21,6 @@
 
 
 
-
 </head>
 <?php
 session_start();
@@ -35,6 +34,14 @@ if (isset($_SESSION['nom_Usuario'])) {
 ?>
 
 <body>
+<?php
+  // Desactivar la caché en el lado del navegador
+  header("Cache-Control: no-cache, no-store, must-revalidate");
+  header("Pragma: no-cache");
+  header("Expires: 0");
+
+  // Resto del código de procesamiento del formulario
+?>
 
 
 
@@ -149,7 +156,7 @@ if (isset($_SESSION['nom_Usuario'])) {
                     <p>MADRID CALLE MARQUÉS DE LA ENSENADA</p>
                     <p>Teléfono: 916 535 482 </p>
                     <p>Correo electrónico: info@imperialretreat.com</p>
-                    <form>
+                    <form method="post">
                         <button class="nav-link active" aria-current="page" name="btn_pagina_FQ"><u>Preguntas frecuentes</u></button>
                     </form>
                 </div>

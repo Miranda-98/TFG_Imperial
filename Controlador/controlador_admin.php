@@ -47,20 +47,66 @@ if(isset($_REQUEST['btnNuevoAdmin'])){
 
     }
  }
-
  if (isset($_REQUEST['btnNuevaHabitacion'])) {
+
+            $nuevaEstancia = new Estancia($_POST['cod_estancia'],
+            $_POST['estado'],
+            $_POST['descripcion'],
+            $_POST['ubicacion'],
+            $_POST['planta'],
+            $_POST['tipo'],
+            $_POST['precio'],0,
+            $_POST['localidad'],
+            $_POST['estado']);
+
+            if($nuevaEstancia->crearEstancia()){
+                 echo "Estancia creada";
+
+            }
     $nuevaHabitacion = new Habitacion($_POST['cod_estancia'],'no','no','no','no','no','no','no','no',$_POST['cod_habitacion'],$_POST['num_camas'],$_POST['tipo_bano']);
-    if($nuevaHabitacion->crearHabitacion()){
-        echo "Habitación creada";
-    }
+
+            if($nuevaHabitacion->crearHabitacion()){
+                echo "Habitación creada";
+            }
     
  }
- if (isset($_REQUEST['btnNuevaSala'])) {
+//  if (isset($_REQUEST['btnNuevaHabitacion'])) {
+
+//     $nuevaHabitacion = new Habitacion($_POST['cod_estancia'],'no','no','no','no','no','no','no','no',$_POST['cod_habitacion'],$_POST['num_camas'],$_POST['tipo_bano']);
+//     if($nuevaHabitacion->crearHabitacion()){
+//         echo "Habitación creada";
+//     }
+    
+//  }
+
+if (isset($_REQUEST['btnNuevaSala'])) {
+    
+        $nuevaEstancia = new Estancia($_POST['cod_estancia'],
+        $_POST['estado'],
+        $_POST['descripcion'],
+        $_POST['ubicacion'],
+        $_POST['planta'],
+        $_POST['tipo'],
+        $_POST['precio'],0,
+        $_POST['localidad'],
+        $_POST['estado']);
+
+        if($nuevaEstancia->crearEstancia()){
+        echo "Estancia creada";
+
+        }
+
     $nuevaSala = new Sala($_POST['cod_estancia'],'','','','','','','','',$_POST['cod_Sala'],$_POST['aforo'],$_POST['tipo_Sala']);
     if($nuevaSala->crearSala()){
         echo "Sala creada";
     }
  }
+//  if (isset($_REQUEST['btnNuevaSala'])) {
+//     $nuevaSala = new Sala($_POST['cod_estancia'],'','','','','','','','',$_POST['cod_Sala'],$_POST['aforo'],$_POST['tipo_Sala']);
+//     if($nuevaSala->crearSala()){
+//         echo "Sala creada";
+//     }
+//  }
 
  
 ?>

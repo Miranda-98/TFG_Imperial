@@ -17,20 +17,66 @@
 ?>
 
 <h1>Nueva Sala</h1>
-    <form method="post">
+<form method="post">
+        <label for="cod_estancia">Código de Estancia:</label>
+        <input type="number" name="cod_estancia" id="">
+<br>
+        <label for="descripcion">Descripción:</label>
+        <input type="text" name="descripcion" id="">
+        <br>
+        <label for="ubicacion">Ubicación:</label>
+        <select name="ubicacion">
+            <option value="interior">Interior</option>
+            <option value="exterior">Exterior</option>
+            <option value="azotea">Azotea</option>
+        </select>
+        <br>
+        <label for="planta">Planta:</label>
+        <select name="planta">
+            <option value="0">Planta 0</option>
+            <option value="1">Planta 1</option>
+            <option value="2">Planta 2</option>
+            <option value="3">Planta 3</option>
+            <option value="4">Planta 4</option>
+            <option value="5">Planta 5</option>
+            <option value="6">Planta 6</option>
+            <option value="7">Planta 7</option>
+        </select>
+        <br>
+        <label for="tipo">Tipo:</label>
+        <select name="tipo">
+            <option value="comun">Común</option>
+            <option value="lujo">Lujo</option>
+            <option value="presidencial">Presidencial</option>
+        </select>
+        <br>
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" id="">
+        <br>
+       
+        <!-- Valores ocultos para construir el objeto -->
+        <label for="localidad">Localidad:</label>
+        <select name="localidad" >
+             <option value="madrid" selected>Madrid</option>
+        </select>
+        <input type="hidden" name="estado" value="libre">
+            <br>
+        <!-- <input type="submit" name="btnNuevaEstancia" id=""> -->
+    <!-- </form>
+    <form method="post"> -->
         
         <label for="cod_Sala">Código de Sala:</label>
         <input type="number" name="cod_Sala" id="">
         <br>
-        <label for="cod_estancia">Código de Estancia:</label>
+        <!-- <label for="cod_estancia">Código de Estancia:</label>
         <select name="cod_estancia">
         <?php
-        foreach ($estanciasDisponibles as $key) {
-           echo "<option value='$key->cod_estancia'>".$key->cod_estancia."</option>";
-        }
+        // foreach ($estanciasDisponibles as $key) {
+        //    echo "<option value='$key->cod_estancia'>".$key->cod_estancia."</option>";
+        // }
         ?>
         </select>
-        <br>
+        <br> -->
         <label for="aforo">Aforo máximo:</label>
         <input type="number" name="aforo" id="">
         <br>
