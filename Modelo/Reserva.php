@@ -80,7 +80,7 @@
         function nuevaFactura () {
             try {
                 $cone = $this->conexion;
-                $sql = "SELECT COUNT(*) FROM reserva ;";
+                $sql = "SELECT MAX(cod_reserva) FROM reserva ;";
                 $stmt = $cone->prepare($sql);
 
                 $stmt->execute();
@@ -106,7 +106,7 @@
                 $stmt->execute();
                 // echo '<br/>insertado';
             } catch (PDOException $e) {
-                echo "<br/>ERROR AL CREAR HABITACION " . $e->getMessage();
+                echo "<br/>ERROR AL CREAR FACTURA " . $e->getMessage();
             }
         }
         // function reservarHabitacionPorTipo(/*$tipo, $fechaInicio, $fechaFin*/)
