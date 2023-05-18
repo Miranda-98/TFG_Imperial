@@ -82,11 +82,11 @@ if(isset($_REQUEST['btn_Administracion'])){
     
     include '../Vista/factura_reserva.php';
     
-  } else if (isset($_REQUEST['btn_aniadir_habitacion'])) {         // -----------------------------------------
+  } else if (isset($_REQUEST['btn_aniadir_habitacion'])) {        
     
     include '../Vista/Form_nuevaHabitacion.php';
     
-  }else if (isset($_REQUEST['btn_aniadir_sala'])) {                  // -----------------------------------------
+  }else if (isset($_REQUEST['btn_aniadir_sala'])) {                 
     
     include '../Vista/Form_nuevaSala.php';
     
@@ -94,7 +94,7 @@ if(isset($_REQUEST['btn_Administracion'])){
 
     include '../Vista/Home_principal.php';
  }
-
- 
 //  btn_aniadir_sala
 //  btn_anadir_estancia
+?>
+

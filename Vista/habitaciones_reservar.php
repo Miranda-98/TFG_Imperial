@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="mediaQuery.css">
 
     <script src="fechaMinimaFormReserva.js"></script>
+    
 </head>
 
 <body>
@@ -75,17 +76,27 @@
     echo "";
     ?>
 
-    <input type='submit' class='btn btn-primary mb-4' name='btn_enviar_reservas' value='Reservar'>
-
+        <?php 
+        // Control de sesión: si no está iniciada la sesión no se muestra el botón necesario para seguir la reserva
+        if(!empty($_SESSION['nom_Usuario'])){
+        ?>
+            <input type='submit' class='btn btn-primary mb-4' name='btn_enviar_reservas' value='Reservar' id="btnReservar">
+        <?php 
+        } else {
+        ?>
+            <input type='submit' class='btn btn-primary mb-4' name='inicio_Sesion' value='Inicia Sesión para Reservar'>
+        <?php 
+        }
+        ?>
     </div>
     </form>
-    <?php
-    //Escondemos el dato en la web del numero de habitaciones para poder cogerlo con JS
-    echo "<form method='post'><input type='hidden' name='numeroMaximoHabitaciones' value='" . $numHabitaciones . "'></form>";
+        <?php
+        //Escondemos el dato en la web del numero de habitaciones para poder cogerlo con JS
+        echo "<form method='post'><input type='hidden' name='numeroMaximoHabitaciones' value='" . $numHabitaciones . "'></form>";
 
-    //Escondemos los datos necesarios para la reserva  
+        //Escondemos los datos necesarios para la reserva  
 
-    ?>
+        ?>
 
 
     <script>
@@ -94,20 +105,32 @@
         console.log("Numero: ", maxSeleccionados);
         var checkboxes = document.getElementsByTagName('input');
 
+        const btnReservar = document.getElementById("btnReservar");
+        btnReservar.disabled = true;
+
         for (var i = 0; i < checkboxes.length; i++) {
             checkboxes[i].addEventListener('change', function() {
+                btnReservar.disabled = true;
                 var numSeleccionados = 0;
                 for (var j = 0; j < checkboxes.length; j++) {
                     if (checkboxes[j].checked) {
                         numSeleccionados++;
+                        console.log(numSeleccionados)
                     }
                 }
+                // CONTROL DEL BOTÓN DE CONTINUACIÓN DE FORMULARIO
+                if (numSeleccionados == maxSeleccionados ){
+                    btnReservar.disabled = false;
+                } else if (numSeleccionados >= maxSeleccionados){
+                    btnReservar.disabled = false;
+                }
+
                 if (numSeleccionados > maxSeleccionados) {
                     this.checked = false;
                     alert("Según el número de personas usted debería reservar un máximo de " + maxSeleccionados + " habitaciones");
-                    //Aquí se puede meter algún mensaje que avise al usuario de que no seleccione más habitaciones ó
-                    //Podemos pulsar el botón de enviar cuando haya seleccionado ya las habitaciones
+                    
                 }
+                
             });
         }
     </script>
