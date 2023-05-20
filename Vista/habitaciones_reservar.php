@@ -80,7 +80,7 @@
         // Control de sesión: si no está iniciada la sesión no se muestra el botón necesario para seguir la reserva
         if(!empty($_SESSION['nom_Usuario'])){
         ?>
-            <input type='submit' class='btn btn-primary mb-4' name='btn_enviar_reservas' value='Reservar' id="btnReservar">
+            <input type='submit' class='btn btn-danger mb-4' name='btn_enviar_reservas' value='Reservar' id="btnReservar">
         <?php 
         } else {
         ?>
