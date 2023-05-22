@@ -16,7 +16,7 @@ require_once '../Modelo/Reserva.php';
   $numHabitaciones = ceil(($numPersonas + $numNiños) / 2);
 
   // Volvemos a recoger las fechas para poder mostrarlas en el formulario por si el usuario quiere cambiarlas
-  $fechaInicioFormateada = date('Y-m-d', strtotime($_POST['datoFechaInicio']));
+  $fechaInicioFormateada = date('Y-m-d', strtotime($_POST['datoFechaInicio'])) ;
   $fechaFinFormateada = date('Y-m-d', strtotime($_POST['datoFechaFin']));
 
   //Recogemos el registro de habitaciones disponibles en las fechas seleccionadas

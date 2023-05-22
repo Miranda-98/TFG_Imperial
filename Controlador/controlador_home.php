@@ -19,7 +19,7 @@ if(isset($_REQUEST['btn_Administracion'])){
 
   }else if (isset($_REQUEST['btn_anadir_estancia'])) {
 
-    include '../Vista/Form_nuevaEstancia.php';
+    include '../Vista/decision_estancia.php';
 
   } else if (isset($_REQUEST['btn_pagina_Galeria'])) {
     
@@ -40,7 +40,7 @@ if(isset($_REQUEST['btn_Administracion'])){
     include '../Vista/Eventos.php';
   
   
-}else if (isset($_REQUEST['btn_anadir_habitacion'])) {
+  }else if (isset($_REQUEST['btn_anadir_habitacion'])) {
     
     include '../Vista/Form_nuevaHabitacion.php';
   
@@ -82,7 +82,43 @@ if(isset($_REQUEST['btn_Administracion'])){
     
     include '../Vista/factura_reserva.php';
     
+  } else if (isset($_REQUEST['btn_aniadir_habitacion'])) {        
+    
+    include '../Vista/Form_nuevaHabitacion.php';
+    
+  }else if (isset($_REQUEST['btn_aniadir_sala'])) {                 
+    
+    include '../Vista/Form_nuevaSala.php';
+    
+  }else if (isset($_REQUEST['btn_reserva_admin'])) {                 
+    
+    include 'botones_reserva_habitacion_sala.php';
+    
+  }else if (isset($_REQUEST['bton_formulario_fechas_admin'])) {                 
+    
+    include 'todas_habitaciones_reservas_admin.php';
+    
+  }else if (isset($_REQUEST['reserva_habitacion_admin'])) {                 
+    
+    include 'formulario_fechas_admin.php';
+    
+  }else if (isset($_REQUEST['reserva_sala_admin'])) {                 
+    
+    include '';
+    
+  }else if (isset($_REQUEST['btn_cambio_parametros_admin'])) {
+    
+    include '../Vista/todas_habitaciones_reservas_admin.php';
+    
   }else{
 
     include '../Vista/Home_principal.php';
  }
+//  btn_aniadir_sala
+//  btn_anadir_estancia
+//  btn_reserva_admin
+// reserva_habitacion_admin
+// bton_formulario_fechas_admin
+// btn_cambio_parametros_admin
+?>
+
