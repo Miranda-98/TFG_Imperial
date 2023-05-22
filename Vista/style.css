@@ -32,7 +32,8 @@ footer {
     margin-left: 0%;
 }
 
-.footerPrincipal>div>h4, .footerPrincipal {
+.footerPrincipal>div>h4,
+.footerPrincipal {
     display: flex;
     justify-content: center;
 }
@@ -62,7 +63,7 @@ footer {
     height: 800px;
 }
 
-.contenidoContacto {       
+.contenidoContacto {
     display: flex;
     flex-direction: column;
     padding-left: 30%;
@@ -84,9 +85,9 @@ footer {
     align-items: center;
 }
 
-li > a{
+li>a {
     color: white;
-    
+
 }
 
 
@@ -158,10 +159,10 @@ input:invalid {
 
 }
 
-.formulario_cambio_parametros{
+.formulario_cambio_parametros {
     padding: 2%;
-   
-  }
+
+}
 
 /*******************************************************/
 
@@ -193,6 +194,13 @@ input:invalid {
 
 
 /* Botones */
+
+  
+  .custom-select option:hover {
+    background-color: #8BC3B7;
+  }
+
+
 
 .btn {
     background-color: #6f6d6d;
@@ -234,17 +242,17 @@ input:invalid {
     background-color: black;
 }
 
-li > button:hover {
+li>button:hover {
     background-color: rgb(139, 195, 183);
 }
 
-li > button {
+li>button {
     width: 150px;
 }
 
 
 /*******************************************************/
-        /* Iconos caracteristicas de las habitaciones */
+/* Iconos caracteristicas de las habitaciones */
 .caracteristicas {
     font-size: 40px;
 }

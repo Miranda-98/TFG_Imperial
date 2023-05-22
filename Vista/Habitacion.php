@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="contenedor containerFotosHabitacionPresidencial">
-                    <div class="corouselImagenes" style="background-color: green;">
+                    <div class="corouselImagenes">
                         <div id="carousel" class="carousel slide carouselImagenes " data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -98,9 +98,9 @@
                     </div>
 
 
-                    <div class="item foto1">
-                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
-                            <img src="../img/habitaciones/hab_presidencial/foto1.jpg">
+                    <div class="item foto1" >
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" >
+                            <img src="../img/habitaciones/hab_presidencial/foto1.jpg" >
                         </button>
 
 

@@ -46,7 +46,7 @@ if (isset($_SESSION['nom_Usuario'])) {
         <!-- div icono-->
         <div>
             <a class="" href="home.php">
-                <img src="../img/logoOriginalSinTextoSinFondo.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="150px" height="150px"/>
+                <img src="../img/logoOriginalSinTextoSinFondo.png" alt="Imperial Retreat Logo" title="Imperial Retreat" width="150px" height="150px" />
             </a>
         </div>
 
@@ -110,8 +110,9 @@ if (isset($_SESSION['nom_Usuario'])) {
                         <li class="nav-item">
                             <button class="nav-link active" aria-current="page" name="btn_pagina_Habitaciones">Habitaciones</button>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" >
                             <button class="nav-link active" aria-current="page" name="btn_pagina_Eventos">Salas de eventos</button>
+                          
                         </li>
                         <li class="nav-item">
                             <button class="nav-link active" href="#">Ofertas</button>
@@ -143,7 +144,7 @@ if (isset($_SESSION['nom_Usuario'])) {
         ?>
     </div>
 
-<br><br><br>
+    <br><br><br>
     <footer class="footer bg-secondary text-white">
         <div class="row footerPrincipal">
             <div class="col-md-3 contactoFooter">
@@ -163,16 +164,16 @@ if (isset($_SESSION['nom_Usuario'])) {
                 <h4 class="iconos">Redes sociales</h4>
                 <ul class="list-unstyled iconos">
                     <li><a href="#"><i class="fab fa-facebook fa-lg text-white"></i> Facebook</a>
-                        
-                    </li>
+
+                    </li><br />
                     <li>
                         <a href="#"><i class="fab fa-twitter fa-lg text-white"></i> Twitter</a>
-                        
-                    </li>
+
+                    </li><br />
                     <li>
                         <a href="#"><i class="fab fa-instagram fa-lg text-white"></i> Instagram</a>
-                        
-                    </li>
+
+                    </li><br />
                 </ul>
             </div>
 
@@ -191,9 +192,9 @@ if (isset($_SESSION['nom_Usuario'])) {
             <div class="col-md-4 "><br /><br />
                 <h6>© Copyright 2023 - All Rights Reserved</h6>
                 <!-- <p>All Rights Reserved.</p> -->
-            </div>      
+            </div>
             <div class="col-md-3 logoEmpresa" style=" width:150px; height:150px">
-                <img src="../img/logoOriginalSinFondo.png" alt="Imperial Retreat Logo" title="Imperial Retreat" style="width: 100%; height: 100%;"/>
+                <img src="../img/logoOriginalSinFondo.png" alt="Imperial Retreat Logo" title="Imperial Retreat" style="width: 100%; height: 100%;" />
             </div>
         </div>
 
